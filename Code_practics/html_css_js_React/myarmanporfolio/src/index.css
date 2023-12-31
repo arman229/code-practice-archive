@@ -1,0 +1,15 @@
+body{
+  margin: 0;
+  /*background-color: #f0f0f0;*/
+
+}
+.mycontainer {
+  background: url(./images/coffee-apple.jpg) no-repeat center center ;
+
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}

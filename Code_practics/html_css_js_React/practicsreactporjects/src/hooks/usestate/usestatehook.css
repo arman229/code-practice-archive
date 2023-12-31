@@ -1,0 +1,31 @@
+/* Add this CSS to a separate .css file or use a CSS-in-JS solution like styled-components */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 16px;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+  
+  .button {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .button:hover {
+    background-color: #2980b9;
+  }
+  
+  .value {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  

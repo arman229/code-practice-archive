@@ -1,0 +1,61 @@
+
+#secondsubcontainer {
+ border: 2px solid gray;text-align: right;
+    width: 340px;
+    border-bottom: 6px solid black;
+    max-width: 400px;margin-left: auto;
+    margin-right: auto; margin-top: 10px;
+
+}
+@media (max-width: 2200px) {
+    .mycontainer {border:3px solid red;
+        padding: 10px !important;
+    }
+}
+#firstsubcontainer{
+  border: 2px solid black;
+     width: 340px;
+    margin-left: auto;
+    max-width: 400px;
+    margin-right: auto;
+    margin-top: 10px;
+    color: black;
+}
+
+#btn {
+
+    padding: 10px;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: black;
+    color: white;
+}
+
+#answer {
+
+}
+
+div .input_number  {
+    margin: 4px;
+width: 45px;
+    font-size: 1.8rem;
+    text-align: right;
+
+
+}
+  div span{
+      display: inline-block;
+    margin: 4px;
+    width: 45px;
+      height: 20px;
+    font-size: 1.8rem;
+      text-align: center !important;
+
+
+}
+  #solutioncontainer{
+
+      border-top: 6px solid black;
+  }

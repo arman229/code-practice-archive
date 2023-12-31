@@ -1,0 +1,17 @@
+
+
+.title {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+}
+
+.linkButton {
+    margin-left: 12px;
+}
