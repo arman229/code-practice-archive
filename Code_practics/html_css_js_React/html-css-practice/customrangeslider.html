@@ -7,16 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <div id="container">
-        <input id="input" type="range" min="1"
-        max="100" value="50">
-        <p>value <span id="value"></span></p>
-    </div>
+
+<div id="container">
+    <input id="input" type="range" min="1"
+           max="100" value="50">
+    <p>value <span id="value"></span></p>
+</div>
 </body>
 <script>
-    var input=document.getElementById("input")
-    var value=document.getElementById("value")
-    value.
+    var input = document.getElementById("input")
+    var value = document.getElementById("value")
+    input.addEventListener("change", function (e) {
+        value.innerText = e.target.value
+    })
 </script>
 </html> 
