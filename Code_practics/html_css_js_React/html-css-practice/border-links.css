@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    margin: 20px;
+    
+    background-color: #333;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 14px 16px;
+    color: #f2f2f2;
+    display: inline-block;
+}
+
+nav a:hover {
+    border-bottom: 2px solid red;
+}
+
+nav a:first-child {
+    border-bottom: 2px solid red;
+}

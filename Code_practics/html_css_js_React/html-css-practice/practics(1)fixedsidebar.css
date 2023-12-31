@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 27px;
+}
+
+nav div {
+    width: 200px;
+    flex-grow: 1;     position: fixed;
+}
+
+nav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    position: fixed;
+
+}
+
+.container {
+    display: flex;
+}

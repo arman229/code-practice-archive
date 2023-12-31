@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Topnav</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body {
+        margin: 0px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    nav {
+        background-color: black;
+
+    }
+
+    nav a {
+        display: inline-block;
+        padding: 12px 16px;
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+
+    }
+
+    nav a:hover {
+        background-color: blueviolet;
+    }
+
+    #dropdown {
+        display: inline-block;
+    }
+
+    #dropdown button {
+        background-color: transparent;
+        padding: 12px 16px;
+        color: white;
+        font-size: 14px;
+    }
+
+    #dropdown button:hover {
+        background-color: blueviolet;
+    }
+
+    #dropdown-content {
+        position: absolute;
+        background-color: black;
+        display: none;
+    }
+
+    #dropdown-content a {
+        display: block;
+        min-width: 140px;
+    }
+
+    #dropdown:hover #dropdown-content {
+        display: block;
+    }
+
+    @media screen and (max-width: 600px) {
+        nav a {
+            display: block;
+        }
+
+        #dropdown,
+        #dropdown button {
+            width: 100vw;
+            text-align: left;
+        }
+
+        #dropdown-content {
+            position: static;
+        }
+
+        nav.responsive a:not(:first-child),
+        nav.responsive #dropdown {
+            display: none;
+
+        }
+    }
+</style>
+
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+        <div id="dropdown">
+            <button>Dropdown <i class="fa fa-caret-down"></i></button>
+            <div id="dropdown-content">
+                <a href="#">COntent 1</a>
+                <a href="#">COntent 2</a>
+                <a href="#">COntent 3</a>
+            </div>
+        </div>
+        <a href="#">About</a>
+    </nav>
+</body>
+
+</html>

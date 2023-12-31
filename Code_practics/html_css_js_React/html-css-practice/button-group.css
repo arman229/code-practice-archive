@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+nav button {
+    float: left;
+    padding: 12px 16px;
+    background-color: #04AA6D;
+    font-size: 22px;
+    border: 2px solid green;
+}
+nav button:hover { background-color: greenyellow ;}

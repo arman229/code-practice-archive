@@ -1,0 +1,58 @@
+body {
+    margin: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: cadetblue;
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    padding: 18px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+
+}
+
+nav a:hover {
+    background-color: dodgerblue;
+}
+
+
+input {
+    height: 40px;
+    font-size: 18px;
+}
+
+button {
+    height: 40px;
+    width: 40px;
+    margin-right: 16px;
+}
+
+.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+@media screen and (max-width: 500px) {
+    nav {
+        flex-direction: column;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        margin-right: unset;
+        width: 100%;
+    }
+
+}

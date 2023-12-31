@@ -1,0 +1,6 @@
+div p{ white-space: nowrap;
+width: 300px;
+
+overflow: hidden;
+    text-overflow: ellipsis;}
+p:hover{ overflow: visible;}

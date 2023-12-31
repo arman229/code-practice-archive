@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Image Overlay Icon</title>
+</head>
+<style>
+    body {
+        margin: 10px;
+    }
+
+    #container {
+     
+        position: relative;
+        display: inline-block;
+
+    }
+
+    #container2 {
+        width: 500px;
+       
+        height: 500px;
+        position: absolute;
+        top: 0px;
+    }
+
+    .icon {
+        position: absolute;
+        top: 50%;
+        display: none;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 6em;
+        color: white;
+
+    }
+
+    #container:hover #container2 {
+        background-color: red;
+    }
+    #container:hover .icon { display: block;}
+</style>
+
+<body>
+    <h1>Fade in Overlay Icon</h1>
+    <p>Hover over the image to see the effect</p>
+    <div id="container">
+        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+        <div id="container2"> <a href="#" class="icon" title="User Profile">
+                <i class="fa fa-user"></i>
+            </a></div>
+    </div>
+
+</body>
+
+</html>

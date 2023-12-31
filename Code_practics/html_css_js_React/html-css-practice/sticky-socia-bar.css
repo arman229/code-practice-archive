@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.left-side {
+    position: fixed;
+    border: 2px solid red;
+    width: 64px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left-side a {
+    display: block;
+    padding: 12px 26px;
+}
+
+.right-side {
+    margin-left: 64px;
+    border: 2px solid green;
+}

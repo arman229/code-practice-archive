@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter ky</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div {
+            padding: 12px;
+            color: red;
+        }
+
+        div i {
+            margin-right: 16px;
+        }
+        #btn{
+            background-color: red;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="msg" placeholder="Enter Password" />
+    <div id="validate_lowercase"><i class="fa fa-close"></i> A lowercase letter</div>
+    <div id="validate_capital"><i class="fa fa-close"></i>A capital letter</div>
+    <div id="validate_number"><i class="fa fa-close"></i>A number</div>
+    <div id="validate_8_chars"><i class="fa fa-close"></i>Minimum 8 charactors</div>
+    <button id="btn" disabled="true">Submit</button>
+</body>
+<script>
+    var password = document.getElementById('msg')
+    var validate_lowercase = document.getElementById('validate_lowercase')
+    var validate_capital = document.getElementById('validate_capital')
+    var validate_number = document.getElementById('validate_number')
+    var validate_8_chars = document.getElementById('validate_8_chars')
+    var btn = document.getElementById('btn')
+
+
+
+    password.onkeyup = function () {
+        var userValue = password.value
+        var loweCaseFlag = containLowerCase(userValue)
+        var uperCaseFlag = containUperCase(userValue)
+        var numberFlag = containNumer(userValue)
+        var lengthFlag = lengthisGreaterthan8(userValue)
+        checkOk(validate_lowercase, loweCaseFlag)
+        checkOk(validate_capital, uperCaseFlag)
+        checkOk(validate_number, numberFlag)
+        checkOk(validate_8_chars, lengthFlag)
+        if (loweCaseFlag && uperCaseFlag && numberFlag && lengthFlag) {
+            btn.style.backgroundColor = 'green'
+            btn.disabled=false
+        } else {
+            btn.style.backgroundColor = 'red'
+            btn.disabled=true
+        }
+    }
+
+
+
+
+
+btn.onclick=function(){
+    alert('good')
+}
+
+
+
+
+
+
+
+
+    function containLowerCase(pass) {
+        var lowerCaseLetters = /[a-z]/g;
+        return pass.match(lowerCaseLetters)
+    }
+    function containUperCase(pass) {
+        var uperCaseLetters = /[A-Z]/g;
+        return pass.match(uperCaseLetters)
+    }
+    function containNumer(pass) {
+        var numberCaseLetters = /[0-9]/g;
+        return pass.match(numberCaseLetters)
+    }
+    function lengthisGreaterthan8(pass) {
+        return pass.length > 8
+    }
+
+
+
+
+
+    function checkOk(elem, flag) {
+        if (flag) {
+            elem.style.color = 'green'
+            var i = elem.getElementsByTagName("i")[0]
+            i.style.color = "green"
+            i.classList.remove('fa-close')
+            i.classList.add('fa-check')
+        } else {
+            elem.style.color = 'red'
+            var i = elem.getElementsByTagName("i")[0]
+            i.style.color = "red"
+            i.classList.remove('fa-check')
+            i.classList.add('fa-close')
+        }
+    }
+
+</script>
+
+</html>

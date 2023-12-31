@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <p style="text-transform: capitalize;">please enter any number</p>
+    <input id="input" onclick="fun()" required>
+    <button onclick="Even_odd()">Check</button>
+    <h1 id="text" style="text-transform: capitalize;">
+        </p>
+        <br>
+        <br>
+
+
+        <h1 style="text-transform: capitalize;">please enter any number</h1>
+        <input id="input2" required>
+        <button onclick="isprime()">Check</button>
+        <h1 id="text2" style="text-transform: capitalize;"></h1>
+</body>
+<script>
+
+    function Even_odd() {
+        var input_value = Number(document.getElementById("input").value);
+        var msg = ""
+
+        if (input_value == 0) {
+            alert("enter a valid number")
+            return
+        }
+        if (input_value % 2 == 0) {
+            msg = "even Number";
+        } else {
+            msg = "orr Number";
+        }
+        document.getElementById("text").innerHTML = msg
+        document.getElementById("text").style.display = "block";
+    }
+
+</script>
+<script>
+    function isprime() {
+        var isprime = true
+        var input_value2 = Number(document.getElementById("input2").value);
+
+        if (input_value2 == 0 || input_value2 == 1 || input_value2 < 0) {
+            document.getElementById("text2").innerHTML = "not prime";
+        }
+
+        else if (input_value2 == 2) {
+            document.getElementById("text2").innerHTML = " prime";
+        }
+        else {
+            for (let j = 2; j < input_value2; j++) {
+                if (input_value2 % j == 0) {
+                    isprime = false
+                }
+            }
+        }
+
+        if (isprime == false) {
+            document.getElementById("text2").innerHTML = " not  prime";
+        }
+        else {
+            document.getElementById("text2").innerHTML = "    prime";
+        }
+
+
+    }
+
+
+
+
+</script>
+
+</html>

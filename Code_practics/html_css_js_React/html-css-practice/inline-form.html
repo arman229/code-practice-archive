@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline Form</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #container {
+        padding: 16px;
+
+        background-color: gray;
+    }
+
+    input[type=email],
+    input[type=password] {
+        padding: 12px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        width: 100%;
+    }
+
+    #content {
+        padding: 12px;
+    }
+
+    #btn {
+        margin-top: 12px;
+        width: 100%;
+        padding: 12px;
+        background-color: skyblue;
+        color: white;
+    }
+
+    @media (min-width: 700px) {
+
+        input[type=email],
+        input[type=password],
+        #btn {
+            width: unset;
+        }
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    /* Chrome, Safari, Edge, Opera */
+</style>
+
+<body>
+    <div id="content">
+        <h1>Responsive Inline Form</h1>
+        <p>We have created an inline form that will stay horizontal until the screen width of the browser window is less
+            than 850 pixels: then the form is displayed vertically instead of horizontally.</p>
+        <p>Resize the browser window to see the effect.</p>
+        <p>Clear the input field when it gets focus:</p>
+        <input type="number" onfocus="this.value=''" value="input">
+    </div>
+    <div id="container">
+        <form action="#">
+            <label class="Label" for="email">Email:</label>
+            <input type="email" name="email" placeholder="Enter email">
+            <label class="Label" for="psw">Password:</label>
+            <input type="password" name="psw" placeholder="Enter password">
+            <label> <input type="checkbox">Remember me</label>
+            <button id="btn">Submit</button>
+        </form>
+    </div>
+    <div style="padding: 16px;" id="clipboard">
+        <input style="width: 100%;" type="text" value="hello world" id="myinput">
+        <button onclick="copy_text()" style="width: 100%;">Copy text</button>
+    </div>
+</body>
+<script>
+    var myinput = document.getElementById("myinput")
+    function copy_text() {
+        // var userValue = myinput.select() 
+        // myinput.select()
+        navigator.clipboard.writeText(myinput.value)
+        console.log(myinput.value);
+    }
+</script>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Login Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #container {
+
+        padding: 14px;
+    }
+
+    .fa {
+        color: white;
+    }
+
+    #fac {
+        background-color: #5770a6;
+        color: white;
+        text-decoration: none;
+    }
+
+    #fac:hover {
+        background-color: #3B5998;
+    }
+
+    #twi:hover {
+        background-color: #55ACEE;
+    }
+
+    #googgle:hover {
+        background-color: #dd4b39;
+    }
+
+    #twi {
+        background-color: #6db7ef;
+        color: white;
+        text-decoration: none;
+    }
+
+    #googgle {
+        background-color: #e06555;
+        color: white;
+        text-decoration: none;
+    }
+
+    #subcontainer {
+
+        padding: 40px;
+        background-color: #f2f2f2;
+    }
+
+    #subcontainer a,
+    input {
+        width: 100%;
+        display: inline-block;
+        padding: 14px;
+        margin-bottom: 10px;
+    }
+
+    #subcontainer h1,
+    #subcontainer p {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    #btn {
+
+        width: 100%;
+        padding: 14px;
+        color: white;
+        background-color: #28b581;
+    }
+
+    #btn:hover {
+        background-color: #04AA6D;
+    }
+
+
+    section {
+        background-color: #666666;
+        color: white;
+    }
+
+    section div {
+        padding: 12px 16px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    section div:hover {
+        background-color: #3B5998;
+    }
+
+    #verti {
+        height: 170px;
+        width: 80px;
+        position: relative;
+        display: none;
+    }
+
+    #hori {
+        text-align: center;
+        padding: 16px; 
+    }
+
+    @media screen and (min-width:600px) {
+        #subcontainer {
+            display: flex;
+            flex-direction: row;
+        }
+        #hori{
+            display: none;
+        }
+        #verti {
+            display: block; 
+        }
+    }
+</style>
+
+<body>
+
+    <div id="container">
+        <h1> Login with Social Media or Manually</h1>
+        <div id="subcontainer">
+            <div>
+                <a id="fac" href="#"><i class="fa fa-facebook fa-fw"></i> Login with Facebook</a>
+                <a id="twi" href="#"><i class="fa fa-twitter fa-fw""> </i> Login with Twitter</a>
+                <a id="googgle" href="#"> <i class="fa fa-google fa-fw"></i> Login with Google</a>
+            </div>
+            <div id="verti">
+                <div style="height: 170px; width:2px; background-color:gray; position: absolute;  left: 50%;"></div>
+                <div style="border: 2px solid gray; border-radius: 50%; padding: 12px; position: absolute; top: 50%; left: 50%; 
+                transform: translate(-50%,-50%); z-index: 1;  background-color: #f2f2f2;">Or</div>
+            </div>
+            <div id="hori">Or sign in manually:</div>
+            <div>
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Username">
+                <button id="btn">Login</button>
+            </div>
+        </div>
+        <section>
+            <div>Sign up</div>
+            <div>Forgot passwod ?</div>
+        </section>
+
+</body>
+
+</html>

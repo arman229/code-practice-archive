@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.btn {
+    padding: 20px;
+    background-color: dodgerblue;
+    font-size: 20px;
+    color: white;
+    border: none;
+
+}
+
+.btn:hover {
+    background-color: #0b7dda;
+}
+
+.hoverbtn {
+    padding: 12px 16px;
+    margin-top: 16px;
+    display: inline-block;
+    background-color: #0b7dda;
+    cursor: pointer;
+}
+
+.arrow {
+    margin-left: 8px;
+    color: white;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.hoverbtn span {
+    transition: all 0.3s ease;
+
+}
+
+.hoverbtn:hover span {
+    padding-left: 12px;
+}
+
+.hoverbtn:hover .arrow {
+    opacity: 1;
+}
+
+.button {
+    position: relative;
+    background-color: #04AA6D;
+    border: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition-duration: 0.5s;
+    text-decoration: none;
+    cursor: pointer;
+overflow: hidden;
+
+}
+
+/*
+.button:after {
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 8px;
+    background-color: #0b7dda;
+    opacity: 0;
+    transition: all 0.3s ease;
+}*/
+.button:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.button:active:after {
+    opacity: 1;
+    transition: 0s;
+
+}

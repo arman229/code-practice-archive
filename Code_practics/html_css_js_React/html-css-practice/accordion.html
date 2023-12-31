@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+</head>
+<style>
+    body {
+        margin-left: 20px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .btn {
+        background-color: rgb(134, 134, 207);
+        width: 100%;
+        padding: 12px 16px;
+        text-align: left;
+        color: white;
+        font-size: 20px;
+        outline: 1px solid black;
+        border: none;
+
+
+    }
+
+    .btn:hover {
+        background-color: blue;
+    }
+
+    .content {
+        padding: 20px;
+        outline: 2px solid red;
+        display: none;
+        transition: all 0.3s;
+    }
+</style>
+
+<body>
+    <button class="btn" id="btn1">Section1</button>
+
+    <div class="content" id="content1" onmouseover="onMouse()">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor
+        incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat.</div>
+
+    <button class="btn">Section2</button>
+
+    <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat.</div>
+    <button class="btn">Section3</button>
+
+    <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat.</div>
+    <button class="btn">Section4</button>
+
+    <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat.</div>
+    <button class="btn">Section5</button>
+
+    <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat.</div>
+    <script>
+        var btns = document.getElementsByClassName("btn");
+        var contents = document.getElementsByClassName("content");
+
+        for (let i = 0; i < btns.length; i++) {
+            const btn = btns[i];
+            btn.onclick = function toggle() {
+                var content = contents[i]
+                if (content.style.display == 'none') {
+                    content.style.display = 'block'
+                } else {
+                    content.style.display = 'none'
+                }
+            }
+        }
+        function onMouse() {
+            let html = `<h2>Header</h2><ul>`;
+            html += "<li>apple</li>"
+            html += "</ul>"
+
+
+            .innerhtml=html
+        }
+
+
+    </script>
+</body>
+
+</html>

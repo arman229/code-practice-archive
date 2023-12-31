@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #picture {
+        width: 500px;
+        height: 400px;
+
+    }
+
+    #container {
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+        background-color: black;
+    }
+
+    #picture1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #footer {
+        position: absolute;
+        color: rgb(245, 179, 204);
+    }
+
+    #cross {
+        padding: 14px 17px;
+        position: absolute;
+        right: 10px;
+        color: white;
+    }
+</style>
+
+<body>
+    <img id="picture" src="https://www.w3schools.com/howto/img_snow_wide.jpg" alt="" onclick="animationimg()">
+    <div id="container"> <span id="cross">cross</span><img id="picture1"
+            src="https://www.w3schools.com/howto/img_snow_wide.jpg" alt=""> <span id="footer">Snow</span></div>
+
+</body>
+
+</html>

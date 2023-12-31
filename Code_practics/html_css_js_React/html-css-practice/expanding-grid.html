@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanding Grid</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        color: white;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #row {
+        display: flex;
+    }
+
+    .column {
+
+        font-size: 2em;
+        flex: 33%;
+        padding: 62px;
+
+    }
+
+    .one,
+    .box1 {
+        background-color: green;
+    }
+
+    .two,
+    .box2 {
+        background-color: blue;
+    }
+
+    .three,
+    .box3 {
+        background-color: red;
+    }
+
+    .content {
+        padding: 14px;
+        font-size: 1.5em;
+
+    }
+
+    .icon {
+        cursor: pointer;
+        font-size: 2.2em;
+        padding: 14px;
+        float: right;
+    }
+</style>
+
+<body>
+    <div id="row">
+        <div onclick="shows1()" class="column one">Box1</div>
+        <div onclick="shows2()" class="column two">Box2</div>
+        <div onclick="shows3()" class="column three">Box3</div>
+    </div>
+    <div class="content box1" style="display: none;" id="content-box1">
+        <span  onclick="this.parentElement.style.display='none'" class="icon">&times; </span>
+        <h1>Box 1</h1>
+        <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis
+            ullamcorper nam. Ius error diceret deseruisse ad</p>
+    </div>
+    <div class="content box2" style="display: none;" id="content-box2">
+        <span onclick="close(1)" class="icon">&times;</span>
+        <h1>Box 2</h1>
+        <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis
+            ullamcorper nam. Ius error diceret deseruisse ad</p>
+    </div>
+    <div class="content box3" style="display: none;" id="content-box3">
+        <span onclick="close(2)" class="icon">&times;</span>
+        <h1>Box 3</h1>
+        <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis
+            ullamcorper nam. Ius error diceret deseruisse ad</p>
+    </div>
+    <script>
+    var icon= document.getElementsByClassName("icon")[0]
+        var a, content1 = document.getElementById("content-box1")
+
+        var content2 = document.getElementById("content-box2")
+
+        var content3 = document.getElementById("content-box3")
+        function shows1() {
+            content1.style.display = "block"
+            content2.style.display = "none"
+            content3.style.display = "none"
+        }
+        function shows2() {
+            content1.style.display = "none"
+            content2.style.display = "block"
+            content3.style.display = "none"
+        }
+        function shows3() {
+            content1.style.display = "none"
+            content2.style.display = "none"
+            content3.style.display = "block"
+        }
+        function close(a) {
+            content1.style.display = "none"
+            content2.style.display = "none"
+            content3.style.display = "none"
+        }
+    </script>
+</body>
+
+</html>

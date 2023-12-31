@@ -1,0 +1,17 @@
+
+body{
+    margin: 0;
+}
+table {
+    width: 100%;
+}
+tr * {
+    border: 2px solid blue;
+    padding: 10px;
+    text-align: left;
+}
+
+tr:hover {
+    color: blue;
+    background-color: red;
+}

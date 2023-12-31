@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    font-size: 22px;
+}
+
+nav {
+    background-color: black;
+    color: white;
+    display: flex;
+
+}
+
+nav a {
+    padding: 13px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #333333;
+}
+
+.end {
+    text-align: center;
+    flex-grow: 1;
+}
+
+@media screen and (max-width: 789px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+    }
+
+    nav a {
+        text-align: center;
+    }
+}

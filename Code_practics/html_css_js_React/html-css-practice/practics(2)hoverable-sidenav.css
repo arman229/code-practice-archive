@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+nav a {
+    display: block;
+    font-size: 25px;
+    text-decoration: none;
+    outline: 2px solid red;
+    padding: 12px;
+    margin-top: 18px;
+    width: 150px;
+    position: relative;
+    left: -10%;
+    border-radius: 10px;
+    transition: 0.3s all ease;
+}
+
+nav a:hover {
+    left:  0 ;
+
+}
+
+.nav-1 {
+    background-color: red;
+}
+
+.nav-2 {
+    background-color: teal;
+}
+
+.nav-3 {
+    background-color: greenyellow;
+}
+
+.nav-4 {
+    background-color: orange;
+}

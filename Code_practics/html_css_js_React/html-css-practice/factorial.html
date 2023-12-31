@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Factoriak</title>
+</head>
+<body>
+<h1>Factorial test</h1>
+<input id="number_input" placeholder="Please enter number" required/>
+<button id="find_fact">Find Factorial</button>
+<div id="output"></div>
+<script>
+    let button = document.getElementById("find_fact")
+    button.addEventListener("click", findFact)
+
+    function findFact() {
+        let inputElement = document.getElementById("number_input")
+        let output = document.getElementById("output")
+        let userEnteredNumber = inputElement.value
+        output.innerText=userEnteredNumber*userEnteredNumber
+    }
+
+
+</script>
+</body>
+</html>

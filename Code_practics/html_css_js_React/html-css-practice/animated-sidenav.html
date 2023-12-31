@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Side Navigation</title>
+
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #left {
+        width: 200px;
+        height: 100vh;
+        background-color: wheat;
+        position: fixed;
+        margin-left: -200px;
+        transition: all 0.3s;
+    }
+
+    #left nav a {
+        padding: 12px 16px;
+        font-size: 20px;
+        color: black;
+        display: block;
+        text-decoration: none;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    #closeBtn {
+        text-align: end;
+        cursor: pointer;
+        font-size: 2em;
+        padding: 16px;
+        display: block;
+    }
+
+    #menu {
+        font-size: 1.2em;
+        padding: 16px;
+        cursor: pointer;
+    }
+
+    #container {
+        margin-left: 0px;
+        transition: all 0.3s; 
+        height: 100vh;
+    }
+</style>
+
+<body>
+    <div id="left">
+        <span id="closeBtn" onclick="hideMenu()"> &times;</span>
+        <nav>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">contact</a>
+        </nav>
+    </div>
+    <div id="container">
+        <span id="menu" onclick="showMenu()">&#9776;</span>
+        <p>lkj sldfa jdsl;a jflkj sldfa jdsl;a jflkj sldfa jdsl;a jflkj sldfa jdsl;a jflkj sldfa jdsl;a jflkj sldfa
+            jdsl;a jfl;</p>
+    </div>
+</body>
+<script>
+    let drawere = document.getElementById('left')
+    let container = document.getElementById('container')
+    function showMenu() {
+        drawere.style.marginLeft = '0px'
+        container.style.marginLeft = '200px';
+        container.style.backgroundColor='rgba(0,0,0,0.4)'
+    }
+    function hideMenu() {
+        drawere.style.marginLeft = '-200px'
+        container.style.marginLeft = '0px'
+        container.style.backgroundColor='rgba(0,0,0,0)'
+    }
+</script>
+
+</html>

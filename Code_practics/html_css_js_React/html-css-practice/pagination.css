@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#pagination {
+    margin-top: 22px;
+}
+
+#pagination a {
+    text-decoration: none;
+    padding: 12px 16px;
+    color: black;
+    outline: 2px solid red;
+}
+
+.active {
+    background-color: dodgerblue;
+    color: red;
+}
+
+#pagination a:hover:not(.active) {
+    background-color: #555555;
+}

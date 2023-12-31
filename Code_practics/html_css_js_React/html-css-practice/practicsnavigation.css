@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+}
+
+.navigation {
+    background-color: #111111;
+}
+
+.navigation a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 16px 12px;
+    color: white;
+}
+
+.active {
+    background-color: green;
+    color: black;
+}
+
+.navigation a:hover {
+    background-color: red;
+    color: black;
+}

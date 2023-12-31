@@ -1,0 +1,17 @@
+
+
+
+.mainButton {
+
+    border: none;
+    border-radius: 8px;
+    background: #E5E3E8;
+    padding: 12px 24px;
+    color: rgba(137, 0, 0, 1);
+}
+
+.mainButton:hover {
+    color: #E5E3E8;
+    transition: 0.3s ease all;
+    background: rgba(137, 0, 0, 1);
+}

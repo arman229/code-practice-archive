@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Factorial of an integer</title>
+</head>
+
+<body>
+    
+    Enter any number <input id="input_value"/>
+    <input type="text" onkeypress="dateChange()" id="date">
+    <button id="button" onclick="factorial()">Find</button>
+    <p id="fact"> </p>
+</body>
+<script>
+function dateChange(){
+    var dateStr=document.getElementById("date").value
+ dateStr.
+    console.log( document.getElementById("date").value)
+}
+    function factorial() {
+        var fact = document.getElementById("fact")
+        var input_value = Number(document.getElementById("input_value").value);
+        if(input_value<0){
+            alert("Enter positive number")
+            return
+        }
+        var f = 1
+        if (input_value > 1) {
+            for (let i = input_value; i > 0; i--) {
+                f *= i;
+            }
+        }
+        fact.innerHTML = "factorial is:" + f;
+    }
+</script>
+
+</html>

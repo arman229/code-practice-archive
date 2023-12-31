@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent Image Text</title>
+</head>
+<style>
+    * { box-sizing: border-box;}
+    #container {
+        position: relative;
+       
+        font-family: Arial;
+        max-width: 800px; margin:   auto;
+
+    }
+
+    #container img {
+        width: 100%;
+    }
+
+    .content {
+        position: absolute;
+        
+        background: rgb(0, 0, 0);
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+        bottom: 20px;
+       
+    }
+</style>
+
+
+<body>
+    <h1>Responsive Image with Transparent Text</h1>
+    <div id="container">
+        <img src="https://www.w3schools.com/w3images/notebook.jpg" alt="">
+        <div class="content">
+            <h1>Heading</h1>
+            <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque
+                expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+        </div>
+    </div>
+</body>
+
+</html>

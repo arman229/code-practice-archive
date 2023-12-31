@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    font-size: 23px;
+}
+
+#text-bold {
+    text-decoration: bold;
+}
+
+nav {
+    position: fixed;
+    width: 200px;
+    top: 0px;
+    height: 100vh;
+    background-color: #555555;
+    margin-top: 0;
+}
+
+nav a {
+    color: white;
+    display: block;
+    text-decoration: none;
+
+    outline: 2px solid red;
+    padding: 13px;
+}
+
+section {
+    margin: 43px 0 0 210px;
+    height: 1999px;
+}
+
+nav a:hover:not(.active) {
+    background-color: red;
+    color: white;
+}
+
+.active {
+    background-color: #04AA6D;
+    color: white
+}
+
+@media screen  and (max-width: 800px) {
+    nav {
+        position: static;
+        height: auto;
+        width: 100%;
+    }
+
+    nav a {
+        text-align: center;
+    }
+
+    section {
+        margin-left: 2px;
+    }
+}
+
+@media screen  and (max-width: 500px) {
+    nav a {
+        display:block;
+    }
+}

@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+}
+
+#first {
+    height: 200px;
+    width: 400px;
+    background-color: red;
+    transform: translate(10px, 20px);
+    color: white;
+    transition: height 5s, width 5s, transform 3s;
+
+}
+
+#first:hover {
+    width: 800px;
+    height: 500px;
+    background-color: green;
+    background-image: linear-gradient(red, blue, green, orange, yellow, red);
+    transition-timing-function: linear;
+
+}
+
+#second {
+    height: 200px;
+    width: 400px;
+    transition: height 5s, width 5s;
+
+    transform: rotateY(0deg);
+    background-color: green;
+    color: white;
+    text-align: center;
+}
+
+#second:hover {
+    width: 800px;
+    height: 500px;
+    background-color: green;
+    background-image: linear-gradient(red, blue, green, orange, yellow, red);
+    transition-timing-function: ease;
+}
+
+#third {
+    height: 200px;
+    transition: height 5s, width 5s;
+    width: 400px;
+    background-color: blue;
+    transform: scale(1.5, 1);
+    color: white;
+    text-align: center;
+}
+
+#third:hover {
+    width: 800px;
+    height: 500px;
+    background-color: green;
+    background-image: linear-gradient(red, blue, green, orange, yellow, red);
+    transition-timing-function: ease-in;
+}
+
+#fourth {
+    height: 200px;
+    width: 400px;
+    transition: height 5s, width 5s;
+    background-color: orange;
+    transform: skewX(9deg);
+    color: white;
+    text-align: center;
+    outline: 3px solid red;
+}
+
+#fourth:hover {
+    width: 800px;
+    height: 500px;
+    background-color: green;
+    background-image: linear-gradient(red, blue, green, orange, yellow, red);
+    transition-timing-function: ease-out;
+}
+
+#fifth {
+    height: 200px;
+    width: 400px;
+    transition: height 5s, width 5s;
+    background-color: midnightblue;
+    transform: skewY(10deg);
+    color: white;
+    text-align: center;
+}
+
+#fifth:hover {
+    width: 800px;
+    height: 500px;
+    background-color: green;
+    background-image: linear-gradient(red, blue, green, orange, yellow, red);
+    transition-timing-function: ease-in-out;
+}
+
+#sixth {
+    height: 200px;
+    width: 400px;
+
+    background-color: teal;
+
+    color: white;
+    text-align: center;
+
+}
+
+#sixth:hover {
+    height: 200px;
+    width: 400px;
+    transition:  background-color 3s,height 5s, width 5s, linear,5s;
+    background-color: white;
+
+
+
+
+}

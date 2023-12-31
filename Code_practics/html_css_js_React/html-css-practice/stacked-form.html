@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacked Form</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    form {
+        background-color: #f2f2f2;
+        ;
+        padding: 24px;
+    }
+
+    input[type=text],
+    select,
+    #btn {
+        padding: 12px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        width: 100%;
+    }
+
+    label {
+        width: 100%;
+    }
+
+    #btn {
+        background-color: #04AA6D;
+        cursor: pointer;
+    }
+
+    #btn:hover {
+        background-color: #45a049;
+    }
+</style>
+
+<body>
+    <form action="#">
+        <label for="fname">First Name</label>
+        <input type="text" name="fname" placeholder="Your name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" name="lname" placeholder="Your last name..">
+
+        <label for="country">Country</label>
+        <select name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+        </select>
+        <button id="btn">Submit</button>
+    </form>
+</body>
+
+</html>

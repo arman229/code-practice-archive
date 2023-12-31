@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lightbox</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        color: white;
+        background-color: black;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #image {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    #container {
+        top: 60px;
+        margin: 10px;
+        position: relative;
+        outline: 2px solid red;
+
+    }
+
+    #numbertext {
+        top: 0px;
+        position: absolute;
+        padding: 14px;
+        outline: 2px solid red;
+    }
+
+    #cross {
+        position: absolute;
+        right: 10px;
+
+        font-size: 2em;
+        padding: 8px;
+        color: white;
+    }
+
+
+    #bar {
+        display: flex;
+    }
+
+    #bar img {
+        width: calc(100%/4);
+    }
+</style>
+
+<body>
+    <div id="cross">&times;</div>
+    <div id="container">
+
+
+        <img id="image" src="https://www.w3schools.com/howto/img_nature_wide.jpg" alt="">
+        <div  id="numbertext">s</div>
+        
+        <div   id="caption"></div>
+        <button  id="leftbtn" onclick="left()">&#10094;</button>
+        <button   id="rightbtn" onclick="right()">&#10095;</button>
+        <div id="bar">
+            <img id="img1" src="https://www.w3schools.com/howto/img_nature_wide.jpg">
+            <img id="img2" src="https://www.w3schools.com/howto/img_snow_wide.jpg">
+            <img id="img3" src="https://www.w3schools.com/howto/img_lights_wide.jpg">
+            <img id="img4" src="https://www.w3schools.com/howto/img_mountains_wide.jpg">
+        </div>
+
+    </div>
+
+</body>
+<script>
+
+    var images = ["https://www.w3schools.com/howto/img_nature_wide.jpg", "https://www.w3schools.com/howto/img_snow_wide.jpg", "https://www.w3schools.com/howto/img_lights_wide.jpg", "https://www.w3schools.com/howto/img_mountains_wide.jpg"]
+    img1.onclick = function () { image.src = images[0] }
+    img2.onclick = function () { image.src = images[1] }
+    img3.onclick = function () { image.src = images[2] }
+    img4.onclick = function () { image.src = images[3] }
+</script>
+
+</html>

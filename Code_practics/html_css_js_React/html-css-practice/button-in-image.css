@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.btn {
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    outline: none;
+    font-size: 19px;
+    position: absolute;
+    background-color: black;
+    opacity: .5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    border: 2px solid red;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+.container .btn:hover {
+    opacity: 1;
+}

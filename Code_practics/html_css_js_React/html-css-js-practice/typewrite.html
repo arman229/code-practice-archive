@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      var i = 0;
+      var text = " This is a typing text effect.This is a typing text effect.This is a typing text effect.This is a typing text effect.This is a typing text effect.This is a typing text effect.This is a  <>typing text effect.This is a typing text effect.This is a typing text effect.This is a typing text effect.This is a typing text effect. ";
+      var speed = 19;
+
+      function typeWriter() {
+        if (i < text.length) {
+          document.getElementById("text").innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+    </script>
+  </head>
+  <body onload="typeWriter()">
+    <h2 id="text"></h2>
+  </body>
+</html>

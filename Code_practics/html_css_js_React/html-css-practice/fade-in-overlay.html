@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade in Overlay</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #container {
+        display: inline-block;
+        width: 400px;
+        height: 400px;
+        position: relative;
+    }
+
+    #container1 {
+        position: absolute;
+        height: inherit;
+        width: inherit;
+        background-color: #00ba73;
+        transition: all 0.4s;
+
+    }
+
+    #container2 {
+        position: absolute;
+        display: flex; 
+        justify-content: center;
+        align-items: center; 
+        background-color: #008CBA;
+        height: 0px;
+        width: inherit;
+        transition: all 0.4s; 
+        overflow: hidden;
+    }
+
+    #container img {
+        width: 100%;
+    }
+
+    #container:hover #container2 {
+        height: inherit;
+    }
+</style>
+
+<body>
+
+    <h1>Fade in Overlay</h1>
+    <p>Hover over the image to see the effect</p>
+    <div id="container">
+        <div id="container1">
+            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+        </div>
+        <div id="container2">
+            <div class="text">Hello World</div>
+        </div>
+    </div>
+
+    </div>
+
+</body>
+
+</html>

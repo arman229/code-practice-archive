@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sub nav</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        nav {
+            background-color: blue;
+        }
+
+        .subNav {
+            display: inline-block;
+
+        }
+
+        .subNav button,
+        nav>a,
+        .full-bleed-menu a {
+            padding: 12px 16px;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            margin: 0;
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+
+        .full-bleed-menu {
+            background-color: rgb(57, 3, 107);
+            display: none;
+            position: absolute;
+            left: 0;
+            width: 100vw;
+        }
+        .subNav:hover .full-bleed-menu{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#">Home</a>
+        <div class="subNav">
+            <button>About <i class="fa fa-caret-down"></i></button>
+            <div class="full-bleed-menu">
+                <a href="#bring">Bring</a>
+                <a href="#deliver">Deliver</a>
+                <a href="#package">Package</a>
+                <a href="#express">Express</a>
+            </div>
+        </div>
+        <div class="subNav">
+            <button>Services <i class="fa fa-caret-down"></i></button>
+              <div class="full-bleed-menu">
+                <a href="#bring">Brings</a>
+                <a href="#deliver">Delivers</a>
+                <a href="#package">Packages</a>
+                <a href="#express">Expresss</a>
+            </div>  
+        </div>
+        <div class="subNav">
+            <button>Partners <i class="fa fa-caret-down"></i></button>
+              <div class="full-bleed-menu">
+                <a href="#bring">Bringd</a>
+                <a href="#deliver">Delivedr</a>
+                <a href="#package">Packaged</a>
+                <a href="#express">Expressd</a>
+            </div>  
+        </div>
+        <a href="#">Contact</a>
+    </nav>
+</body>
+
+</html>

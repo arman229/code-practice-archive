@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>image model</title>
+    <style>
+        body {
+            margin: 0; 
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        #container { 
+            height: 100vh;
+            width: 100vw; 
+        }
+
+        #myImg1 {  
+            animation-name: zoom;
+            animation-duration: 2s;  
+            width: 40%;
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        .close {
+            color: rgb(240, 12, 12);
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            padding: 12px;
+            font-size: 1.7em;
+            cursor: pointer;
+            display: none;
+        }
+    </style>
+</head>
+
+
+<body>
+    <img id="myImg"  src="image1.jpg" alt="Snow">
+    <div id="container">
+        <img id="myImg1"  src="image1.jpg" alt="Snow">
+        <span id="closed" class="close df">&times;</span>
+    </div> 
+</body>
+
+<script>
+    var con = document.getElementById("container")
+    var Img = document.getElementById('myImg')
+    var closeBtn = document.getElementById('closed')
+    Img.onclick = function () { 
+        closeBtn.style.display = 'block'
+        con.style.backgroundColor = 'black'
+        closeBtn.className=  closeBtn.className +" close"
+        closeBtn.classList.add("close")
+        closeBtn.className.replace("close","")
+    }
+
+
+    closeBtn.onclick = function () {
+        myImg.style.width = '40%'
+        con.style.backgroundColor = 'unset'
+        closeBtn.style.display = 'none'
+    }
+    closeBtn.classList.remove("close")
+      
+</script>
+
+</html>

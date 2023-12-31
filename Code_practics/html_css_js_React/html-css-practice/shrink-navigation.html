@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Down a Bar</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #topnav {
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        position: fixed;
+        top: 0;
+        height: 200px;
+        width: 100%;
+        transition: all 0.3s;
+        background-color: black;
+    }
+
+
+
+    #topnav a {
+        display: inline-block;
+        padding: 14px 16px;
+        border-radius: 20px;
+        background-color: aqua;
+        text-decoration: none;
+
+    }
+
+    #container {
+        margin-top: 200px;
+        padding-left: 15px;
+        padding-top: 30px;
+        height: 3030px;
+        transition: all 0.3s;
+    }
+
+    #first {
+        font-size: 2.5em;
+        transition: all 0.3s;
+    }
+
+    @media screen and (max-width: 500px) {
+        #topnav {
+            flex-direction: column;
+        }
+
+        #topnav a {
+            display: block;
+            width: 100vw;
+            border-radius: 0;
+        }
+    }
+</style>
+
+<body>
+    <nav id="topnav">
+        <div id="first">
+            <a href="#">Company Logo</a>
+        </div>
+        <div id="second">
+            <a href="#">Home</a>
+            <a href="#">News</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+    <div id="container">
+        <h1>This example demonstrates how to slide down a navbar when the user starts to scroll the page.</h1>
+        <p>Scroll down this frame to see the effect!
+
+            Scroll to the top to hide the navbar.
+
+            Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum.</p>
+    </div>
+    <script>
+        window.onscroll = scrollfunction
+        let container = document.getElementById('container')
+        function scrollfunction() {
+            console.log(document.getElementById("topnav").style.height)
+            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+                document.getElementById("topnav").style.height = "100px";
+                document.getElementById("first").style.fontSize = "1em";
+                container.style.marginTop='100px'
+            }
+            else {
+                document.getElementById("topnav").style.height = "200px";
+                // var marginTopToset = document.getElementById("topnav").offsetHeight
+                document.getElementById("first").style.fontSize = "2.5em";
+                container.style.marginTop='200px'
+            }
+        }</script>
+</body>
+
+</html>

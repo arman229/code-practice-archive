@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    font-size: 22px;
+}
+
+.container {
+    position: relative;
+
+}
+
+.dropup-content {
+    border: 2px solid red;
+    width: 160px;
+    background-color: #555555;
+    position: absolute;
+    bottom: 33px;
+    display: none;
+}
+
+.dropup-content a {
+    display: block;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.dropup-content:hover .dropup-content a {
+    background-color: red;
+}
+
+.container:hover .dropup-content {
+    display: block;
+}

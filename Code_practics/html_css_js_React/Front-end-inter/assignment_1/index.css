@@ -1,0 +1,14 @@
+
+.external_css{
+    background-color: green;
+    color: white;
+    padding: 20px;
+}
+#my_margin{
+    border: 2px solid gray;
+    margin: 20px;
+}
+#my_padding{
+    border: 2px solid blue;
+    padding: 30px;
+}

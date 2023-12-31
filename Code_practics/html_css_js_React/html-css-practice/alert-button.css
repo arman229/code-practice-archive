@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container button {
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+.Success {background-color: #04AA6D;}
+.Success:hover {background-color: #46a049;}
+
+.Info {background-color: #2196F3;}
+.Info:hover {background: #0b7dda;}
+
+.Warning {background-color: #ff9800;}
+.Warning:hover {background: #e68a00;}
+
+.Danger {background-color: #f44336;}
+.Danger:hover {background: #da190b;}
+
+.Default {background-color:firebrick ; color: black;}
+.Default:hover {background: #ddd;}

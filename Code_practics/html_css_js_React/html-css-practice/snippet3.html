@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    @keyframes gola_rotate {
+        from {
+            transform: rotateZ(0deg);
+        }
+
+        to {
+            transform: rotateZ(359deg);
+        }
+    }
+
+    @keyframes person_open {
+        from {
+            transform: scale(0, 0);
+        }
+
+        to {
+            transform: scale(100%, 100%);
+        }
+    }
+
+    .member_card {
+
+        height: 330px;
+        width: 224px;
+        display: inline-block;
+    }
+
+    .box1 {
+        position: absolute;
+        transition: all 0.3s;
+    }
+
+    .box2 {
+        transform: scale(0);
+        position: absolute;
+        transition: all 0.3s;
+    }
+
+    .box1 .image_person {
+        height: 148px;
+        width: 148px;
+        top: 32px;
+        left: 32px;
+        position: absolute;
+        border-radius: 50%;
+
+    }
+
+    .box1 .image_gola {
+        animation: gola_rotate 20s linear infinite
+    }
+
+    .box2 .image_person {
+        position: absolute;
+        height: 330px;
+        width: 224px;
+        top: 0;
+        left: 0;
+        border-radius: 12px;
+    }
+
+    .box2 .info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+    }
+
+    .member_card:hover .box1 {
+        transform: scale(0);
+    }
+
+    .member_card:hover .box2 {
+        transform: scale(1);
+    }
+
+
+    .t_center {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <section>
+        <div class="member_card">
+            <div class="box1">
+                <img class="image_gola" src="images/gola.png" alt="sd">
+                <img class="image_person" src="images/Asof-Pir.jpg" alt="dfsafsd">
+                <div class="info">
+                    <h1 class="t_center">Mr.Asif Pir <br>CEO Systems </h1>
+                    <p class="t_center">Member</p>
+                </div>
+            </div>
+            <div class="box2">
+                <img class="image_person" style="background-color: aqua;" src="images/Asof-Pir.jpg" alt="dfsafsd">
+                <div class="info">
+                    <h1 class="t_center">Mr.Asif Pir <br>CEO Systems </h1>
+                    <p class="t_center">Member</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

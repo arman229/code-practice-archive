@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+
+<style>
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    nav {
+        background-color: black;
+    }
+
+    nav a {
+        padding: 12px;
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+    }
+
+    nav a:hover {
+        background-color: white;
+        color: black;
+    }
+
+    #img-container .mySlides {
+        width: 100%;  
+        display: block; 
+    }
+
+    #content {
+        max-width: 600px;
+
+        margin-left: auto;
+        text-align: justify;
+        margin-right: auto;
+        font-size: 1.5em;
+        padding: 12px;
+    }
+
+    #content h1,
+    #content h4 {
+        text-align: center;
+    }
+
+    #img-container2 {
+        display: flex;
+
+        padding: 18px;
+        background-color: gray;
+    }
+
+    #img-container2 div {
+        flex-grow: 0.33;
+    }
+
+    #img-container2 p {
+        text-align: center;
+    }
+
+    #img-container2 div img {
+        width: 100%;
+        padding: 12px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 67px;
+        background-color: black;
+        color: white;
+
+    }
+
+    footer a {
+        font-size: 1.3em;
+        color: white;
+    }
+
+
+    @media screen and (max-width:600px) {
+        #img-container2 {
+            flex-direction: column;
+        }
+
+    }
+</style>
+
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Band</a>
+        <a href="#">Tour</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div id="img-container">
+        <img class="mySlides" style="padding: 0;" src="https://www.w3schools.com/howto/img_band_la.jpg" alt="">
+        <img class="mySlides"  style="padding: 0;" src="https://www.w3schools.com/howto/img_band_ny.jpg" alt="">
+        <img class="mySlides"   style="padding: 0;" src="https://www.w3schools.com/howto/img_band_chicago.jpg" alt="">
+    </div>
+    <div id="content">
+        <h1> THE BAND</h1>
+        <h4> We love music</h4>
+        <p>We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+    </div>
+    <div id="img-container2">
+        <div>
+            <p>John</p>
+            <img src="https://www.w3schools.com/howto/img_bandmember.jpg" alt="">
+            <p>John is the smartest.</p>
+        </div>
+        <div>
+            <p>Paul</p>
+            <img src="https://www.w3schools.com/howto/img_bandmember.jpg" alt="">
+            <p>Paul is the prettiest.</p>
+        </div>
+        <div>
+            <p>Ringo</p>
+            <img src="https://www.w3schools.com/howto/img_bandmember.jpg" alt="">
+            <p>Ringo is the funniest.</p>
+        </div>
+    </div>
+    <footer>
+        <a href="#"><i class="fa fa-facebook-official"></i></a>
+        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-flickr"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <p>
+            Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+        </p>
+    </footer>
+    <script>
+
+        var myIndex = 0;
+        automaticslides();
+
+        function automaticslides() {
+            var mySlides = document.getElementsByClassName("mySlides");
+            for (var i = 0; i < mySlides.length; i++) {
+                  mySlides[i].style.display = "none";
+            }
+            if (myIndex == mySlides.length - 1) {
+                myIndex = 0
+            } else {
+                myIndex++;
+            }
+                mySlides[myIndex].style.display = "block";
+            setTimeout(automaticslides, 1000);
+        }
+
+    </script>
+</body>
+
+</html>

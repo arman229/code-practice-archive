@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+nav { overflow: auto;
+    margin-left: 10px;
+    white-space: nowrap;
+
+
+    background-color: red;
+}
+nav a{ text-decoration: none;
+padding: 14px;  display: inline-block; color: white;
+ }
+
+nav a:hover {
+    background-color: #04AA6D;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opacity with Box</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        margin-left: 10px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #container {
+
+        display: inline-block;
+        position: relative;
+    }
+
+
+    #container2 .text {
+        position: absolute;
+        display: none;
+        top: 50%;
+        border: 2px solid red;
+        color: white;
+        font-size: 16px;
+        padding: 16px 32px;
+        left: 50%;
+        background-color: #04AA6D;
+        transform: translate(-50%, -50%);
+    }
+    #container:hover img {
+        opacity: .4;
+    }
+    #container:hover #container2 .text {
+        display: block;
+    }
+</style>
+
+<body>
+
+    <h1>Opacity with Box</h1>
+    <p>Hover over the image to see the effect</p>
+    <div id="container">
+        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+
+        <div id="container2">
+            <div class="text">John Doe</div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

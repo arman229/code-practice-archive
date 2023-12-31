@@ -1,0 +1,36 @@
+ 
+  body {
+    margin: 0;
+    text-align: center;
+    background-color: gray;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  #container {
+    width: 300px;
+    background-color: orange;
+    height: 300px;
+    border-radius: 15px;
+    border: 2px solid red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  button {
+    padding: 14px 20px 14px 20px;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 13px;
+    background-color: white;
+  }
+
+  button:hover {
+    background-color: black;
+    color: white;
+  }
+ 

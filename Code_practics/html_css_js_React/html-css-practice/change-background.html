@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Change Background on Scroll</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .cov {
+        height: 400px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    section {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: fixed;
+        font-size: 5em;
+        border: 10px solid white;
+        color: white;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    #image1 {
+        background-image: url("https://www.w3schools.com/howto/img_nature_wide.jpg");
+    }
+
+    #image2 {
+        background-image: url("https://www.w3schools.com/howto/img_snow_wide.jpg");
+    }
+
+    #image3 {
+        background-image: url("https://www.w3schools.com/howto/img_lights_wide.jpg");
+    }
+
+    #image4 {
+        background-image: url("https://www.w3schools.com/howto/img_snow_wide.jpg");
+    }
+
+    #image5 {
+        background-image: url("https://www.w3schools.com/howto/img_lights_wide.jpg");
+    }
+
+    #image6 {
+        background-image: url("https://www.w3schools.com/howto/img_mountains_wide.jpg");
+    }
+
+    #image7 {
+
+        background-image: url("https://www.w3schools.com/howto/img_mountains_wide.jpg");
+    }
+</style>
+
+<body>
+
+    <div id="container">
+        <div id="image1" class="coV"> </div>
+        <div id="image2" class="cov"> </div>
+        <div id="image3" class="cov"> </div>
+        <div id="image4" class="cov"> </div>
+        <div id="image5" class="cov"> </div>
+        <div id="image6" class="cov"> </div>
+        <div id="image7" class="cov"> </div>
+
+    </div>
+    <section> TEXT</section>
+</body>
+
+</html>

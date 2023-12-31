@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    table {
+        border-collapse: collapse;
+        padding: 12px;
+        /*table center by using margin property*/
+        margin-left: auto;
+        margin-right: auto;
+        /*set width 100%*/
+        width:100%;
+        border: 2px solid gray;
+    }
+
+    th,
+    td {
+        padding: 18px;
+        text-align: left;
+        border: 2px solid gray;
+    }
+
+    tr:nth-child(even) {
+        background-color: rgb(128, 20, 20);
+        color: white;
+    }
+
+    #row {
+        margin-left: -5px;
+        margin-right: -5px;
+        display: flex;
+    }
+
+    .columns {
+        flex: 50%;
+        padding: 5px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #row {
+            flex-direction:column;
+        }
+    }
+</style>
+
+<body>
+
+    <div id="row">
+        <div class="columns">
+            <table>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Points</th>
+                </tr>
+                <tr>
+                    <td>Jill</td>
+                    <td>Smith</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Eve</td>
+                    <td>Jackson</td>
+                    <td>94</td>
+                </tr>
+                <tr>
+                    <td>Adam</td>
+                    <td>Johnson</td>
+                    <td>67</td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="columns">
+            <table>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Points</th>
+                </tr>
+                <tr>
+                    <td>Jill</td>
+                    <td>Smith</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Eve</td>
+                    <td>Jackson</td>
+                    <td>94</td>
+                </tr>
+                <tr>
+                    <td>Adam</td>
+                    <td>Johnson</td>
+                    <td>67</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade in Overlay</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        margin-left: 10px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #container {
+
+        display: inline-block;
+        position: relative;
+    }
+
+    #container2 {
+        top: 0px;
+        width: 500px;
+        height: 500px;
+        background-color: #008CBA;
+        transition: 3s ease;
+        transform: scale(0);
+        position: absolute;
+
+    }
+
+    #container2 .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+     
+
+    #container:hover #container2 {
+        transform: scale(1);
+    }
+</style>
+
+<body>
+
+    <h1>Image Hover Fullscreen Zoom</h1>
+    <p>Hover over the image to see the effect</p>
+    <div id="container">
+        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+        <div id="container2">
+            <div class="text">Hello World</div>
+        </div>
+    </div>
+
+    </div>
+
+</body>
+
+</html>

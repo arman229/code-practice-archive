@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Whether a Checkbox is
+        Checked
+    </title>
+</head>
+
+<body>
+
+    Checkbox:<input type="checkbox" id="mycheckbox" onclick="checkbox()">
+    <p id="text" style="display:none">Checkbox is CHECKED!</p>
+</body>
+<script>
+    var text = document.getElementById("text")
+    var mycheckbox = document.getElementById("mycheckbox")
+
+    function checkbox() {
+        if (mycheckbox.checked) {
+            text.style.display = "block"
+        } else {
+            text.style.display = "none"
+        }
+    }
+</script>
+
+</html>

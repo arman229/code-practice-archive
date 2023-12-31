@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Text-to-Speech</title>
+</head>
+<body>
+    <textarea id="text" rows="10" cols="50">Type your text here.</textarea><br><br>
+    <select id="voiceSelect"></select><br><br>
+    <button id="speakBtn">Speak</button>
+    <a id="downloadBtn" href="#" download>Download</a>
+
+    <script>
+        // Load available voices
+        let voices = [];
+    
+        function loadVoices() {
+            voices = speechSynthesis.getVoices();
+            let voiceSelect = document.getElementById("voiceSelect");
+    
+            for(let i = 0; i < voices.length; i++) {
+                if(voices[i].lang.includes("en")) { // filter for English language voices
+                    let option = document.createElement("option");
+                    option.value = voices[i].name;
+                    option.textContent = voices[i].name;
+                    voiceSelect.appendChild(option);
+                }
+            }
+        }
+    
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    
+        // Text-to-Speech function
+        let utterance = new SpeechSynthesisUtterance();
+    
+        function speakText() {
+            let text = document.getElementById("text").value;
+            utterance.lang = "en-US";
+            utterance.text = text;
+            utterance.voice = voices[document.getElementById("voiceSelect").selectedIndex];
+            speechSynthesis.speak(utterance);
+        }
+    
+        document.getElementById("speakBtn").addEventListener("click", speakText);
+    
+        // Download audio
+        utterance.onend = function() {
+            let audioBlob = new Blob([new Uint8Array(utterance.audioBuffer)], {type: "audio/mp3"});
+            let url = URL.createObjectURL(audioBlob);
+            let downloadBtn = document.getElementById("downloadBtn");
+            downloadBtn.href = url;
+            downloadBtn.download = "audio.mp3";
+            downloadBtn.style.display = "inline-block";
+        }
+    </script>
+    
+</body>
+</html>

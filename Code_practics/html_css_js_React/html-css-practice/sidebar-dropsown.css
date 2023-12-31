@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+}
+
+* {font-size: 20px;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #04AA6D;
+    height: 100%;
+    position: fixed;
+    width: 199px;
+}
+
+nav a {text-decoration: none;
+    display: block;
+    padding: 10px;
+
+}
+
+section {
+ border: 1px solid red;
+    margin-left: 200px;
+}
+nav a:hover {  color: white;}

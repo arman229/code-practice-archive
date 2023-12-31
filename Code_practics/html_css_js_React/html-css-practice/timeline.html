@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: bisque;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .timeline {
+
+            max-width: 1200px;
+            min-height: 100vh;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::after {
+            content: "";
+            position: absolute;
+            width: 8px;
+            top: 0;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            background-color: aqua;
+        }
+
+        .container {
+            position: relative;
+            width: 50%;
+            padding: 10px 40px;
+        }
+
+        .container::after {
+            position: absolute;
+            content: "";
+            width: 25px;
+            height: 25px;
+            right: -16px;
+            top: 16px;
+            background-color: white;
+            border: 4px solid #FF9F55;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .box-right::after {
+            left: -16px;
+        }
+
+        .box-left {
+            left: 0;
+        }
+
+        .box-right {
+            left: 50%;
+        }
+
+        .content {
+            background-color: white;
+            border-radius: 6px;
+            padding: 16px;
+            border-radius: 12px;
+
+        }
+
+        /* .box-right::after {
+            position: absolute;
+            content: "";
+            height: 0px;
+            width: 0px;
+            left: -16px;
+            top: 16px;
+            border: medium solid white;
+            border-width: 16px 16px 16px 0px;
+            border-color: transparent white transparent transparent;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="timeline">
+        <div class="box-left container">
+            <div class="content">
+                <h2>2017</h2>
+                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto perfecto perfecti
+                    perfect!</p>
+            </div>
+        </div>
+        <div class="box-right container">
+            <div class="content">
+                <h2>2017</h2>
+                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea
+                    mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto
+                    primis ea eam.</p>
+            </div>
+        </div>
+        <div class="box-left container">
+            <div class="content">
+                <h2>2017</h2>
+                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci.</p>
+            </div>
+        </div>
+        <div class="box-right container">
+            <div class="content">
+                <h2>2017</h2>
+                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea
+                    mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto
+                    primis ea eam.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

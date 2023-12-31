@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        text-align: center;
+        background-color: gray;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #container {
+        width: 300px;
+        background-color: orange;
+        height: 300px;
+        border-radius: 15px;
+        border: 2px solid red;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    button {
+        padding: 14px 20px 14px 20px;
+        border: 1px solid black;
+        cursor: pointer;
+        border-radius: 13px;
+        background-color: white;
+    }
+
+    button:hover {
+        background-color: black;
+        color: white;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <h1>Stopwatch</h1>
+        <h2 id="time">00:00:00:00 </h2>
+        <button id="start_btn">Start</button>
+        <button id="reset_btn">Reset</button>
+    </div>
+
+
+
+</body>
+<script>
+    var time_ele = document.getElementById('time');
+    var start_btn = document.getElementById('start_btn');
+    var reset_btn = document.getElementById('reset_btn');
+    var totalMills = 0
+    var isStarted = false;
+    start_btn.addEventListener("click", startStop)
+    reset_btn.addEventListener("click", reset)
+    var timer;
+    function startStop() {
+        if (isStarted) {
+            start_btn.innerHTML = "Start"
+            isStarted = false
+            clearInterval(timer)
+            setTimeValue()
+        } else {
+            start_btn.innerHTML = "Stop"
+            isStarted = true
+            timer = setInterval(() => {
+                totalMills++;
+                setTimeValue()
+            }, 10)
+        }
+    }
+
+    function reset() {
+        start_btn.innerHTML = "Start"
+        isStarted = false
+        totalMills = 0
+        clearInterval(timer)
+        setTimeValue()
+
+    }
+
+
+    function setTimeValue() {
+
+        let mills = totalMills;
+        let sec = 0
+        let mins = 0;
+        let hours = 0;
+        if (mills > 99) {
+            sec = Math.round(mills / 100)
+            mills = mills % 100
+        }
+        if (sec > 59) {
+            mins = Math.round(sec / 60)
+            sec = sec % 60
+        }
+        if (mins > 59) {
+            hours = Math.round(mins / 60)
+            mins = mins % 60
+        }
+        let millsFormated = mills < 10 ? `0${mills}` : `${mills}`
+        let secFormated = sec < 10 ? `0${sec}` : `${sec}`
+        let minFormated = mins < 10 ? `0${mins}` : `${mins}`
+        let hourFormated = hours < 10 ? `0${hours}` : `${hours}`
+        time_ele.innerHTML = `${hourFormated}:${minFormated}:${secFormated}:${millsFormated}`
+
+    }
+
+
+</script>
+
+</html>
+
+<!-- <div id="container">
+        <h1>Stopwatch</h1>
+        <p><span id="mintues">00</span>:<span id="seconds">00</span>:<span id="tens">00</span></p>
+        <button id="start_btn" onclick="start()">Start</button>
+        <button id="stop_btn" onclick="stop()">Stop</button>
+        <button id="reset_btn" onclick="reset()">Reset</button>
+    </div>
+
+
+
+</body>
+<script>
+    var mintuesele = document.getElementById('mintues');
+    var secondsele = document.getElementById('seconds');
+    var tensele = document.getElementById('tens');
+    var start_btn = document.getElementById('start_btn');
+    var stop_btn = document.getElementById('stop_btn');
+    var reset_btn = document.getElementById('reset_btn');
+    var mintues = 0
+    var seconds = 0
+    var tens = 0
+    var flag = false;
+
+
+    function start() {
+        flag = true;
+        startTimer()
+    }
+
+    function stop() {
+        flag = false
+    }
+
+    function reset() {
+        flag = false;
+        mintues = 0;
+        seconds = 0;
+        tens = 0;
+        mintuesele.innerHTML = "00";
+        secondsele.innerHTML = "00";
+        tensele.innerHTML = "00";
+
+    }
+
+
+
+    function startTimer() {
+        if (flag == true) {
+            tens++;
+            if (tens == 100) {
+                tens = 0
+                seconds++
+                if (seconds == 59) {
+                    mintues++
+                    seconds = 0
+                    tens = 0
+                }
+            }
+            var mintuesstr = mintues;
+            var secondsstr = seconds;
+            var tensstr = tens;
+
+            if (mintues < 10) {
+                mintuesstr = "0" + mintuesstr
+            }
+            if (seconds < 10) {
+                secondsstr = "0" + secondsstr
+            }
+            if (tens < 10) {
+                tensstr = "0" + tensstr
+            }
+            mintuesele.innerHTML = mintuesstr;
+            secondsele.innerHTML = secondsstr;
+            tensele.innerHTML = tensstr;
+            setTimeout("startTimer()", 10)
+        }
+
+
+    }
+
+</script> -->

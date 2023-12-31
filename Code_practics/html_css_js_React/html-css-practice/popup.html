@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-size: 1.7em;
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .tooltip {
+        position: relative;
+        padding-left: 12px;
+        padding-right: 12px;
+        margin-top: 20px;
+        display: inline-block;
+        background-color: antiquewhite;
+    }
+
+    #content {
+        position: absolute;
+        top: 0px;
+        left: 0;
+        background-color: black;
+        color: white;
+        display: none;
+
+    }
+
+    .tooltip h1 {
+        user-select: none;
+        cursor: pointer;
+        background-color: aqua;
+    }
+
+    #content::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 15px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+    }
+</style>
+
+<body>
+    <div class="tooltip">
+        <h1  onclick="popup()" id="head">Click me to toggle the popup!</h1>
+        <span id="content"> A simple popup!</span>
+    </div>
+
+</body>
+<script>
+    var tooltip = document.getElementsByClassName("tooltip")[0]
+    var content = document.getElementById("content")
+    var head = document.getElementById("head")
+    window.onclick = function (event) {
+        if (event.target != head && event.target != tooltip) {
+            content.style.display = "none";
+        }
+    }
+    function popup() {
+        if (content.style.display === "none") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshows</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            outline: 2px solid red;
+            margin: 10px;
+            position: relative;
+        }
+
+        #counter {
+            position: absolute;
+            top: 10px;
+            padding: 10px;
+            left: 10px;
+            color: rgb(19, 18, 18);
+            background-color: rgb(233, 227, 227);
+        }
+
+        img {
+            width: 100%;
+            width: 100%;
+            
+        }
+
+         #caption {
+            position: absolute;
+            width: 100%;
+            padding: 10px;
+            background-color: black;
+            border: 2px solid black;
+            text-align: center;
+            bottom: 10px;
+            color: white;
+        }
+
+        #leftbtn,
+        #rightbtn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 14px 16px;
+            font-size: 1.5em;
+        }
+
+        #leftbtn {
+            left: 0px;
+        }
+
+        #rightbtn {
+            right: 0px;
+        }
+
+        #leftbtn:hover,
+        #rightbtn:hover {
+            background-color: black;
+            color: white;
+        }
+
+        #icon {
+            text-align: center;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div  id="counter"></div>
+        <img id="bannerd" alt="">
+        <div   id="caption"></div>
+        <button  id="leftbtn" onclick="left()">&#10094;</button>
+        <button   id="rightbtn" onclick="right()">&#10095;</button>
+    </div>
+
+    <div id="icon">
+        <i class="dot" onclick="openSlide(0)"></i>
+        <i class="dot" onclick="openSlide(1)"></i>
+        <i class="dot" onclick="openSlide(2)"></i>
+        <i class="dot" onclick="openSlide(3)"></i>
+    </div>
+
+    <script>
+        var images = [
+        var captonsText = ["fristn", "asdflsadf", "asdfdsafdsa", "asdfadsfdsarttbfbdfb"]
+        var numbertext = ['1', '2', '3', '4']
+        var banner = document.getElementById("banner")
+        let leftArrpw = document.getElementById('leftbtn')
+        let rightArrow = document.getElementById('rightbtn')
+        var countobj = document.getElementById('counter')
+        var icon = document.getElementById('icon')
+
+
+
+        let currentIndex = 0
+
+
+        function left() {
+            if (currentIndex == 0) {
+                currentIndex = 3
+            } else {
+                currentIndex--
+            }
+            bannerd.src = images[currentIndex]
+            caption.innerHTML = captonsText[currentIndex]
+            counter.innerHTML = numbertext[currentIndex] + "/4"
+            // var index = currentIndex + 1
+            // countobj.innerHTML = index + "/4"  
+        }
+
+        function right() {
+            if (currentIndex == 3) {
+                currentIndex = 0
+            } else {
+                currentIndex++
+            }
+            bannerd.src = images[currentIndex]
+            caption.innerHTML = captonsText[currentIndex]
+            counter.innerHTML = numbertext[currentIndex] + "/4"
+
+            // var index = currentIndex + 1
+            // countobj.innerHTML = index + "/4"
+
+
+        }
+
+        function openSlide(slideToOpen) {
+            currentIndex = slideToOpen
+            banner.src = images[currentIndex]
+            caption.innerHTML = captonsText[currentIndex]
+            counter.innerHTML = numbertext[currentIndex] + "/4"
+            // var index = currentIndex + 1
+            // countobj.innerHTML = index + "/4" 
+            // icon.removeChild(icon.firstChild)
+
+        }
+
+        bannerd.src = images[currentIndex]
+        caption.innerHTML = captonsText[currentIndex]
+        counter.innerHTML = numbertext[currentIndex] + "/4"
+
+
+    </script>
+</body>
+
+</html>

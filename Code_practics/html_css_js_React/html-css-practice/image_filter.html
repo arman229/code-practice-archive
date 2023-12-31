@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image filter</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #filters {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        h3 {
+            margin: 0;
+        }
+
+        #filters input[type=range] {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img id="my_img" src="https://www.w3schools.com/howto/pineapple.jpg" alt="">
+    </div>
+    <div id="filters">
+        <div>
+            <h3>Blur</h3>
+            <input type="range" id="blur" min="0" max="100">
+        </div>
+        <div>
+            <h3>Brightness</h3>
+            <input type="range" id="brightness" min="0" max="100">
+        </div>
+        <div>
+            <h3>Contrast</h3>
+            <input type="range" id="contrast" min="0" max="100">
+        </div>
+        <div>
+            <h3>grayscale</h3>
+            <input type="range" id="grayscale" min="0" max="100">
+        </div>
+        <div>
+            <h3>hue-rotate</h3>
+            <input type="range" id="hue_rotate" min="0" max="100">
+        </div>
+        <div>
+            <h3>invert</h3>
+            <input type="range" id="invert" min="0" max="100">
+        </div>
+        <div>
+            <h3>opacity</h3>
+            <input type="range" id="opacity" min="0" max="100">
+        </div>
+        <div>
+            <h3>saturate</h3>
+            <input type="range" id="saturate" min="0" max="100">
+        </div>
+        <div>
+            <h3>sepia</h3>
+            <input type="range" id="sepia" min="0" max="100">
+        </div>
+    </div>
+</body>
+<script>
+    var image = document.getElementById("my_img");
+    // var blur = document.getElementById("blur");
+    // blur.addEventListener("change", function () {
+    //     let blurValue = blur.value/10
+    //     var sdf = 'blur(' + blurValue + 'px)'
+    //     console.log(sdf)
+    //     image.style.filter = sdf
+    // }) 
+
+    // var grayscale = document.getElementById("grayscale");
+    // grayscale.addEventListener("change", function () {
+    //     let blurValue = blur.value 
+    //     var sdf = 'grayscale(' + blurValue + '%)'
+    //     console.log(sdf)
+    //     image.style.filter = sdf
+    // })
+
+    // var contrast = document.getElementById("contrast");
+    // contrast.addEventListener("change", function () {
+    //     let blurValue = blur.value 
+    //     var sdf = 'contrast(' + blurValue + '%)'
+    //     console.log(sdf)
+    //     image.style.filter = sdf
+    // })
+
+    var sepia = document.getElementById("sepia");
+    sepia.addEventListener("change", function () {
+        let blurValue = sepia.value
+        var sdf = 'sepia(' + blurValue + '%)'
+        console.log(sdf)
+        image.style.filter = sdf
+    })
+
+</script>
+
+</html>

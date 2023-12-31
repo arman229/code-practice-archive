@@ -1,0 +1,23 @@
+{
+  "name": "atm-bank-project",
+  "type": "module",
+  "version": "1.0.2",
+  "dependencies": {
+    "@types/node": "^20.6.4",
+    "chalk": "^5.3.0",
+    "inquirer": "^9.2.11",
+    "node-banner": "^1.4.0"
+  },
+  "bin": {
+    "atm-bank-project": "bin/index.js"
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

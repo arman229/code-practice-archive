@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Position Text Over an Image</title>
+</head>
+<style>
+    #container {
+        position: relative;
+        outline: 2px solid red;  text-align: center;
+    }
+
+    .bottom-left {
+        position: absolute;
+        bottom: 10px;
+    }
+
+    .top-left {
+        position: absolute;
+        top: 10px;
+    }
+
+    .top-right {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    .bottom-right {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .centered {position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+
+<body>
+    <div id="container">
+        <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" alt="">
+        <div class="bottom-left">Bottom Left</div>
+        <div class="top-left">Top Left</div>
+        <div class="top-right">Top Right</div>
+        <div class="bottom-right">Bottom Right</div>
+        <div class="centered">Centered</div>
+    </div>
+</body>
+
+</html>

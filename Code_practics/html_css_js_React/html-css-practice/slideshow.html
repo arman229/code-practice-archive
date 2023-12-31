@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshows</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            outline: 2px solid red;
+            margin: 10px;
+            position: relative;
+        }
+
+        .numbertext {
+            position: absolute;
+            top: 10px;
+            padding: 10px;
+            left: 10px;
+            color: rgb(19, 18, 18);
+            background-color: rgb(233, 227, 227);
+        }
+
+        img {
+            width: 100%;
+            width: 100%;
+            text-align: center;
+        }
+
+        .text {
+            position: absolute;
+            width: 100%;
+            padding: 10px;
+            background-color: black;
+            border: 2px solid black;
+            text-align: center;
+            bottom: 10px;
+            color: white;
+        }
+
+        .left,
+        .right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 14px 16px;
+            font-size: 1.5em;
+        }
+
+        .left {
+            left: 0px;
+        }
+
+        .right {
+            right: 0px;
+        }
+
+        .left:hover,
+        .right:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="numbertext">1/4</div>
+        <img id="banner" src="pictures/image1.jpg" alt="">
+        <div class="text"> Caption one</div>
+        <button onclick="left()" class="left">&#10094;</button>
+        <button onclick="right()" class="right">&#10095;</button>
+    </div>
+
+
+    <script>
+        var images = ["pictures/image1.jpg", "pictures/image2.jpg", "pictures/image3.jpg", "pictures/image4.jpg"]
+        let imageElement = document.getElementById("banner")
+
+        function left() {
+            var random = images[Math.floor(Math.random() * images.length)]
+            console.log("Kig usdukfsd")
+            imageElement.setAttribute("src", random)
+        }
+        function right() {
+            var random = images[Math.floor(Math.random() * images.length)]
+            console.log("rgightfsd")
+            imageElement.setAttribute("src", random)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>PIAIC</title>
+
+
+
+
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+
+<style>
+
+.scroll-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #1d9777;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background-color: gray;
+}
+
+.box {
+  
+  background-color: whitesmoke;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+  border-radius: 12px;
+  min-height: 250px;
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.animations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  color: white;
+  padding: 10px;
+
+}
+
+.static {
+  height: 35px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0px;
+}
+
+ 
+
+.box:hover .paragraphs {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+
+}
+
+.box:hover .headings {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.paragraphs {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.headings {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+#static1 { background-color: #192a56;}
+.box:hover #animation1 {background-color: #192a56;}
+#static2 { background-color: #e1006a;}
+.box:hover #animation2 {background-color: #e1006a;}
+#static3 { background-color: #fbc314;}
+.box:hover #animation3 {background-color: #fbc314;}
+#static4 { background-color: #1b8f8b;}
+.box:hover #animation4 {background-color: #1b8f8b;}
+  .carousel-indicators button {
+
+
+    border-radius: 50%;
+    height: 10px !important;
+
+    width: 10px !important;
+  }
+
+  .carousel-indicators .active {
+    background-color: black;
+  }
+</style>
+
+
+
+<body>
+
+  <nav class="navbar navbar-expand-lg   " style="background-color: #064547; color: white !important;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://www.piaic.org/static/media/Logo.fb7de414.svg" style="width: 50px; height: 50px;  " alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav  ms-auto" style=" color: white !important;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" style="color: white !important;"> How It Works </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color: white !important;">Apply</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false" style="color: white !important;">
+              available Programs
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #064547;">
+              <li><a class="dropdown-item" href="#">Artificial Intelligence</a></li>
+              <li><a class="dropdown-item" href="#">Cloud Native and mobile web Computing </a></li>
+              <li><a class="dropdown-item" href="#">Blockchain</a></li>
+              <li><a class="dropdown-item" href="#">Internet of things</a></li>
+              <li><a class="dropdown-item" href="#"> web 3. and Metaverse Developer </a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false" style="color: white !important;">
+              about
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #064547;">
+              <li><a class="dropdown-item" href="#">the presdent</a></li>
+
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color: white !important;">WIT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="row p-4 g-3 justify-content-center" >
+    <div class="col-md-5  col-lg-3 col-xxl-3"> <img src="https://www.piaic.org/static/media/president-png.5b5f05c1.png"
+        alt=""></div>
+    <div class="col-md-7 col-xll-6"
+      style="background-image: url( );">
+      <div class=" p-5">
+        <h2> Presidential Initiative</h2>
+        <h3>for Artificial Intelligence & Computing (PIAIC)</h3>
+        <p>The mission of PIAIC is to reshape Pakistan by revolutionizing education, research, and business by adopting latest, cutting-edge technologies. Experts are calling this the 4th industrial revolution. We want Pakistan to become a global hub for AI, data science, cloud native computing, edge computing, blockchain, augmented reality, and internet of things.</p>
+        <div style="  text-align: center; display: flex ; justify-content: end;">
+          <table>
+            <tr>
+              <td style="padding:0px 10px;"><button class="px-4" style="background-color: #0ad390;"> Apply</button></td>
+              <td style="padding:0px 10px;">
+                <div style="border-right: 3px solid black; height: 39px;"> </div>
+              </td>
+              <td style="padding:0px 10px;"><span style="font-weight: bold;">100k <br>application received </span></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <center  ">
+    <div>
+      <h1 style="  letter-spacing: 8px;">Available programs</h1>
+      <div class="row p-5 d-flex  " style="  justify-content: space-around;   ">
+
+        <div class="col-lg-3 col-xxl-3 ">
+          <div class="box">
+            <h1 class="static"
+                 id="static1">
+            </h1>
+            <div class="animations " id="animation1">
+              <h4 class="py-3 headings">Artificial Intelligence</h4>
+              <p class="paragraphs"> A ONE YEAR AI PROGRAM DESIGNED FOR ABSOLUTE BEGINNERS.
+                GETTING PAKISTAN READY FOR THE NEW ERA OF COMPUTING ENABLED BY THE RISE OF AI. </p>
+            </div>
+            <h5 style="color:#192a56 ;">Artificial Intelligence</h5>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xxl-3 ">
+          <div class="box">
+            <h1 class="static" id="static2">
+            </h1>
+            <div class="animations " id="animation2">
+              <h4 class="py-3 headings">Cloud Native and Mobile Web Computing Specialist</h4>
+              <p class="paragraphs">A ONE YEAR CLOUD COMPUTING PROGRAM DESIGNED FOR ABSOLUTE BEGINNERS.
+                GETTING PAKISTAN READY FOR THE NEW ERA OF MICROSERVICES AND MULTI-CLOUD NATIVE COMPUTING. </p>
+            </div>
+            <h5 style="color:#e1006a ;"> Cloud Native and Moblie Web</h5>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xxl-3 ">
+          <div class="box">
+            <h1 class="static" id="static3">
+            </h1>
+            <div class="animations " id="animation3">
+              <h4 class="py-3 headings">BLOCKCHAIN SPECIALIST</h4>
+              <p class="paragraphs">A ONE YEAR BLOCKCHAIN PROGRAM DESIGNED FOR ABSOLUTE BEGINNERS GETTING PAKISTAN READY FOR THE NEW ERA OF BLOCKCHAIN, FINTECH AND SMART CONTRACTS
+              </p>
+            </div>
+            <h5 style="color: #fbc314;">Blockchain</h5>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xxl-3 ">
+          <div class="box">
+            <h1 class="static" id="static4"
+                >
+            </h1>
+            <div class="animations " id="animation4">
+              <h4 class="py-3 headings">Internet of Things and
+                AI Specialist</h4>
+              <p class="paragraphs">A FIFTEEN MONTHS IOT AND AI PROGRAM DESIGNED FOR ABSOLUTE BEGINNERS GETTING PAKISTAN READY FOR THE NEW ERA OF INTERNET OF THINGS AND AI </p>
+            </div>
+            <h5 style="color:#1b8f8b ;">Internet of Things AI</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </center>
+  <div class="row  p-5 " style=" border: 2px solid black; background-color: #2b2929;">
+    <div class="col-lg-8 " style="height: 650px;">
+      <h1 class=" display-4 fw-bold" style="color: white;">Videos</h1>
+      <iframe width="100%" style="height: 400px;" src="https://www.youtube.com/embed/m4g0zd4E_bo"
+        title="PIAIC offering free first quarter classes online" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+      <h3 style="color:#1d9777 ; margin : 30px 0px;">PIAIC Offering Free First Quarter Classes Online</h3>
+      <p style="color: white;">The mission of PIAIC is to reshape Pakistan by revolutionizing education, research, and
+        business by adopting
+        latest, cutting-edge technologies</p>
+    </div>
+    <div class="col-lg-4  scroll-container " style="height: 600px; overflow-y: scroll;  ">
+      <div class="row p-2" style="  background-color:#484848 ">
+        <img class="col-lg-6 col-4 p-0" style="height: 150px;  "
+          src="https://i.ytimg.com/vi/m4g0zd4E_bo/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCIG8swl5weIsSt_36mG2VyKPupyw"
+          alt="">
+
+        <div class="col-lg-6 col-8" style="height: 150px; overflow: hidden; font-size: smaller; ;">
+          <h6 style="color:#1d9777 ;">
+            PIAIC Offering Free First Quarter Classes Online</h6>
+          <p style="color: white;">
+            The mission of PIAIC is to reshape Pakistan by revolutionizing education, research, and business by adopting
+            latest, cutting-edge technologies.
+          </p>
+        </div>
+      </div>
+
+      <div class="row p-2" style="  background-color:#484848 ">
+        <img class="col-lg-6 col-4 p-0" style="height: 150px;  "
+          src=" https://i.ytimg.com/vi/NPGapK5aMII/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAx5pegJf4dKBlDmoYz5B-paYAU1A"
+          alt="">
+
+        <div class="col-lg-6 col-8" style="height: 150px; overflow: hidden; font-size: smaller; ;">
+          <h6 style="color:#1d9777 ;">
+            PIAIC OFFICIAL COVID-19 Coronavirus Policy
+          </h6>
+          <p style="color: white;">
+            The mission of PIAIC is to reshape Pakistan by revolutionizing education, research, and business by adopting latest, cutting-edge technologies.
+          </p>
+        </div>
+      </div>
+
+      <div class="row p-2" style="  background-color:#484848 ">
+        <img class="col-lg-6 col-4 p-0" style="height: 150px;  "
+          src="https://i.ytimg.com/vi/_rUQ301EJAo/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAtBZodxxHyobIDP13zgWTQ92E-hQ "
+          alt="">
+
+        <div class="col-lg-6 col-8" style="height: 150px; overflow: hidden; font-size: smaller; ;">
+          <h6 style="color:#1d9777 ;">
+            PIAIC Classes Coming Soon!
+          </h6>
+          <p style="color: white;">
+            The mission of PIAIC is to reshape Pakistan by revolutionizing education, research, and business by adopting latest, cutting-edge technologies.
+          </p>
+        </div>
+      </div>
+
+      <div class="row p-2" style="  background-color:#484848 ">
+        <img class="col-lg-6 col-4 p-0" style="height: 150px;  "
+          src="https://i.ytimg.com/vi/RuYbBHHF4VM/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLABXcLM3C6FliZCd7LcHmdfftlMyw "
+          alt="">
+
+        <div class="col-lg-6 col-8" style="height: 150px; overflow: hidden; font-size: smaller; ;">
+          <h6 style="color:#1d9777 ;">
+           
+Teaser 2: PIAIC Classes Coming Soon
+          </h6>
+          <p style="color: white;">
+            The mission of PIAIC is to reshape Pakistan by revolutionizing education, research, and business by adopting latest, cutting-edge technologies.
+          </p>
+        </div>
+      </div>
+
+      <div class="row p-2" style="  background-color:#484848 ">
+        <img class="col-lg-6 col-4 p-0" style="height: 150px;  "
+          src="https://i.ytimg.com/vi/sqtc7s1KZEg/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLBNwQn7v_KMACOFna29uryb3EpPzg "
+          alt="">
+
+        <div class="col-lg-6 col-8" style="height: 150px; overflow: hidden; font-size: smaller; ;">
+          <h6 style="color:#1d9777 ;">
+            PIAIC Intro - Full Version
+          </h6>
+          <p style="color: white;">
+            Official intro video of the PIAIC. Messages from President Dr. Arif Alvi, Kazi Rahat Ali, Hunaid Lakhani, Sulaiman S. Mehdi, and Zia Ullah Khan.
+          </p>
+        </div>
+      </div>
+
+      <div class="row p-2" style="  background-color:#484848 ">
+        <img class="col-lg-6 col-4 p-0" style="height: 150px;  "
+          src="https://img.youtube.com/vi/x5LRuwdi0aQ/mqdefault.jpg "
+          alt="">
+
+        <div class="col-lg-6 col-8" style="height: 150px; overflow: hidden; font-size: smaller; ;">
+          <h6 style="color:#1d9777 ;">
+            Exclusive Interview of President Dr.Arif Alvi
+          </h6>
+          <p style="color: white;">
+            | Ab Baat Hogi | 26th January 2019 | BOL News
+          </p>
+        </div>
+      </div>
+
+      <div class="row p-2" style="  background-color:#484848 ">
+        <img class="col-lg-6 col-4 p-0" style="height: 150px;  "
+          src=" https://i.ytimg.com/vi/kHLdqsLWnEM/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAc5yNk6ThE95pKLQVDjLkwlrGR7A"
+          alt="">
+
+        <div class="col-lg-6 col-8" style="height: 150px; overflow: hidden; font-size: smaller; ;">
+          <h6 style="color:#1d9777 ;">
+           
+PTV Coverage of PIAIC Entry Test
+          </h6>
+          <p style="color: white;">
+            PTV News coverage of 1st Entrance Exam of the PIAIC in Karachi
+          </p>
+        </div>
+      </div>
+
+      <div class="row p-2" style="  background-color:#484848 ">
+        <img class="col-lg-6 col-4 p-0" style="height: 150px;  "
+          src="https://i.ytimg.com/vi/7fjcWkDFbcg/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAJ712JI48vC7_tJQmhlOjnsIEx_A "
+          alt="">
+
+        <div class="col-lg-6 col-8" style="height: 150px; overflow: hidden; font-size: smaller; ;">
+          <h6 style="color:#1d9777 ;">
+            PIAIC Launch - President Arif Alvi Address
+          </h6>
+          <p style="color: white;">
+            Presidential address at the launch of the Presidential Initiative for Artificial Intelligence and Computing on December 9, 2018.
+          </p>
+        </div>
+      </div>
+
+      <div class="row p-2" style="  background-color:#484848 ">
+        <img class="col-lg-6 col-4 p-0" style="height: 150px;  "
+          src="https://i.ytimg.com/vi/C5iWrmShgv0/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDIg51jaxOVb5IXJMC2pdnmunOeng "
+          alt="">
+
+        <div class="col-lg-6 col-8" style="height: 150px; overflow: hidden; font-size: smaller; ;">
+          <h6 style="color:#1d9777 ;">
+            Zia Khan Interview on Bol News
+          </h6>
+          <p style="color: white;">
+            Published on Dec 31, 2018
+          </p>
+        </div>
+      </div>
+
+     
+      <div class="row p-2" style="  background-color:#484848 ">
+        <img class="col-lg-6 col-4 p-0" style="height: 150px;  "
+          src="https://i.ytimg.com/vi/5p8oJVVg2P4/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAXEtZvFoYIbr2qr3o_yZ_qZ-0G8Q "
+          alt="">
+
+        <div class="col-lg-6 col-8" style="height: 150px; overflow: hidden; font-size: smaller; ;">
+          <h6 style="color:#1d9777 ;">
+           
+PTV Coverage of PIAIC Launch Event
+          </h6>
+          <p style="color: white;">
+            PTV Coverage of PIAIC Launch Event on December 9, 2018
+          </p>
+        </div>
+      </div> <div class="row p-2" style="  background-color:#484848 ">
+        <img class="col-lg-6 col-4 p-0" style="height: 150px;  "
+          src="https://i.ytimg.com/vi/dRm0Y7n7xzU/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDXHaTnhJFYmoWLruA5N5m8Wpog0g "
+          alt="">
+
+        <div class="col-lg-6 col-8" style="height: 150px; overflow: hidden; font-size: smaller; ;">
+          <h6 style="color:#1d9777 ;">
+           
+LIVE: President of Pakistan Dr Arif Alvi's exclusive interview with Nadeem Malik, October 29, 2018
+          </h6>
+          <p style="color: white;">
+            Streamed live on Oct 29, 2018
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div id="demo" class="carousel slide   p-5" data-bs-ride="carousel " style="background-color: #00bf9a;">
+
+
+    <div class="carousel-indicators  ">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"> </button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+
+
+    <div class="carousel-inner">
+      <h1 class=" ">images</h1>
+      <div class="carousel-item active   ">
+        <div class="row d-flex align-items-center justify-content-center g-3">
+          <div class="col-md-6  col-xxl-5">
+            <img src="https://www.piaic.org/static/media/Launching-site-image2.c147d1bb.jpg" alt=" " class="d-block"
+              style="width:100%">
+          </div>
+          <div class="col-md-6 col-xxl-5 p-4 ">
+            <h1>President launching the PIAIC website.</h1>
+            <p>"President Dr. Arif Alvi launching the official website of the PIAIC on December 9, 2018. From left to
+              right: Mr. Adil Altaf (Director Panacloud), Mr. Zia Ullah Khan (CEO Panacloud), Mr. Hunaid Lakhani
+              (Chancellor Iqra University), President Dr. Arif Alvi, Mr. Sulaiman S. Mehdi (Chairman Pakistan Stock
+              Exchange), Mr. Zeeshan Hanif (CTO Panacloud), Maulana Bashir Farooqui (Founder Saylani Welfare Trust), Mr.
+              Yousuf Lakhani (President Saylani Welfare Trust)."</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row d-flex align-items-center justify-content-center g-3">
+          <div class="col-md-6  col-xxl-5">
+            <img src="https://www.piaic.org/static/media/Launching-site-image1.2f88fa1a.jpg" alt=" " class="d-block"
+              style="width:100%">
+          </div>
+          <div class="col-md-6 col-xxl-5 p-4 ">
+            <h1>First meeting with the president</h1>
+            <p>First official PIAIC meeting on November 1st, 2018. From left to right Mr.Zia Yllah Khan (CEO Panacloud)>
+              Mr Kazi Rahat Ali( General Secretary PIAIC),. President Dr. Arif Alvi, Mr. Yousuf Lakhani ( presdent
+              Saylani
+              Welfare Trust, Mr. Muhammad Ghazzal ( COO Saylani Welfare</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row d-flex align-items-center justify-content-center g-3">
+          <div class="col-md-6  col-xxl-5">
+            <img src="https://www.piaic.org/static/media/Launching-site-image3.d4d5dfcb.jpg" alt=" " class="d-block"
+              style="width:100%">
+          </div>
+          <div class="col-md-6 col-xxl-5 p-4 ">
+            <h1> Meeting with Chief Secretary Sindh. </h1>
+            <p> "Meeting with Chief Secretary of Sindh, Mr. Mumtaz Ali Shah on December 28th, where he assured the PIAIC
+              management team of his full support for the national cause and offered space at all the public
+              universities in Sindh."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <div class="p-5  " style="background-color: #e1e6e8; ">
+    <h1 style="text-align: center;">strategic Partners</h1>
+    <div class="  d-flex border justify-content-center p-5">
+
+      <div class="p-3">
+
+        <img style=" height: 70px; width: 70px;" src="https://www.piaic.org/static/media/panacloudLogo.9b5ef574.svg"
+          alt="">
+      </div>
+      <div class="p-3 d-flex  " style="  align-items: center;"><img src="https://www.piaic.org/static/media/saylaniLogo.c2a52d0a.png" alt=""
+          style="width: 160px; height: 40px;"></div>
+    </div>
+  </div>
+
+  <div class="row p-5  " style="background-color: #202f39; color: white; text-decoration: none;  ">
+    <div class="col-md-4 col-sm-6">
+      <h2>Navigation</h2>
+      <ul style=" list-style-type: none;">
+        <li>Home</li>
+        <li><a href="#">Apply</a></li>
+        <li>How it works</li>
+        <li>Artificial Intelligence</li>
+        <li>Cloud Native and Mobile Web</li>
+        <li>Computing</li>
+        <li>Blockchain</li>
+        <li>Internet of
+          Things and Al
+        </li>
+        <li>About The President</li>
+        <li>Management Committee</li>
+        <li> Women Inclusion in Technology (WIT)</li>
+      </ul>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div>
+        <h2>Locations</h2>
+        <p>PIAIC Helpline</p>
+        <span> <img src="https://www.piaic.org/static/media/callIcon.ef3e710d.svg" alt="">+92-308-2220203(WhatsApp as
+          well) </span>
+      </div>
+      <div class="mt-5">
+        <h2>Connect with us </h2>
+        <a href="#"> <img src="https://www.piaic.org/static/media/facebookIcon.7a82d3ab.svg" alt=""></a>
+        <a href="#"><img src="https://www.piaic.org/static/media/youtubeicon.31253a80.svg" alt=""></a>
+      </div>
+    </div>
+
+  </div>
+  <footer class="  text-end px-4 py-2 " style="background-color: #12232f; color: white;">
+    <p style="   font-weight: bold;">Powered by</p>
+    <img class="border-danger" style="height: 60px; width: 70px ;  "
+      src="https://www.piaic.org/static/media/panacloudfootericon.130c4779.png" alt="">
+  </footer>
+
+
+</body>
+
+</html>

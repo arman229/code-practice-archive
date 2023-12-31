@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Down a Bar</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    nav {
+        background-color: black;
+        width: 100vw;
+        position: fixed;
+        top: -50px;
+        transition: all 0.3s;
+    }
+
+    nav a {
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        padding: 14px 16px;
+    }
+
+    nav a:hover {
+        background-color: white;
+        color: black;
+    }
+
+    #container {
+        padding-left: 15px;
+        padding-top: 30px;
+        height: 3030px;
+    }
+</style>
+
+<body>
+    <nav id="navigate"> <a href="#">Home</a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div id="container">
+        <h1>This example demonstrates how to slide down a navbar when the user starts to scroll the page.</h1>
+        <p>Scroll down this frame to see the effect!
+            sdfsd
+            Scroll to the top to hide the navbar.
+
+            Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum.
+        </p>
+    </div>
+</body>
+<script>
+    window.onscroll = scollFun
+    let navigate = document.getElementById('navigate')
+    var lastScrollPosition = window.pageYOffset
+
+    function scollFun() {
+        var currentScrollPosition = window.pageYOffset
+        if (currentScrollPosition < lastScrollPosition) {
+            navigate.style.top = '0px'
+        } else {
+            navigate.style.top = '-50px'
+        }
+        lastScrollPosition = currentScrollPosition
+    }
+</script>
+
+</html>

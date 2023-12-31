@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List View or Grid view</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .row {
+        display: flex;
+
+    }
+
+    .btn {
+        margin-bottom: 16px;
+        padding: 12px;
+        cursor: pointer;
+
+    }
+
+    .btn.active {
+        background-color: #666;
+        color: white;
+    }
+
+    .column {
+        margin: 12px;
+        text-align: center;
+        flex: 50%;
+        border: 2px solid red;
+        padding: 12px;
+    }
+
+    @media screen and (max-width:700px) {
+        .row {
+            flex-direction: column;
+        }
+
+    }
+</style>
+
+<body>
+
+    <div id="btnContainer">
+        <button class="btn" onclick="listView()"><i class="fa fa-bars"></i> List</button>
+        <button class="btn active" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h1>Colunm 1</h1>
+            <p> some text..</p>
+        </div>
+        <div class="column">
+            <h1>Colunm 2</h1>
+            <p> some text..</p>
+        </div>
+        <!-- </div> -->
+        <!-- <div class="row"> -->
+        <div class="column">
+            <h1>Colunm 3</h1>
+            <p> some text..</p>
+        </div>
+        <div class="column">
+            <h1>Colunm 4</h1>
+            <p> some text..</p>
+        </div>
+    </div>
+    <!-- <script>
+        var elements = document.getElementsByClassName('column')
+        function listView() { console.log("lkdjfk")
+            for(var i = 0; i < elements.length; i++) {
+                elements[i].style.backgroundcolor="red";
+            }
+        }
+    </script> -->
+</body>
+
+</html>

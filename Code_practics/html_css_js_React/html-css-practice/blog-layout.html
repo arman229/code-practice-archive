@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Layout</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #container {
+        padding: 14px;
+    }
+
+    #header {
+        height: 550px;
+        position: relative;
+        background-color: gray;
+
+        align-items: center;
+        display: flex;
+        font-size: 2em;
+        justify-content: center;
+    }
+
+    #about-me,
+    #popular-post,
+    #follow-me {
+        padding: 14px;
+    }
+
+    footer {
+        display: flex;
+        background-color: gray;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #row {
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: space-between;
+    }
+
+    .news {
+
+        padding: 12px;
+    }
+
+    .img {
+        height: 300px;
+        padding: 12px;
+        background-color: gray;
+    }
+
+    .img2 {
+        height: 50px;
+        padding: 12px;
+        background-color: gray;
+    }
+
+    #navbar {
+
+
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+
+    }
+
+    .column75 {
+        flex-grow: 0.75;
+        margin-right: 12px;
+    }
+
+    .column25 {
+        flex-grow: 0.25;
+        margin-left: 12px;
+
+    }
+
+    #navbar a {
+        text-decoration: none;
+        float: left;
+
+        padding: 12px;
+
+    }
+
+    #navbar a:hover {
+        background-color: wheat;
+        color: black;
+    }
+
+    @media screen and (max-width: 800px) {
+        #row {
+            flex-direction: column;
+        }
+
+        #navbar a {
+            width: 100%;
+        }
+
+        .column75,
+        .column25 {
+            margin-right: 0px;
+        }
+    }
+</style>
+
+<body>
+    <div id="container">
+        <div id="header"> Blog Name
+            <div id="navbar">
+                <a href="#">link1</a>
+                <a href="#">link1</a>
+                <a href="#">link1</a>
+                <a href="#" style="float: right;">link1</a>
+            </div>
+        </div>
+        <div id="row">
+            <div class="column75">
+                <div class="news">
+                    <h1>TITLE HEADING</h1>
+                    <p>Title description, Dec 7, 2017</p>
+                    <p class="img">
+                        Image </p>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consecteturadipiscing elit, sed
+                        doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quisnostrud exercitation ullamco.</p>
+                </div>
+                <div class="news">
+                    <h1>TITLE HEADING</h1>
+                    <p>Title description, Dec 7, 2017</p>
+                    <p class="img">
+                        Image </p>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed
+                        doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation ullamco.</p>
+                </div>
+            </div>
+            <div class="column25">
+                <div id="about-me">
+                    <h1>About Me</h1>
+                    <p class="img2">
+                        Image </p>
+                    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+                </div>
+                <div id="popular-post">
+                    <h1>Popular Post</h1>
+                    <p class="img2">
+                        Image </p>
+                    <p class="img2">
+                        Image </p>
+                    <p class="img2">
+                        Image </p>
+                </div>
+                <div id="follow-me">
+                    <h1>Follow Me</h1>
+                    <p>Some text..</p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <h1>footer</h1>
+        </footer>
+    </div>
+</body>
+
+</html>

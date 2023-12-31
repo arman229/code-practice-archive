@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#container {
+    background-color: #333333;
+}
+
+#container a {
+    display: inline-block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: white;
+}
+
+#container a:hover {
+    background-color: red;
+}
+
+section {
+    height: 400px;
+    background-color: blue;
+    display: none;
+}
+
+.dropdown:hover section {
+    display: block;
+
+}

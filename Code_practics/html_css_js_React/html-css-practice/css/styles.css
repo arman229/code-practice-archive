@@ -1,0 +1,185 @@
+:root {
+    --main_color: #040311
+}
+
+body {
+    margin: 0px;
+    background-color: var(--main_color);
+}
+
+* {
+    box-sizing: border-box;
+    color: rgb(224, 42, 42);
+}
+
+header #banner {
+    width: 100%;
+    top: 0;
+
+}
+
+.d_f {
+    display: flex;
+}
+
+.p1 {
+    padding: 10px;
+}
+
+header {
+    background-color: var(--main_color);
+}
+
+header nav {
+    position: absolute;
+
+    top: 0;
+    width: 100%;
+}
+
+header nav #menu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header nav #menu a {
+    padding: 10px 12px;
+    text-decoration: none;
+}
+
+header nav #menu a:hover {
+    text-decoration: underline;
+}
+
+#key_focus_areas {
+    background-color: var(--main_color);
+    display: flex;
+    padding: 32px;
+}
+
+#key_focus_areas .left h1:first-child {
+    font-size: 2em;
+}
+
+#key_focus_areas .left {
+    width: 50%;
+    position: relative;
+    padding: 32px;
+}
+
+.bg-dark {
+    background-color: black;
+}
+
+#key_focus_areas .right {
+    width: 50%;
+    position: relative;
+}
+
+
+#plane {
+    animation: plane_anim;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: absolute;
+}
+
+#key_focus_areas .areas {
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid green;
+}
+
+#key_focus_areas .areas div {
+    width: 42%;
+    margin: 4%;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid red;
+    text-align: center;
+}
+
+#committee_tor h1 {
+    text-align: center;
+}
+
+#committee_content {
+    padding: 48px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#committee_content div {
+    width: 25%;
+    height: 400px;
+    padding: 32px;
+    transition: all 0.3s;
+
+}
+
+#committee_content div p {
+    text-align: justify;
+}
+
+#committee_content div:hover {
+    outline: 1px solid red;
+
+}
+
+#committee_content img {
+    transition: all 2s;
+}
+
+#committee_content div:hover img {
+    transform: rotateY(360deg);
+}
+
+#road_map h1 {
+    text-align: center;
+}
+
+#road_map_child {
+    display: flex;
+    justify-content: space-around;
+}
+
+#road_map_child div {
+    text-align: center;
+    outline: 2px solid red;
+    width: 424px;
+    background-repeat: no-repeat;
+    background-position: cover;
+
+    background-image: url(../images/Road-Map.png);
+}
+
+#partner {
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+}
+#contributor {
+    top: 50%;
+    right: 0;
+    position: absolute;
+    transform: translateY(-50%);
+}
+#footer {
+    display: flex;
+}
+#youtube-link{ 
+}
+#user-information { 
+    outline: 1px solid rebeccapurple;
+}
+
+input {
+    display: inline-block;
+    width: 100%;
+}

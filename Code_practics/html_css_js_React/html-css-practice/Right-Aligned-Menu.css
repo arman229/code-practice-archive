@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;  font-size: 22px;
+}
+
+nav {
+    background-color: black;
+    color: white;
+
+}
+
+nav a {
+    padding: 13px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+
+}
+
+span {
+    float: right;
+}
+
+ .active{
+    background-color: #04AA6D;
+}
+
+nav a:hover:not(.active) {
+    background-color: teal;
+    color: black;
+}
+section{ text-indent: 40px; }

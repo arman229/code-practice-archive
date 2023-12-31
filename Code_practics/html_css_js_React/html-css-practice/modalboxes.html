@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Create a model box</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #model_box {
+        display: none;
+        width: 100%;
+        height: 100%;
+        border: 3px solid red;
+        position: fixed;
+        left: 0;
+        background-color: rgb(0, 0, 0);
+
+        background-color: rgba(0, 0, 0, 0.4);
+        top: 0;
+    }
+
+    #model_content {
+        background-color: black;
+        color: white;
+        padding: 16px;
+        width: 80%;
+        margin: auto;
+        margin-top: 200px;
+    }
+
+    #close {
+        float: right;
+        cursor: pointer;
+        padding: 12p;
+        border: 2px solid red;
+        font-size: 1.5em;
+    }
+
+    #openbtn {
+        padding: 12px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+
+    #openbtn:hover {
+        background-color: rgb(196, 11, 11);
+        color: black;
+    }
+</style>
+
+<body>
+    <h1>Model Example</h1>
+    <button id="openbtn"> Open Model </button>
+    <div id="model_box">
+        <div id="model_content"> <span id="close" id="closeicon">&times;</span>
+            <p>Some text in the Modal.</p>
+        </div>
+    </div>
+    0
+    <script>
+        var openbtn = document.getElementById("openbtn")
+        var model_box = document.getElementById("model_box")
+        var closeicon1 = document.getElementById("close")
+        openbtn.onclick = function () {
+            model_box.style.display = "block"
+        }
+
+        closeicon1.onclick = function () {
+            model_box.style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target == model_box) {
+                model_box.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+
+</html>

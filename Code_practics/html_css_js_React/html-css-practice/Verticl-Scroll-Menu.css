@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #04AA6D;
+    width: 200px;
+    height: 200px;
+    overflow-y: auto;
+}
+
+nav a {
+    display: block;
+    font-size: 23px;
+    text-decoration: none;
+    padding: 20px 4px 10px 2px;
+}
+
+nav a:hover {
+    background-color: #555555;
+}

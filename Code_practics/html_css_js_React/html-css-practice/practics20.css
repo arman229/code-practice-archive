@@ -1,0 +1,88 @@
+h1,h2{
+    margin: 0;
+}
+body{
+    background-color: #679159;
+}
+#container { 
+    border-radius: 20px;
+    width: 80%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:   #bed2b7;
+    padding: 20px;
+
+}
+
+#container header {
+    padding: 16px;
+    background-image: linear-gradient(180deg, #dcba41, #f1e2b1);
+    border-top-left-radius:20px ;
+    border-top-right-radius:20px ;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: blanchedalmond;
+}
+nav a {
+    display: inline-block;
+    padding: 16px 12px;
+    text-decoration: none;
+}
+nav a:hover{
+    color: green;
+}
+#main{
+    padding: 16px;
+    background-color: white;
+    border-bottom-left-radius:20px ;
+    border-bottom-right-radius:20px ;
+}
+.title{ 
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; 
+    height: 60px;
+    background-color: #679159;
+}
+.title::before{
+    content: "";
+    display: inline-block;
+    height: 60px;
+    width: 60px; 
+    border-radius: 50%; 
+    float: left;
+    transform: translateX(-50%);
+    background-color: white ;
+}
+.title::after{
+    content: "";
+    display: inline-block;
+    height: 60px;
+    width: 60px; 
+    border-radius: 50%; 
+    float: right;
+    transform: translate(50%,-50%);
+    background-color: white ;
+}
+#bg{ 
+    position: fixed;
+    z-index: -1; 
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+#bg #top{
+    background-color: blue;
+    height: 200px;
+    border-bottom: 20px solid white;
+}
+#bg #bottom{
+    height: 100vh;
+    background-color: lightblue;
+      
+}

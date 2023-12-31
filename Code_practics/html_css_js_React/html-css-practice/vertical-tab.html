@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Tabs</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #container {
+        height: 100vh;
+        width: 30%;
+        background-color: rgba(0, 0, 0, 0.062);
+        position: fixed;
+    }
+
+
+    #container .btn {
+        border: none;
+        text-align: left; 
+        width: 100%;
+        padding-left: 20px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        font-size: 20px;
+        display: block;
+    }
+
+    #container .btn:hover {
+        background-color: rgba(0, 0, 8, 0.904);
+        color: white;
+    }
+
+    .content {
+        width: 70%;
+        margin-left: 30%;
+        padding-left: 16px;
+        padding-top: 16px;
+        height: 300px;
+        font-size: 20px;
+        display: none;
+    }
+
+    .active {
+         background-color: rgba(0, 0, 8, 0.904);
+        color: white;  
+    }
+
+    h3 {
+        margin: 0;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <button class="btn"> London</button>
+        <button class="btn"> Paris</button>
+        <button class="btn"> Tokyo</button>
+    </div>
+    <div id="London" class="content">
+        <h3>London</h3>
+        <p>London is the capital city of England.</p>
+    </div>
+
+    <div id="Paris" class="content">
+        <h3>Paris</h3>
+        <p>Paris is the capital of France.</p>
+    </div>
+
+    <div id="Tokyo" class="content">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+    <script>
+
+        var btns = document.getElementsByClassName("btn");
+        var contents = document.getElementsByClassName("content");
+        for (let i = 0; i < btns.length; i++) {
+            btns[i].onmouseover = () => buttonIsClicked(i)
+        }
+
+        function buttonIsClicked(index) {
+            for (let i = 0; i < contents.length; i++) {
+                contents[i].style.display = 'none'
+                btns[i].classList.remove("active")
+            }
+            contents[index].style.display = 'block'
+            btns[index].classList.add("active")
+        }
+
+        contents[0].style.display = 'block'
+        btns[0].classList.add("active")
+    </script>
+</body>
+
+</html>

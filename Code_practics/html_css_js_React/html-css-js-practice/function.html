@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    body {
+        background-color: antiquewhite;
+        font-size: 1.3em;
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #container {
+        border: 3px solid red;
+        width: 400px;
+        padding: 14px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #btn {
+        color: white;
+        padding: 12px;
+        font-size: 1.1em;
+        background-color: blueviolet;
+    }
+
+    h1,
+    input,
+    label,
+    button {
+        width: 100%;
+
+    }
+
+    #first {
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    #first span {
+        width: 100%;
+        background-color: green;
+        padding: 10px;
+    }
+
+    .income {
+        margin-top: 12px;
+    }
+
+    input {
+        margin-top: 12px;
+        margin-bottom: 12px;
+        padding: 12px;
+    }
+
+    .item {
+        padding: 6px;
+        display: flex;
+        border-left: 4px solid green;
+        margin-top: 12px;
+        background-color: white;
+        box-shadow: 6px 6px 6px gainsboro;
+    }
+
+    .item i {
+        color: red;
+        padding-left: 6px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <h1>Expense Tracker</h1>
+        <div id="first">
+            <span style="border-right: 2px solid red;">income <br>
+                <p id="income">$0 </p>
+            </span>
+            <span>Expense <br>
+                <p id="expense">$0</p>
+            </span>
+        </div>
+        <input class="income" type="number" id="incomeInput" placeholder="Enter your income">
+        <p class="income"> TOTAL BALANCE: <span id="balance">$0</span></p>
+        <label> item </label>
+        <input placeholder="Enter Item Name" id="itemNameInput">
+        <label for="itemPrice"> Amount</label>
+        <input type="number" placeholder="Enter Amount($)" name="itemPrice" id="itemPrice">
+        <button id="btn">Add Expenses</button>
+        <div id="expense_list">
+            <!-- <span class="item">
+                <span style="flex-grow: 1;">Book Name </span>
+                <span>18$</span>
+                <i class="fa fa-close"></i>
+            </span> -->
+        </div>
+    </div>
+</body>
+<script>
+    var incomeDiplay = document.getElementById("income");
+    var incomeInput = document.getElementById("incomeInput");
+    var balance = document.getElementById("balance");
+
+    var itemNameInputEle = document.getElementById("itemNameInput");
+    var itemPriceInputEle = document.getElementById("itemPrice");
+    var expenseListEle = document.getElementById("expense_list");
+    var expenseEle = document.getElementById("expense")
+    var btnEle = document.getElementById("btn")
+
+
+
+
+    incomeInput.addEventListener("input", onIcomeChanged)
+    function onIcomeChanged() {
+        balance.innerHTML = "$" + incomeInput.value
+        incomeDiplay.innerHTML = "$" + incomeInput.value
+        income = parseInt(incomeInput.value)
+    }
+
+
+    btnEle.addEventListener("click", addButtonClicked)
+
+    var income = 0
+    var totalBalance = 0
+    var expense = 0
+
+    function addButtonClicked() {
+        var itemName = itemNameInputEle.value
+        var itemPrice = parseInt(itemPriceInputEle.value)
+        addItem(itemName, itemPrice)
+    }
+
+
+    function addItem(itemName, itemPrice) {
+        const rootSpan = document.createElement("span");
+        rootSpan.classList.add("item")
+        const itemNameSpan = document.createElement("span");
+        itemNameSpan.style.flexGrow = "1"
+        itemNameSpan.innerHTML = itemName
+        const itemAmountSpan = document.createElement("span");
+        itemAmountSpan.innerHTML = "$" + itemPrice
+        const iconNode = document.createElement("i");
+        iconNode.classList.add("fa", "fa-close")
+        iconNode.addEventListener("click", () => {
+            expense -= itemPrice
+            expenseEle.innerHTML = "$" + expense
+            balance.innerHTML = "$" + (income - expense)
+            expenseListEle.removeChild(rootSpan)
+        })
+        rootSpan.appendChild(itemNameSpan)
+        rootSpan.appendChild(itemAmountSpan)
+        rootSpan.appendChild(iconNode)
+        expenseListEle.appendChild(rootSpan)
+        expense += itemPrice
+        expenseEle.innerHTML = "$" + expense
+        balance.innerHTML = "$" + (income - expense)
+
+    }
+
+</script>
+
+
+</html>

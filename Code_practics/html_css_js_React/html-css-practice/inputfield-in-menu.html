@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Field in a Menu</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #topnav {
+        border: 2px solid red;
+        display: inline-block;
+        width: 100%;
+    }
+
+    #topnav a {
+        float: left;
+        padding: 12px;
+        text-decoration: none;
+    }
+
+    form {
+     
+        float: right;
+    }input,
+        #btn {
+            padding: 12px;
+        }
+
+    .active {
+        background-color: blueviolet;
+    }
+
+    @media screen and (max-width:800px) {
+        #topnav a {
+            float: none;
+            width: 100%;
+            display: block;
+        }
+
+        form {
+            float: none;
+        }
+
+        input,
+        #btn {padding: 12px;
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+    <div id="topnav"> <a class="active" href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+
+        <form action="#"> <input type="text" placeholder="Username ">
+            <input type="password" placeholder="password">
+            <button id="btn"> Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

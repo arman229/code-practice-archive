@@ -1,0 +1,17 @@
+.container {
+    position: relative;
+    display: inline-block;
+    width: 308px;
+}
+
+.container .subcontainer {
+    visibility: hidden;
+    background-color: teal;
+}
+
+.container:hover ~ .subcontainer {
+    visibility: visible;
+    position: relative;
+    top: 39px;
+    right: 29px;
+}

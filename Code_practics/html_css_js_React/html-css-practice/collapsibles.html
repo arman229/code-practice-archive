@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapsibles</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .btn {
+        width: 100%;
+        font-size: 1.5em;
+        text-align: left;
+        display: inline-block;
+        padding: 14px;
+        border: .5px solid black;
+        cursor: pointer;
+    }
+
+    .btn:hover {}
+
+    .content {
+        display: none;
+        padding: 12px;
+    }
+
+    .bg {
+        background-color: black;
+    }
+
+    .icon {
+        float: right;
+    }
+</style>
+
+<body>
+    <button class="btn" onclick="opencollapsibles(0)">Open Collapsibles <span class="icon">&plus;</span> </button>
+    <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat.</div>
+    <button class="btn" onclick="opencollapsibles(1)">Open Collapsibles <span class="icon">&plus;</span> </button>
+    <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat.</div>
+
+    <button class="btn" onclick="opencollapsibles(2)">Open Collapsibles <span class="icon">&plus;</span> </button>
+    <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat.</div>
+
+    <button class="btn" onclick="opencollapsibles(3)">Open Collapsibles <span class="icon">&plus;</span> </button>
+    <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat.</div>
+
+    <button   class="btn" onclick="opencollapsibles(4)">Open Collapsibles <span class="icon">&plus;</span> </button>
+    <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat.</div>
+
+    <button class="btn" onclick="opencollapsibles(5)">Open Collapsibles <span class="icon">&plus;</span> </button>
+    <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat.</div>
+
+
+</body>
+<script>
+    var btns = document.getElementsByClassName("btn")
+    var contents = document.getElementsByClassName("content")
+    var icons = document.getElementsByClassName("icon")
+    function opencollapsibles(i) {
+        if (contents[i].style.display == "block") {
+            contents[i].style.display = "none";
+            icons[i].innerHTML = "&plus;"
+            btns[i].style.backgroundColor = "red"
+        } else {
+            contents[i].style.display = "block"
+            icons[i].innerHTML = "&minus;"
+            btns[i].style.backgroundColor = "green"
+        }
+        // btns[i].classList.toggle("bg");
+    }
+
+
+</script>
+
+</html>

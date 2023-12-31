@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        transition: all 2s;
+    }
+
+    #container {
+
+        margin: 10px;
+
+        position: relative;
+    }
+
+    #number {
+        top: 10px;
+        padding: 10px;
+        left: 10px;
+        color: aliceblue;
+        background-color: black;
+        position: absolute;
+
+    }
+
+    #leftbtn {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+    }
+
+    #rightbtn {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+    }
+
+    #caption {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        bottom: 5px;
+        color: white;
+        background-color: black;
+        padding: 10px;
+    }
+#btn { background-color: black;
+color: white;
+padding: 14px 17px;
+font-size: 1.5em;
+width: 30%;
+ border-radius: 13px;
+text-align: center; 
+ 
+ }
+</style>
+
+<body>
+    <div id="container">
+        <!-- <div id="number"> </div> -->
+        
+        <img id="image" alt="">
+        <!-- <button id="leftbtn" onclick="left()">&#10094;</button>
+        <button id="rightbtn" onclick="right()">&#10095;</button>
+
+        <div id="caption"> </div> -->
+        <button id="btn" onclick="btn()">Click Me</button>
+    </div>
+     
+</body>
+<script>
+    // var numbers = ['1/4', '2/4', '3/4', '4/4']
+    var images = ["https://www.w3schools.com/howto/img_nature_wide.jpg", "https://www.w3schools.com/howto/img_snow_wide.jpg", "https://www.w3schools.com/howto/img_lights_wide.jpg", "https://www.w3schools.com/howto/img_mountains_wide.jpg"]
+    // var captions = ["first", "second", "third","fourth"];
+    let currentIndex = 0
+    function btn() {
+            if (currentIndex == 0) {
+                currentIndex = 3
+            } else {
+                currentIndex--
+            }
+            image.src = images[currentIndex]
+            caption.innerHTML = captions[currentIndex]
+            number.innerHTML = numbers[currentIndex] 
+            
+        }
+
+        function left() {
+            if (currentIndex == 0) {
+                currentIndex = 3
+            } else {
+                currentIndex--
+            }
+            image.src = images[currentIndex]
+            caption.innerHTML = captions[currentIndex]
+            number.innerHTML = numbers[currentIndex] 
+            
+        }
+
+        function right() {
+            if (currentIndex == 3) {
+                currentIndex = 0
+            } else {
+                currentIndex++
+            }
+            image.src = images[currentIndex]
+            caption.innerHTML = captions[currentIndex]
+            number.innerHTML = numbers[currentIndex] 
+            
+        } image.src = images[currentIndex]
+            caption.innerHTML = captions[currentIndex]
+            number.innerHTML = numbers[currentIndex]
+</script>
+
+</html>

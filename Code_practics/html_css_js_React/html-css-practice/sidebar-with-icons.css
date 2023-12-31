@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: black;
+    width: 190px;
+    margin-top: 0;
+}
+
+.nav a {
+    font-size: 25px;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: #555555;
+}
+
+section {
+    margin-left: 200px;
+}
+
+div {
+    margin-top: 0;
+    outline: 2px solid red;
+}
+
+.nav a:hover {
+    color: #f1f1f1;
+}

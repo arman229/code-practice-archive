@@ -1,0 +1,100 @@
+* {
+    color: white;
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 0px;
+    background-color: #232531;
+}
+
+header {
+    display: flex;
+
+    position: relative;
+}
+
+header div {
+
+    position: absolute;
+    right: 230px;
+
+}
+
+header button {
+    padding: 10px;
+    width: 170px;
+    height: 50px;
+    background-color: #232531;
+    color: #ff5733;
+}
+
+.active {
+    border-bottom: 2px solid #ff5733;
+    color: #ff5733;
+}
+
+
+
+
+#work-shop {
+    position: absolute;
+    left: 45px;
+    font-size: 20px;
+    text-decoration: none;
+    padding-left: 136px;
+    padding-top: 16px;
+}
+
+#home {
+    text-decoration: none;
+    border-bottom: 2px solid #ff5733;
+    color: #ff5733;
+}
+header span > a{
+    text-decoration: none;
+}
+header div a {
+    display: inline-block;
+    padding: 16px 12px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+header div a:hover {
+    border-bottom: 2px solid #ff5733;
+    color: #ff5733; 
+}
+
+#front {
+    margin-top: 70px;
+    font-size: 20px;
+    padding-top: 200px;
+    padding-left: 300px;
+
+}
+
+#content {
+    width: 63%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+article p {
+    margin-left: 10px;
+}
+
+#container {
+    display: flex;
+}
+
+#left #right {
+    background-size: contain;
+}
+
+.div button a:hover {
+    background-color: red;
+    transition: width 2s;
+    width: 200px;
+    text-decoration: none;
+}

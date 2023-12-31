@@ -1,0 +1,114 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Geolocation Example</title>
+  </head>
+  <body>
+    <p id="latitude"></p>
+    <p id="longitude"></p>
+    <script>
+       
+       navigator.geolocation.getCurrentPosition(showPosition)
+       function showPosition(position){
+          var lat = position.coords.latitude;
+          var lon = position.coords.longitude;
+          document.getElementById("latitude").innerHTML = "Latitude: " + lat;
+          document.getElementById("longitude").innerHTML = "Longitude: " + lon;
+        };
+      
+    </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Geolocation</h2>
+
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  try {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } catch {
+    x.innerHTML = err;
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+</body> -->
+<!-- </html> -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To-Do List</title>
+  </head>
+  <body>
+    <h1>To-Do List</h1>
+    <form>
+      <input type="text" id="task">
+      <button type="submit" id="add-task">Add Task</button>
+    </form>
+    <ul id="todo-list"></ul>
+
+    <script>
+      const form = document.querySelector("form");
+      const taskInput = document.querySelector("#task");
+      const todoList = document.querySelector("#todo-list");
+
+      form.addEventListener("submit", function(event) {
+                  event.preventDefault();
+
+        const task = taskInput.value;
+              taskInput.value = "";
+
+        const todo = document.createElement("li");
+        todo.textContent = task;
+
+        todoList.appendChild(todo);
+      });
+    </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Class Method</h2>
+
+<p>How to define and use a Class method.</p>
+
+<p id="demo"></p>
+
+<script>
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+
+  }
+  age() {
+    let date = new Date();
+    return date.getFullYear() - this.year;
+  }
+}
+
+let myCar = new Car("Ford", 2014);
+document.getElementById("demo").innerHTML =
+"My car is " + myCar.age() + " years old.";
+</script>
+
+</body>
+</html>

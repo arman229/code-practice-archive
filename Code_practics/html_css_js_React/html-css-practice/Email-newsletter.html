@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Newsletter</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #container {
+        padding: 18px;
+       
+        background-color: #f1f1f1;
+    }
+    form { padding: 4px;
+    background-color: white;}
+
+    form input {
+        width: 100%;
+        padding: 12px;
+        margin-top: 16px;
+        
+    }
+
+    #footer {
+        
+        margin-top: 12px;
+    }
+
+    #btn {
+        width: 100%;
+        background-color: #04aa6d;
+        color: white;
+        padding: 12px;
+        margin-top: 18px;
+        margin-bottom: 18px;
+    }
+    #btn:hover {background-color: #04aa6d;}
+
+    input[type=checkbox] {
+      
+       left: 0px;
+         
+        
+    }
+</style>
+
+<body>
+
+    <div id="container">
+        <div id="content">
+            <h1>Subscribe to our Newsletter</h1>
+            <p>Lorem ipsum text about why you should subscribe to our newsletter blabla. Lorem ipsum text about why you
+                should subscribe to our newsletter blabla. Lorem ipsum text about why you should subscribe to our
+                newsletter blabla.</p>
+        </div>
+        <form action="#">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Email address">
+            <label>
+                <input style="width:unset; margin-bottom: 20px; border: none;" type="checkbox" checked="checked" > Daily Newsletter
+              </label>
+
+        </form>
+        <div id="footer">
+            <button id="btn">Subscribe</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

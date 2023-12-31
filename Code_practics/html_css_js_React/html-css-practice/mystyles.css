@@ -1,0 +1,30 @@
+body{
+    margin: 0px;
+
+}
+h2{
+    background-color: rgb(70, 104, 67);
+    display: inline;
+}
+ 
+a{
+    background-color: slategrey;
+    display: block;
+}
+div h3{
+    display: inline;
+}
+div{
+    display: inline;
+    margin: 20px; 
+}
+img{
+    height: 100px;
+    width: 100px;
+}
+#auther-name{
+    background-color: blueviolet;
+    color: bisque;
+    font-size: larger;
+    font-family: monospace;
+}

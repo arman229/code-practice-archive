@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search or Filter Menu </title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #left {
+        position: fixed;
+        width: 30%;
+        background-color: beige;
+        height: 100vw;
+    }
+    #left >a { display: block;
+    text-decoration: none;
+padding:14px 16px;}
+
+    #right {   position: fixed;
+        width: 100vw;
+        margin-left: 30%;
+        background-color: bisque; height: 100vw;
+    }
+    #sub-right {  
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;}
+    #search { width: 100%;
+    padding: 15px;}
+</style>
+
+<body>
+    <div id="left">
+        <h1> Menu</h1>
+        <input type="text" id="search" placeholder="Search..">
+        <a href="#"> HTML</a>
+        <a href="#"> CSS</a>
+        <a href="#"> JavaScript</a>
+        <a href="#"> PHP</a>
+        <a href="#"> Puthon</a>
+        <a href="#"> JQuery</a>
+        <a href="#"> SQL</a>
+        <a href="#"> Bootstrap</a>
+        <a href="#">Node.js</a>
+
+    </div>
+    <div id="right">
+      <div id="sub-right">  <h1> Page Content</h1>
+        <p>Start to type for a specific category/link inside the search bar to "filter" the search options.</p>
+        <p>Some text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+        <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+        <p>Some text..</p></div>
+    </div>
+</body>
+
+</html>

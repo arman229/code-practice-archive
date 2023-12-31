@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full page tab</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        nav {
+            background-color: gray;
+            display: flex;
+        }
+
+        nav a {
+            flex-grow: 1;
+            padding-top: 16px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.4em;
+            padding-bottom: 16px;
+        }
+
+        nav a:hover {
+            background-color: azure;
+        }
+
+        h3 {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+    </nav>
+
+    <div id="Home" class="tabcontent">
+        <h3>Home</h3>
+        <p>Home is where the heart is..</p>
+    </div>
+
+    <div id="News" class="tabcontent">
+        <h3>News</h3>
+        <p>Some news this fine day!</p>
+    </div>
+
+    <div id="Contact" class="tabcontent">
+        <h3>Contact</h3>
+        <p>Get in touch, or swing by for a cup of coffee.</p>
+    </div>
+
+    <div id="About" class="tabcontent">
+        <h3>About</h3>
+        <p>Who we are and what we do.</p>
+    </div>
+
+</body>
+<script>
+    var aElements = document.getElementsByTagName('a');
+    var contents = document.getElementsByClassName('tabcontent');
+    let colors = ['red', 'green', 'blue', 'orange']
+    for (let i = 0; i < aElements.length; i++) {
+        aElements[i].onclick = function ds() {
+            for (let j = 0; j < contents.length; j++) {
+                contents[j].style.display = 'none';
+                aElements[j].style.backgroundColor = 'gray';
+            }
+            aElements[i].style.backgroundColor = colors[i];
+            contents[i].style.display = 'block';
+            contents[i].style.backgroundColor = colors[i];
+        }
+    }
+    for (let j = 0; j < contents.length; j++) {
+        contents[j].style.display = 'none';
+    }
+
+</script>
+
+</html>

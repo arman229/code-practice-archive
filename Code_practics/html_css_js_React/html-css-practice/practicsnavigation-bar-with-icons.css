@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+}
+
+.navigation {
+
+    background-color: red;
+}
+
+.navigation a {
+    padding: 15px;
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    background-color: teal;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+
+@media screen and (max-width: 600px) {
+    .navigation a {
+        display: block;
+    }
+}

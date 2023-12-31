@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #container {
+        height: 60px;
+        width: 120px;
+        background-color: gray;
+        position: relative;
+        margin: 16px;
+        border-radius: 16px;
+    }
+
+    #subcontainer {
+        position: absolute;
+        height: 50px;
+        top: 5px;
+        left: 5px;
+        width: 50px;
+        background-color: white;
+        transition: .3s all;
+        border-radius: 16px;
+    }
+
+ 
+</style>
+
+<body>
+    <div id="container">
+        <div id="subcontainer"></div>
+    </div>
+
+</body>
+<script>
+    var isChecked = false
+    var container = document.getElementById('container')
+    var subcontainer = document.getElementById('subcontainer')
+    container.onclick = function () {
+        if (isChecked==true) { 
+            subcontainer.style.marginLeft = '0px'
+            container.style.backgroundColor = 'gray'
+            isChecked = false
+        } else {
+            subcontainer.style.marginLeft = '60px'
+            container.style.backgroundColor = 'aqua'
+            isChecked = true
+        }
+
+    }
+</script>
+
+</html>

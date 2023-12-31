@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoverable Dropdown</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .btn {
+        padding: 10px; 
+        background-color: rgb(150, 137, 137);
+        color: white;
+        cursor: pointer;
+    }
+
+    nav {
+        width: 200px; 
+        display: none;
+    }
+
+
+    nav a {
+        display: block;
+        text-decoration: none;
+        padding: 15px 18px;
+        color: white;
+        background-color: rgb(17, 184, 142);
+
+
+    }
+
+    .btn:hover,
+    nav a:hover {
+        background-color: rgb(241, 4, 44);
+    }
+
+    .dropdown {
+        background-color: antiquewhite;
+        display: inline;
+    }
+
+    .dropdown:hover nav {
+        display: block;
+    }
+</style>
+
+<body>
+    <div class="dropdown">
+        <button class="btn">Hover Me</button>
+        <nav>
+            <a href="#"> Link1</a>
+            <a href="#"> Link2</a>
+            <a href="#"> Link3</a>
+        </nav>
+    </div>
+</body>
+
+</html>

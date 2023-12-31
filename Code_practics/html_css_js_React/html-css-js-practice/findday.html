@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find day of your birth</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #container {
+        border: 4px solid red;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 60px;
+        background-color: blanchedalmond;
+        font-size: 2rem;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <p>Please enter your date of birth</p>
+        <input type="date" id="date_box">
+        <button id="btn" onclick="findday()"> Calculate</button>
+        <p id="demo"></p>
+    </div>
+
+</body>
+<script> 
+function findday() {
+        var dateelem = document.getElementById("date_box").value
+     
+       date_value = dateelem.getDate();
+       month_value = dateelem.getMonth();
+       year_value = dateelem.getFullYear();
+       if(month_value == 1){
+        month_value=month_value + 10
+       }
+    }
+
+</script>
+
+</html>

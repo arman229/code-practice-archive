@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<style>
+    html,
+    body {
+        margin: 0;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #mainbtn {
+        padding: 14px;
+        background-color: green;
+        font-size: 2em;
+    }
+
+    #form-model {
+        background-color: white;
+        top: 30px;
+        border: 2px solid red;
+        width: 40%;
+        transition: 0.4s all;
+        transform: scale(0);
+    }
+
+    /* @keyframes scaleanimation {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+} */
+    span i {
+        cursor: pointer;
+        float: right;
+        top: 10px;
+        padding: 16px;
+        font-size: 2em;
+    }
+
+    #image {
+        outline: 2px solid red;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        border-radius: 50%;
+        width: 50%;
+
+    }
+
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    .container {
+        padding: 16px;
+    }
+
+
+    #btn {
+        width: 100%;
+        padding: 12px;
+        background-color: rgba(6, 243, 6, 0.1);
+        font-size: 1.6em;
+    }
+
+    .two {
+        padding: 26px;
+        border: 2px solid red;
+        background-color: antiquewhite;
+    }
+
+    #cbtn {
+        padding: 12px;
+        background-color: rgba(255, 0, 0, 0.274);
+
+    }
+
+    span i:hover {
+        background-color: red;
+    }
+
+    #btn:hover {
+        opacity: 1;
+        background-color: rgba(6, 243, 6, 1);
+    }
+
+    #cbtn:hover {
+        opacity: 1;
+        background-color: rgba(255, 0, 0, 1);
+    }
+</style>
+
+<body>
+    <!-- onclick="Loginbtn()" -->
+    <button id="mainbtn">login</button>
+    <div id="form-model">
+        <form action="#">
+            <span> <i onclick="none()">&times;</i></span>
+            <div id="image"> <img src="https://www.w3schools.com/howto/img_avatar2.png" alt=""></div>
+            <div class="container"> <label for="username">Username</label>
+                <input type="text" placeholder="Enter Username" name="username" required>
+                <label for="psw">Password</label>
+                <input type="password" placeholder="Enter password" name="psw" required>
+
+                <button id="btn"> Login</button>
+                <label> <input style="margin-top: 20px;" type="checkbox" name="remember">Remember me </label>
+            </div>
+            <div class="container two">
+                <button id="cbtn" onclick="none()">Cancel</button> <span style="float: right; padding: 12px 0 12px;"
+                    class="psw">Forgot
+                    <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+    <script>
+        var Form_model = document.getElementById("form-model")
+        var mainbtn = document.getElementById("mainbtn")
+
+        window.onclick = function (e) {
+            console.log("asdfdsf" + e.target)
+            if (e.target != Form_model && e.target != mainbtn) {
+                Form_model.style.transform = "scale(0)"
+            }
+
+        }
+        mainbtn.onclick = () => Form_model.style.transform = "scale(1)"
+
+
+        function none() {
+            Form_model.style.transform = "scale(0)"
+
+        } 
+    </script>
+</body>
+
+</html>

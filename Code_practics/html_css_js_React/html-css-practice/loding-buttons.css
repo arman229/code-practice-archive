@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+}
+*{ box-sizing: border-box;
+}
+.btn,.btn1 { padding: 14px;
+border: none;
+background-color: dodgerblue;
+font-size: 20px;
+color: white;}
+.fa {
+    margin-left: -12px;
+    margin-right: 8px;
+
+}
+.btn1 {margin-top: 10px;
+    padding: 14px;
+    border: none;
+    background-color: dodgerblue;
+    font-size: 20px;
+    color: white;
+    opacity: .5;
+cursor: pointer;}
+.btn1:hover { opacity: 1;}

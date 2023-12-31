@@ -1,0 +1,84 @@
+#container {
+    border: 4px solid red;
+
+
+    background-image: url("cutlery.jpg"); /* By default image is repeat it covers the entire element */
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: scroll;
+    margin-top: 30px;
+}
+
+#container1 {
+    border: 5px solid green;
+    width: 1000px;
+    height: 1000px;
+    background-image: url("cutlery.jpg"); /* By default image is repeat it covers the entire element */
+    background-repeat: repeat-x;
+}
+
+#container2 {
+    border: 6px solid rgba(66, 63, 59, 0.64);
+    width: 1000px;
+    height: 1000px;
+    background-image: url("cutlery.jpg"); /* By default image is repeat it covers the entire element */
+    background-repeat: repeat-y;
+}
+
+#container3 {
+    border: 7px solid orange;
+    width: 2000px;
+    height: 1500px;
+    background-image: url("cutlery.jpg"); /* By default image is repeat it covers the entire element */
+    background-repeat: space;
+}
+
+#container4 {
+    border: 8px solid orange;
+    width: 3000px;
+    height: 3000px;
+    background-image: url("cutlery.jpg"); /* By default image is repeat it covers the entire element */
+    background-repeat: round;
+}
+
+#first {
+    border: 2px solid aqua;
+}
+
+#second {
+    border: 2px dotted black;
+}
+
+#third {
+    border: 2px groove crimson;
+}
+
+#fourth {
+    border: 2px double darkblue;
+}
+
+#fifth {
+    border: 2px dashed orange;
+}
+
+#sixth {
+    border: 2px ridge firebrick;
+}
+
+#seventh {
+    border: 2px inset green;
+}
+
+#eighth {
+    border: 2px outset hotpink;
+}
+
+#ninth {
+    border: 2px hidden indigo;
+}
+
+#tenth {
+    border: 2px none teal;
+}
+
+

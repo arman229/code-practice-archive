@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Image</title>
+</head>
+<style>
+    body,
+    html {
+        height: 100%;
+    }
+
+
+    #container {
+
+        background-image: url("https://www.w3schools.com/howto/img_nature.jpg");
+        height: 50%;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        outline: 2px solid red;
+    }
+
+    #sub-container {
+        outline: 2px solid red;
+        position: absolute;
+        top: 50%;
+        text-align: center;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+.btn { padding: 12px 20px;}
+    .btn:hover {
+        background-color: #555;
+        color: white;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <div id="sub-container">
+            <h1>I am John Doe</h1>
+            <p>And I'm a Photographer</p>
+            <button class="btn">Hire me</button>
+        </div>
+    </div>
+</body>
+
+</html>

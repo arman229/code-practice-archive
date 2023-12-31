@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+    color: white;
+}
+
+h2 {
+    text-shadow: 2px 2px 5px red;
+}
+
+h3 {
+    text-shadow: 13px 13px green;
+}
+
+ #first {
+    height: 300px;
+    width: 399px;
+    background-color: green;
+    box-shadow: 10px 38px red;
+}
+ #second { height: 300px;
+     width: 399px;
+     background-color: green;
+     box-shadow: 10px 0 blue, 14px 16px red, 18px 20px yellow, 22px 24px red ;
+
+ }
+ #third{
+     width: 399px;
+     background-color: green;
+     box-shadow: 38px 38px 33px red;
+
+ }
+ #fourth{ width: }
+

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    .container {
+        background-image: url("weatherimg.jpg");
+    }
+
+    .images {
+        height: 40px;
+        width: 50px;
+    }
+
+    .animatedimg {
+        height: 30px;
+        width: 30px;
+    }
+
+    .bround {
+        border: 2px solid black;
+        border-radius: 10px
+    }
+
+    .weakly-image {
+        height: 40px;
+        width: 50px;
+        margin-right: 10px;
+    }
+
+    .icon-image {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 2px solid gray;
+    }
+
+    .weather_image {
+        height: 150px;
+        width: 150px;
+
+
+    }
+
+
+
+    .LRicon {
+        cursor: pointer;
+        background-color: gray;
+    }
+
+    .LRicon:hover {
+        background-color: black;
+    }
+</style>
+
+<body>
+    <div class="container border border-danger p-4">
+        <div class="row  d-flex align-items-center bround    bg-light ">
+            <div class="col-sm-4 col-md-2 col-lg-2 col-xxl-1  col-4  "> <img src="images.png" class="icon-image" alt="">
+                Weather
+            </div>
+            <div class="col-sm-8 col-md-5 col-lg-5 col-xxl-5   col-8 p-0 ">
+                <nav class="navbar navbar-expand p-0   bg-light">
+                    <div class="container-fluid ">
+                        <ul class="navbar-nav " style="font-size: 2em;">
+                            <li class="nav-item  border     ">
+                                <i class=" fa fa-home p-2"></i>
+                            </li>
+                            <li class="nav-item  border   ">
+                                <i class=" fa fa-home p-2"></i>
+                            </li>
+                            <li class="nav-item  border   ">
+                                <i class=" fa fa-home p-2"></i>
+                            </li>
+                            <li class="nav-item  border   ">
+
+                                <i class=" fa fa-history p-2"></i>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-sm-12 col-md-5 col-lg-5 col-xxl-6    p-0 ">
+                <div class="input-group">
+                    <div class="form-outline">
+                        <input type="search" placeholder="Type city" id="form1" class="form-control" />
+
+                    </div>
+                    <button type="button" class="btn btn-primary">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row my-4 d-flex justify-content-between p-0  ">
+
+            <div class="col-sm-12 col-md-7 col-lg-6 bg-light bround   p-0 row m-0 ">
+                <h3>City Name: <span id="cityname"> </span> </h3>
+
+                <div class="col-6">
+
+
+
+                    <p><img src="temperature.gif" alt="" class="animatedimg">Temp :<span class="temperature">
+                        </span>
+                    </p>
+
+                    <p><img src="hot.gif" alt="" class="animatedimg">Max-Tem :<span class="temperaturemax">
+                        </span>
+                    </p>
+
+                    <p><img src="cold.gif" alt="" class="animatedimg">Min-Tem :<span class="temperaturemin">
+                        </span>
+                    </p>
+
+
+
+
+
+
+
+                    <p> <img src="sunrise.gif" alt="" class="animatedimg"> sunrise: <span class="sunrise"> </span> </p>
+
+                    <p><img src="sunset.gif" alt="" class="animatedimg">sunset: <span class="sunset"> </span> </ p>
+
+
+
+
+                </div>
+                <div class="col-6" style="  display: flex; align-items: center; flex-direction: column; ">
+                    <h1 class="temperature" style="font-size: 3em; "> </h1> <img src="sunrise.gif" alt="Error"
+                        class="weather_image">
+                </div>
+                <div class="row p-0 m-0">
+                    <div class="col-6">
+                        <p><img src="sunrise.gif" alt="" class="animatedimg">Wind direction:<span class="winddirection">
+                            </span> </p>
+                        <p><img src="sunrise.gif" alt="" class="animatedimg">pressure:<span class="pressure"> </span>
+                        </p>
+                        <p><img src="rainy.gif" alt="" class="animatedimg">Chance of rain:<span class="rainchance">
+                            </span>
+                        </p>
+                    </div>
+                    <div class="col-6">
+                        <p><img src="sunrise.gif" alt="" class="animatedimg">humidety:<span class="humidety"> </span>
+                        </p>
+
+                        <p><img src="view.gif" alt="" class="animatedimg">visibilty:<span class="visibilty"> </span>
+                        </p>
+
+                        <p><img src="wind.gif" alt="" class="animatedimg">windspeed:<span class="windspeed"> </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-sm-12 col-md-5 col-lg-5 bg-light bround">
+
+
+                <div class="  p-3 ">
+                    <h2> Weakly forest</h2>
+                    <div class="d-flex justify-content-between border-bottom p-1"> <span>today</span>
+                        <span>
+                            <img src="images.png " alt="Error" class="weakly-image"> sunday </span>
+                        <span> 36/22</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between border-bottom p-1"> <span>today</span>
+                        <span>
+                            <img src="images.png " alt="Error" class="weakly-image"> sunday </span>
+                        <span> 36/22</span>
+                    </div>
+                    <div class="d-flex justify-content-between border-bottom p-1"> <span>today</span>
+                        <span>
+                            <img src="images.png " alt="Error" class="weakly-image"> sunday </span>
+                        <span> 36/22</span>
+                    </div>
+                    <div class="d-flex justify-content-between border-bottom p-1"> <span>today</span>
+                        <span>
+                            <img src="images.png " alt="Error" class="weakly-image"> sunday </span>
+                        <span> 36/22</span>
+                    </div>
+                    <div class="d-flex justify-content-between border-bottom p-1"> <span>today</span>
+                        <span>
+                            <img src="images.png " alt="Error" class="weakly-image"> sunday </span>
+                        <span> 36/22</span>
+                    </div>
+                    <div class="d-flex justify-content-between border-bottom p-1"> <span>today</span>
+                        <span>
+                            <img src="images.png " alt="Error" class="weakly-image"> sunday </span>
+                        <span> 36/22</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class=" bround  d-flex align-items-center justify-content-between bg-light  ">
+                <div class="  text-white p-2 LRicon" onclick="leftscroll()"> &#10094;</div>
+                <div class="d-flex overflow-hidden border m-2" style="height:120px" id="scrolltext">
+
+                    <div class="p-3   ">
+                        <h5>4:00</h5><img src="images.png  " class="images">
+                        <h4>25</h4>
+                    </div>
+
+                    <div class="p-3   ">
+                        <h5>4:00</h5><img src="images.png  " class="images">
+                        <h4>25</h4>
+                    </div>
+                    <div class="p-3   ">
+                        <h5>4:00</h5><img src="images.png  " class="images">
+                        <h4>25</h4>
+                    </div>
+                    <div class="p-3   ">
+                        <h5>4:00</h5><img src="images.png  " class="images">
+                        <h4>25</h4>
+                    </div>
+                    <div class="p-3   ">
+                        <h5>4:00</h5><img src="images.png  " class="images">
+                        <h4>25</h4>
+                    </div>
+                    <div class="p-3   ">
+                        <h5>4:00</h5><img src="images.png  " class="images">
+                        <h4>25</h4>
+                    </div>
+                    <div class="p-3   ">
+                        <h5>4:00</h5><img src="images.png  " class="images">
+                        <h4>25</h4>
+                    </div>
+                    <div class="p-3   ">
+                        <h5>4:00</h5><img src="images.png  " class="images">
+                        <h4>25</h4>
+                    </div>
+                    <div class="p-3   ">
+                        <h5>4:00</h5><img src="images.png  " class="images">
+                        <h4>25</h4>
+                    </div>
+                    <div class="p-3   ">
+                        <h5>4:00</h5><img src="images.png  " class="images">
+                        <h4>25</h4>
+                    </div>
+                    <div class="p-3   ">
+                        <h5>4:00</h5><img src="images.png  " class="images">
+                        <h4>25</h4>
+                    </div>
+                    <div class="p-3   ">
+                        <h5>4:00</h5><img src="images.png  " class="images">
+                        <h4>25</h4>
+                    </div>
+                </div>
+                <div class="  text-white p-2 LRicon" onclick="rightscroll()">&#10095;</div>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    const weakly_image = document.getElementsByClassName("weakly-image")
+    const weather_image = document.getElementsByClassName('weather_image');
+    const API_KEY = "a2d6296d300bc0160e3160bfd89b46cb";
+    const search = document.getElementById("search")
+    search.addEventListener('click', () => {
+        const city = $('.form-control')[0].value;
+
+        var data = {}
+
+        for (let index = 0; index < 10; index++) {
+            const weatherData = data.list[index];
+            var dt_txt = "2023-02-24 21:00:00"
+            var date = new Date(dt_txt)
+            var div = document.createElement("div");
+            var div = $('div').class("p-3")
+            var h5 = document.createElement("h5");
+            h5.innerText = date.toLocaleTimeString()
+            var img = document.createElement("img");
+            img.classList.add("images")
+            img.src = "images.png"
+            var h4 = document.createElement("h4");
+            h4.innerText = index + "temp"
+            div.appendChild(h5)
+            div.appendChild(img)
+            div.appendChild(h4)
+            $('#scrolltext').append(div)
+        }
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`)
+            .then(response => response.json())
+            .then(data => {
+                const sunrise = data.sys.sunrise
+                const sunset = data.sys.sunset
+                $('#cityname').text(data.name + " ");
+
+
+                $('.pressure')[0].textContent = data.main.pressure + "hPa ";
+                $('.humidety')[0].textContent = data.main.humidity + "% ";
+                $('.visibilty')[0].textContent = data.visibility + " m ";
+                $('.windspeed')[0].textContent = data.wind.speed + " ";
+                $('.winddirection')[0].textContent = data.wind.deg + " ";
+                $('.temperature')[0].textContent = data.main.temp + "°C ";
+                $('.temperature')[1].textContent = data.main.temp + "°C ";
+                $('.temperature')[2].textContent = data.main.temp;
+                $('.temperaturemax')[0].textContent = data.main.temp_max + "°C ";
+                $('.temperaturemax')[1].textContent = data.main.temp_max + "/ ";
+                $('.temperaturemin')[0].textContent = data.main.temp_min + "°C ";
+                $('.temperaturemin')[1].textContent = data.main.temp_min + "  ";
+                $('.rainchance')[0].textContent = data.clouds.all + "% ";
+                const iconUrl = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+
+                weather_image[0].src = iconUrl;
+                weakly_image[0].src = iconUrl;
+                displaySunriseSunset(sunrise, sunset);
+
+                const time = document.getElementsByClassName("time")
+                hourlytime(main.dt[0], main.dt[0], main.dt[0], main.dt[0], main.dt[0],);
+                function hourlytime(a, s, d, f, g) {
+                    var Time = new Date(a * 1000).toLocaleTimeString();
+                    var Time = new Date(s * 1000).toLocaleTimeString();
+                    $('.time')[0].textContent = Time[0];
+                    $('.time')[1].textContent = Time[1];
+                }
+
+                function displaySunriseSunset(sunrise, sunset) {
+                    var sunriseTime = new Date(sunrise * 1000).toLocaleTimeString();
+                    var sunsetTime = new Date(sunset * 1000).toLocaleTimeString();
+                    $('.sunrise')[0].textContent = sunriseTime;
+                    $('.sunset')[0].textContent = sunsetTime;
+                }
+
+
+
+
+
+
+
+            })
+            .catch(error => {
+
+            });;
+    });
+</script>
+<script>
+    function leftscroll() {
+        $("#scrolltext").animate({ scrollLeft: "-=80px" }, "slow");
+    }
+    function rightscroll() {
+        $("#scrolltext").animate({ scrollLeft: "+=80px" }, "slow");
+    }
+</script>
+
+</html>

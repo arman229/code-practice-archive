@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+.container{
+    display: inline-block;
+    background-color: #555555;
+}
+.button1 {
+    font-size: 23px;
+    background-color: #04AA6D;
+    padding: 10px;
+    width: 189px;
+
+}
+
+.nav1 {
+    display: none;
+    width: 189px;
+    outline: 2px solid red;
+}
+
+.nav1 a {
+    display: block;
+    padding: 19px;
+    border: 2px solid red;
+    text-decoration: none;
+}
+.nav1 a:hover {
+    background-color: #ddd;
+}
+/*
+
+.container:click   .nav1 {
+    display: block;
+}*/
+
+
+#search-container p{
+    margin: 0px;
+    max-width: 200px;
+    border: 1px solid gray;
+}

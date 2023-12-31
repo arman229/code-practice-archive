@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade calculator</title>
+</head>
+
+<body>
+    <p>Enter your number</p>
+    <input id="input">
+    <button type="button" onclick="calculate()">Calculate</button>
+
+    <p id="msg"></p>
+</body>
+<script>
+
+
+
+    function calculate() {
+        var input_box = Number(document.getElementById("input").value)
+        document.getElementById("input").value=678
+
+        var msg = document.getElementById("msg")
+        if (input_box <= 49.49) {
+            text = "fail"
+        }
+        else if (input_box <= 54.49) {
+            text = "Pass(D grade) if your number in between 49.5--54.49"
+        }
+        else if (input_box <= 59.49) {
+            text = "Satisfactory(C grade) if your number in between 54.5--59.49"
+        }
+        else if (input_box <= 64.49) {
+            text = "Average(C+ grade) if your number in between 59.5--64.49"
+        }
+        else if (input_box <= 69.49) {
+            text = "Good(B- grade) if your number in between 64.5--69.49"
+        }
+        else if (input_box <= 74.49) {
+            text = "Very Good(B grade) if your number in between 69.5--74.49"
+        }
+        else if (input_box <= 79.49) {
+            text = " Excellent(B+ grade) if your number in between 74.5--79.49"
+        }
+        else if (input_box <= 84.49) {
+            text = "Outstanding(A grade) if your number in between 79.5--84.49"
+        }
+
+        else {
+            text = "Exeptional(A+ Grade) if your number is more than 84.5"
+        }
+        msg.innerHTML = text;
+    }
+
+</script>
+
+</html>

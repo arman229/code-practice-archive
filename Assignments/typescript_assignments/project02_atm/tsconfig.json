@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+      "moduleResolution": "NodeNext",
+      "outDir": "bin",
+  "target": "ES2022",
+    "sourceMap": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

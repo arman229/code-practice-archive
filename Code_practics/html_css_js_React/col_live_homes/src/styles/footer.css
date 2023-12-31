@@ -1,0 +1,53 @@
+.bi-facebook:hover {
+    color: #4B69B1;
+    cursor: pointer;
+    transition: 0.3s ease all;
+}
+
+.bi-twitter-x:hover {
+    color: #000000;
+    cursor: pointer;
+    transition: 0.3s ease all;
+}
+
+.bi-instagram:hover {
+    color: #C4356D;
+    cursor: pointer;
+    transition: 0.3s ease all;
+}
+
+.bi-whatsapp:hover {
+    color: #2BA63B;
+    cursor: pointer;
+    transition: 0.3s ease all;
+}
+
+.bi-youtube:hover {
+    color: #E83F3A;
+    cursor: pointer;
+    transition: 0.3s ease all;
+}
+
+.pred {
+
+    color: #ffff00 !important
+
+}
+
+.copywrite {
+    line-height: 1.4;
+    color: #B6B6B6 !important;
+    /*font-size: 0.8em;*/
+
+}
+
+.footerLink {
+    text-decoration: none !important;
+    /*font-size: 0.8em;*/
+    color: #B6B6B6 !important;
+}
+
+.footerLink:hover {
+    color: white !important;
+}
+

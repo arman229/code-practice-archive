@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .subcontainer {
+        width: 300px;
+        border: 2px solid red;
+        height: 600px;
+    }
+
+    #container {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+    }
+
+    .text_area {
+        width: 250px;
+        padding: 12px;
+        margin-top: 10px;
+
+    }
+
+    .text_box {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        bottom: 2px;
+        border-top: 3px dotted red;
+    }
+
+    .profile {
+        position: absolute;
+        top: 2px;
+        border-bottom: 3px dotted red;
+    }
+
+    img {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        border: 1px solid black;
+    }
+
+    .fa {
+        font-size: 3em;
+        cursor: pointer;
+
+    }
+
+    .fa:hover {
+        background-color: blueviolet;
+    }
+</style>
+
+<body>
+    <button onclick=selectimg2()>clicksssss</button>
+    <div id="container">
+        <div class="subcontainer">
+
+            <span class="profile">
+                <input type="file" class="selectimg" onchange="onFileSelected(event)">
+                <img id="myimg" alt="">
+
+            </span>
+
+            <p>r</p>
+            <p class="demo">s </p>
+            <div id="myDIV"></div>
+            <span class="text_box">
+                <input type="text" class="text_area">
+                <i class="fa fa-send-o" onclick=addtext(0)></i>
+            </span>
+        </div>
+        <div class="subcontainer">
+            <span class="profile">
+                <input type="file" class="selectimg" onselect=selectimg()>
+                <img alt="">
+            </span>
+            <p>r</p>
+            <p class="demo">s </p>
+            <span class="text_box">
+                <input type="text" class="text_area">
+                <i class="fa fa-send-o" onclick=addtext(1)></i>
+            </span>
+        </div>
+    </div>
+</body>
+<script>
+
+    var selectimg = document.getElementsByClassName("selectimg")
+    var img = document.getElementsByTagName("img")
+    var myimgEle = document.getElementById("myimg")
+    var text_area = document.getElementsByClassName("text_area")
+    // selectimg[0].addEventListener("click", selectimg)
+    var firstFileSrc;
+    function onFileSelected(e) {
+        var fileInputEle = e.target
+        var selectedFile = fileInputEle.files[0]
+
+        let fileReader = new FileReader()
+        fileReader.onload = function (evt) {
+            firstFileSrc = evt.target.result
+            myimgEle.src = firstFileSrc
+        }
+        fileReader.readAsDataURL(selectedFile)
+    }
+    function selectimg2() {
+        // var img = document.getElementsByTagName("img")
+        document.getElementById("myimg").src = "profile.jpg";
+
+    }
+    function addtext(i) {
+
+        var text = document.getElementsByClassName("text_area")[i].value;
+
+
+
+        const creatp = document.createElement("p")
+
+        const node = document.createTextNode(text);
+
+        creatp.appendChild(node);
+        // document.body.appendChild(creatp); 
+        document.getElementsByClassName("subcontainer")[i].appendChild(creatp)
+        // document.getElementById("myDIV").appendChild(creatp)
+    }
+</script>
+
+</html0

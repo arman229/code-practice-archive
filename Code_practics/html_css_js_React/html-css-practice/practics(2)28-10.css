@@ -1,0 +1,43 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 20px;
+    background-color: red;
+}
+
+[class*="grid-item-"] {
+    background-color: green;
+    text-align: center;
+    font-size: 39px;
+    border: 2px solid black;
+    gap: 30px 30px;
+}
+
+.grid-item-10 {
+    grid-area: 2/1/4/3;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container {
+    display: flex;
+    padding: 20px;
+    height: 444px;
+    background-color: blue;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.flex-container > div {
+    background-color: navajowhite;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>My First Bootstrap Page</title>
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #container {
+        padding: 14px;
+    }
+
+    #header {
+        height: 550px;
+        position: relative;
+        background-color: gray;
+
+        align-items: center;
+        display: flex;
+        font-size: 2em;
+        justify-content: center;
+    }
+
+    #about-me,
+    #some-links {
+        padding: 14px;
+    }
+
+    #some-links a {
+        width: 100%;
+        border-radius: 10px;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 1.3em;
+        color: black;
+
+        padding: 12px;
+        border: 2px solid rgb(7, 7, 7);
+
+    }
+
+    #some-links a:hover {
+        background-color: gray;
+    }
+
+    footer {
+        display: flex;
+        background-color: gray;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #row {
+        display: flex;
+
+        justify-content: space-between;
+    }
+
+    .news {
+
+        padding: 12px;
+    }
+
+    .img {
+        height: 300px;
+        padding: 12px;
+        background-color: gray;
+    }
+
+    .img2 {
+        height: 200px;
+        padding: 12px;
+        background-color: gray;
+    }
+
+    #navbar {
+        position: relative;
+        background-color: black;
+        width: 100%;
+
+    }
+
+
+
+    .column75 {
+        flex-grow: 0.75;
+        margin-right: 12px;
+    }
+
+    .column25 {
+        flex-grow: 0.25;
+        margin-left: 12px;
+
+    }
+
+    #navbar a {
+        opacity: .5;
+        color: white;
+        display: inline-block;
+        padding: 14px;
+        font-size: 1.3em;
+        text-decoration: none;
+        padding: 12px;
+
+    }
+
+    #disable:disabled {
+        background-color: red;
+    }
+
+    #navbar #active {
+        opacity: 1;
+    }
+
+    #navbar a.icon {
+        position: absolute;
+        right: 10px;
+        top: 0;
+        display: none;
+    }
+
+    #navbar a:hover {
+        opacity: 1;
+    }
+
+    #some-links #active-link {
+        background-color: #007bff;
+    }
+
+    #page_link {
+        display: inline-block;
+        transition: all 0.3s ;
+        height:  0px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #row {
+            flex-direction: column;
+        }
+
+        #navbar a {
+            display: block;
+
+        }
+
+        #page_link {
+            height: 10px;
+        }
+
+        #navbar a.icon {
+            display: inline;
+        }
+
+        .column75,
+        .column25 {
+            margin-right: 0px;
+        }
+    }
+</style>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <div>
+                <h1> My First Bootstrap Page</h1>
+                <h2>Resize this responsive page to see the effect!</h2>
+            </div>
+
+
+        </div>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>    
+              </ul>
+            </div>  
+          </nav>
+        <div id="navbar">
+            <a href="#">WebsiteName</a>
+            <span id="page_link">
+                <a href="#" id="active">page1</a>
+                <a href="#">page2</a>
+                <a href="#">Page3</a>
+            </span>
+            <a href="#" class="icon" onclick="openNavMenu()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div id="row">
+            <div class="column25">
+                <div id="about-me">
+                    <h1>About Me</h1>
+                    <p>Photo of me</p>
+                    <p class="img2">Fake Image </p>
+                    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+                </div>
+                <div id="some-links">
+                    <h1>Some Links</h1>
+                    <p>Some Links</p>
+                    <a href="#" id="active-link">link1</a>
+                    <a href="#">link2</a>
+                    <a href="#">link3</a>
+                    <a href="#" id="disable">link4</a>
+                </div>
+            </div>
+            <div class="column75">
+                <div class="news">
+                    <h1>TITLE HEADING</h1>
+                    <p>Title description, Dec 7, 2017</p>
+                    <p class="img">Fake Image </p>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consecteturadipiscing elit,
+                        seddoeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam,quisnostrud exercitation ullamco.</p>
+                </div>
+                <div class="news">
+                    <h1>TITLE HEADING</h1>
+                    <p>Title description, Dec 7, 2017</p>
+                    <p class="img">Fake Image </p>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit,
+                        seddoeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation ullamco.</p>
+                </div>
+            </div>
+
+        </div>
+        <footer>
+            <h1>footer</h1>
+        </footer>
+    </div>
+</body>
+<script>
+    var page_link = document.getElementById("page_link")
+    function openNavMenu() {
+        if (page_link.style.height == "0") {
+            page_link.style.height = "200px"
+        } else {
+            page_link.style.height = "0"
+        }
+
+    }
+</script>
+
+</html>

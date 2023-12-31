@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box
+}
+
+#top {
+    border: 2px solid black;
+}
+
+#top-ul {
+    border: 2px solid green;
+    float: left;
+    width: 30%;
+}
+
+#content {
+    border: 2px solid red;
+    float: left;
+    width: 70%;
+}

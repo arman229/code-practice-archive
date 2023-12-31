@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    margin-top: 30px;
+}
+
+nav a {
+    border-radius: 5px;
+    padding: 19px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+nav a:hover:not(.active) {
+    background-color: #333333;
+    color: white;
+}
+
+
+
+.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid red;
+    background-color: #555555;
+}
+
+@media screen and (max-width: 800px) {
+    nav a {
+
+
+
+
+    }
+}

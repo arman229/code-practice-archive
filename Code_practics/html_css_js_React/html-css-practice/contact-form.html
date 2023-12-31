@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .container {
+        background-color: rgb(12, 12, 12);
+         color: white;
+        padding: 12px;
+    }
+
+    form {
+   
+        margin-top: 20px;
+    }
+
+    #btn {
+        width: 100%;
+        padding: 10px;
+        background-color: green;
+        color: white;
+
+    }
+
+    input[type=text],
+    #options,
+    #subject {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #subject { height: 200px;}
+</style>
+
+<body>
+    <div class="container">
+        <form action="#">
+            <label for="fname">First Name</label>
+            <input type="text" name="fname" placeholder="Your name..">
+            <label for="lname">Last Name</label>
+            <input type="text" name="lname" placeholder="Your last name..">
+            <label for="country">
+                Country
+            </label>
+            <select name="country" id="options">
+                <option value="australia"> Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa"> USA</option>
+            </select>
+            <label for="subject">Subject </label>
+            <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+
+            <button id="btn">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

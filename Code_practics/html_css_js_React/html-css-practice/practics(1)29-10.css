@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+}
+
+.first-container {
+    background-color: #555;
+    display: flex;
+}
+
+.first-container a {
+    color: white;
+    font-size: 36px;
+    flex-grow: 1;
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+
+.first-container a:hover {
+    background-color: #000;
+}
+
+.second-container {
+    background-color: #555;
+    display: inline-block;
+}
+
+.second-container a {
+    width: 300px;
+    outline: 2px solid red;
+    color: white;
+    font-size: 36px;
+    display: block;
+    padding: 12px;
+    text-align: center;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+
+.second-container a:hover {
+    background-color: #000;
+}
+
+[class*="line"] {
+    width: 39px;
+    height: 7px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.1s ease;
+}
+
+.third-container:hover .first-line {
+    transform: translatey(13px) rotate(45deg);
+}
+
+.third-container:hover .second-line {
+    display: none;
+}
+
+.third-container:hover .third-line {
+    transform: rotate(-45deg);
+}

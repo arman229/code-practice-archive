@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .form-model {
+            padding: 18px;
+            border: 2px solid red;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: end;
+        }
+
+
+        #Nbtn {
+            padding: 12px;
+            background-color: red;
+            margin-left: 12px;
+        }
+
+        #Pbtn {
+            padding: 12px;
+            background-color: rgba(12, 12, 12, 0.247);
+            margin-left: 12px;
+            /* display: none; */
+        }
+
+        #icon {
+            text-align: center;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="form-model-1" class="form-model">
+        <form action="#">
+            <h1 style="text-align: center;">Register</h1>
+            <div id="form-data-name">
+                <label id="name" spellcheck="false" for="name">Name</label>
+                <input type="text" placeholder="First name">
+                <input type="text" placeholder="Last name">
+            </div>
+            <div class="btn">
+                <!-- <button id="Pbtn" onclick="previous()">previous</button> -->
+                <button id="Nbtn" onclick="next1()">Next</button>
+            </div>
+            <div id="icon">
+                <i style="background-color:black;" class="dot"></i>
+                <i class="dot"></i>
+                <i class="dot"></i>
+                <i class="dot"></i>
+            </div>
+        </form>
+    </div>
+
+    <div id="form-model-2" style="display: none;" class="form-model">
+        <form action="#">
+            <h1 style="text-align: center;">Register</h1>
+
+            <div id="form-data-contact">
+                <label id="name" for="name">Contact Info:</label>
+                <input type="text" placeholder="email...">
+                <input type="text" placeholder="Phoned">
+            </div>
+            <div class="btn">
+                <button id="Pbtn" onclick="previous2()">previous</button>
+                <button id="Nbtn" onclick="next2()">Next</button>
+            </div>
+            <div id="icon">
+                <i class="dot"></i>
+                <i style="background-color:black;" class="dot" "></i>
+                <i class=" dot"></i>
+                <i class="dot"></i>
+            </div>
+        </form>
+    </div>
+
+    <div id="form-model-3"  style= display:none; class="form-model">
+        <form action="#">
+            <h1 style="text-align: center;">Register</h1>
+
+            <div id="form-data-birthday">
+                <label id="name" for="name">Birthday:</label>
+                <input type="text" placeholder="dd">
+                <input type="text" placeholder="mm">
+                <input type="text" placeholder="yyyy">
+            </div>
+
+            <div class="btn">
+                <button id="Pbtn" onclick="previous3()">previous</button>
+                <button id="Nbtn" onclick="next3()">Next</button>
+            </div>
+            <div id="icon">
+                <i class="dot"></i>
+                <i class="dot"></i>
+                <i style="background-color:black;" class="dot" "></i>
+                <i class=" dot"></i>
+            </div>
+        </form>
+    </div>
+
+    <div  style=display:none; id="form-model-4" class="form-model">
+        <form action="#">
+            <h1 style="text-align: center;">Register</h1>
+
+            <div id="form-data-login">
+                <label id="name" for="name">Login Info:</label>
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+            </div>
+            <div class="btn">
+                <button id="Pbtn" onclick="previous4()">previous</button>
+                <button id="Nbtn" onclick="next4()">Submit</button>
+            </div>
+            <div id="icon">
+                <i class="dot"></i>
+                <i class="dot"></i>
+                <i class="dot"></i>
+                <i style="background-color:black;" class="dot"></i>
+            </div>
+        </form><form action=" ">
+            <input type="file" id="myFile"  >
+            <input type="submit">
+          </form>
+          
+    </div>
+    <script> var form_model_1 = document.getElementById("form-model-1")
+        var form_model_2 = document.getElementById("form-model-2")
+        var form_model_3 = document.getElementById("form-model-3")
+        var form_model_4 = document.getElementById("form-model-4")
+
+        function next1() {
+            form_model_1.style.display = "none"
+            form_model_2.style.display = "block"
+
+        }
+        function next2() {
+            form_model_2.style.display = "none"
+            form_model_3.style.display = "block"
+
+        }
+        function next3() {
+            form_model_3.style.display = "none"
+            form_model_4.style.display = "block"
+
+        }
+
+        function previous2() {
+            form_model_1.style.display = "block"
+            form_model_2.style.display = "none"
+
+        }
+        function previous3() {
+            form_model_2.style.display = "block"
+            form_model_3.style.display = "none"
+
+        }
+        function previous4() {
+            form_model_3.style.display = "block"
+            form_model_4.style.display = "none"
+
+        }
+
+         
+    </script>
+</body>
+
+
+</html>

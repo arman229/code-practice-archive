@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find sum of any number</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding-left: 30px;
+        transform: translate(-50%, -50%);
+        border: 2px solid red;
+    }
+
+    #btn {
+        width: 100%;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    #btn:hover {
+        background-color: black;
+        color: white;
+    }
+
+    #answer {
+        width: 100%;
+    }
+</style>
+
+<body>
+
+    <div id="container"> <button id="btn">Find sum</button>
+        <p>
+            <input type="number" class="input_number" min="0" max="9" maxlength="1">
+            <input type="number" class="input_number" min="0" max="9" maxlength="1">
+            <input type="number" class="input_number" min="0" max="9" maxlength="1">
+            <input type="number" class="input_number" min="0" max="9" maxlength="1">
+
+        </p>
+        <p>
+            <input type="number" oninput="changevalue(4)" class="input_number" min="0" max="9" maxlength="1">
+            <input type="number" oninput="changevalue(5)" class="input_number" min="0" max="9" maxlength="1">
+            <input type="number" oninput="changevalue(6)" class="input_number" min="0" max="9" maxlength="1">
+            <input type="number" oninput="changevalue(7)" class="input_number" min="0" max="9" maxlength="1">
+
+        </p>
+        <p>
+            <input type="number" disabled class="input_number" min="0" max="9" maxlength="1">
+            <input type="number" disabled class="input_number" min="0" max="9" maxlength="1">
+            <input type="number" disabled class="input_number" min="0" max="9" maxlength="1">
+            <input type="number" disabled class="input_number" min="0" max="9" maxlength="1">
+
+        </p>
+        <p>
+            <input type="number" oninput="changevalue(12)" class="input_number" min="0" max="9" maxlength="1">
+            <input type="number" oninput="changevalue(13)" class="input_number" min="0" max="9" maxlength="1">
+            <input type="number" oninput="changevalue(14)" class="input_number" min="0" max="9" maxlength="1">
+            <input type="number" oninput="changevalue(15)" class="input_number" min="0" max="9" maxlength="1">
+
+        </p>
+        <p><input type="number" disabled class="input_number" min="0" max="9" maxlength="1">
+            <input type="number" disabled class="input_number" min="0" max="9" maxlength="1">
+            <input type="number" disabled class="input_number" min="0" max="9" maxlength="1">
+            <input type="number" disabled class="input_number" min="0" max="9" maxlength="1">
+
+        </p>
+        <!-- <p id="answer"></p> -->
+        <p> <input type="text" id="answer"></p>
+    </div>
+</body>
+<script>
+    var input_number = document.getElementsByClassName("input_number")
+    var btn = document.getElementById("btn")
+
+    btn.addEventListener("click", findsum);
+    // btn.addEventListener("input", changevalue)
+
+    function findsum() {
+
+        var answer = document.getElementById("answer")
+        var firstline = input_number[0].value + input_number[1].value + input_number[2].value + input_number[3].value;
+        answer.value = "sum" + (parseInt(firstline) + 9999 + 9999)
+        document.getElementById('last').value = parseInt(firstline) + 9999 + 9999
+    }
+    function changevalue(i) {
+        setTimeout(function () { input_number[i + 4].value = 9 - input_number[i].value }, 2000);
+        // input_number[i+4].value = 9 - input_number[i].value
+
+
+    }
+</script>
+
+</html>

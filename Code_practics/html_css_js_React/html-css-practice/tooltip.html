@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-size: 1.7em;
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .tooltip {
+        position: relative;
+
+        padding-left: 12px;
+        padding-right: 12px;
+        margin-top: 20px;
+        display: inline-block;
+    }
+
+    #content {
+        position: absolute;
+        top: 0px;
+        left: 0;
+
+        background-color: black;
+        color: white;
+        visibility: hidden;
+
+    }
+
+    #content::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%); 
+        
+          border-width: 15px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;   
+    }
+
+    .tooltip:hover #content {
+        visibility: visible;
+    }
+
+    .color {
+        border-color: red yellow green black;
+        border-width: 15px;
+        border-style: solid;
+        display: block;
+        width: 20px;
+        height: 20px;
+    }
+
+    #container1 {
+        padding: 12px;
+    }
+
+    #container1hide {
+        display: none;
+    }
+
+    #container1:hover #container1hide {
+        display: block;
+        background-color: red;
+    }
+</style>
+
+<body>
+    <div class="tooltip">
+        <h1>top</h1>
+        <span id="content"> tooltiptext</span>
+    </div>
+    <span class="border color"> </span>
+    <div id="container1">Hover over me <div id="container1hide"> I am shown when hovers over the div above .</div>
+    </div>
+
+</body>
+
+</html>

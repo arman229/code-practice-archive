@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="910086e6-4d56-4bc7-b653-5dbf0914970e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/my-tailwind-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-tailwind-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-tailwind-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-tailwind-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-tailwind-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-tailwind-app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-tailwind-demo/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-tailwind-demo/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-tailwind-demo/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-tailwind-demo/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-tailwind-demo/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/react-tailwind-demo/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-tailwind-demo/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-tailwind-demo/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-tailwind-demo/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-tailwind-demo/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-tailwind-demo/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-tailwind-demo/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-tailwind-demo/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-tailwind-demo/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-tailwind-demo/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-tailwind-demo/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-tailwind-demo/src/setupTests.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="2XXMVrcisrWJCp2VkxrOkxwjGcc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="false" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/front_end_internship/assignment_6/my-tailwind-app",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="910086e6-4d56-4bc7-b653-5dbf0914970e" name="Changes" comment="" />
+      <created>1698770997399</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698770997399</updated>
+      <workItem from="1698771008405" duration="27000" />
+    </task>
+    <servers />
+  </component>
+</project>

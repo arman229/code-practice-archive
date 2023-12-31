@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<style>
+    body {
+        margin: 0;
+        background-color: black;
+        color: white;
+
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .close_container {
+        border: 2px solid green;
+        display: flex;
+        justify-content: end;
+    }
+
+    #close-icon {
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        font-size: 2em;
+        font-weight: bold;
+        line-height: 60px;
+        display: inline-block;
+        border: 2px solid red;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    #model {
+        position: relative;
+        border: 2px solid black;
+    }
+
+    #numbertext {
+        position: absolute;
+        top: 10px;
+        padding: 16px;
+        outline: 2px solid red;
+
+    }
+
+    #left,
+    #right {
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+        padding: 12px;
+        cursor: pointer;
+
+    }
+
+    #left {
+        left: 10px;
+    }
+
+    #right {
+        right: 10px;
+    }
+
+    #image img {
+        width: 100%;
+        height: 400px;
+    }
+
+    #caption {
+        text-align: center;
+        width: 100%;
+        background-color: black;
+
+    }
+
+    .container {
+        display: flex;
+        padding: 10px;
+    }
+
+    .container .row img {
+        width: 100%;
+    }
+
+    #full_window {
+        display: none;
+    }
+</style>
+
+<body>
+
+    <div class="container" id="first_row">
+        <div class="row" onclick="openSlide(0)">
+            <img src="https://www.w3schools.com/howto/img_nature.jpg" alt="">
+        </div>
+        <div class="row" onclick="openSlide(1)">
+            <img src="https://www.w3schools.com/howto/img_snow.jpg" alt="">
+        </div>
+        <div class="row" onclick="openSlide(2)">
+            <img src="https://www.w3schools.com/howto/img_mountains.jpg" alt="">
+        </div>
+        <div class="row" onclick="openSlide(3)">
+            <img src="https://www.w3schools.com/howto/img_lights.jpg" alt="">
+        </div>
+    </div>
+    <div id="full_window">
+        <div class="close_container">
+            <span id="close-icon" onclick="closeWindow()">&times;</span>
+        </div>
+
+        <div id="model">
+            <div id="image">
+                <img id="image_change" src="https://www.w3schools.com/howto/img_nature.jpg" alt="">
+            </div>
+            <div id="numbertext">a</div>
+            <button id="left" onclick="left()">&#10094;</button>
+            <button id="right" onclick="right()">&#10095;</button>
+        </div>
+        <div id="caption">d</div>
+        <div class="container">
+            <div class="row " onclick="openSlide(0)">
+                <img src="https://www.w3schools.com/howto/img_nature.jpg" alt="">
+            </div>
+            <div class="row " onclick="openSlide(1)">
+                <img src="https://www.w3schools.com/howto/img_snow.jpg" alt="">
+            </div>
+            <div class="row " onclick="openSlide(2)">
+                <img src="https://www.w3schools.com/howto/img_mountains.jpg" alt="">
+            </div>
+            <div class="row " onclick="openSlide(3)">
+                <img src="https://www.w3schools.com/howto/img_lights.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        var images = ["https://www.w3schools.com/howto/img_nature.jpg", "https://www.w3schools.com/howto/img_snow.jpg", "https://www.w3schools.com/howto/img_mountains.jpg", "https://www.w3schools.com/howto/img_lights.jpg"];
+        var captions = ["Nature and sunrise", "Snow", "Mountains and fjords", "Northern Lights"]
+
+        let currentIndex = 0
+        function left() {
+            if (currentIndex == 0) {
+                currentIndex = 3
+            } else {
+                currentIndex--
+            }
+            showSlide()
+        }
+
+        function right() {
+            if (currentIndex == 3) {
+                currentIndex = 0
+            } else {
+                currentIndex++
+            }
+            showSlide()
+
+        } 
+        
+        function openSlide(slideNumber) {
+            currentIndex = slideNumber
+            $('#first_row').hide()
+            $('#full_window').show()
+            showSlide()
+        }
+        function closeWindow() {
+            $('#first_row').show()
+            $('#full_window').hide()
+        }
+        showSlide()
+
+        function showSlide() {
+            var rows = $("#full_window .container .row")
+             for (let index = 0; index < rows.length; index++) { 
+                rows[index].style.opacity='0.2'
+            }
+            rows[currentIndex].style.opacity='1'
+            image_change.src = images[currentIndex]
+            caption.innerHTML = captions[currentIndex]
+            numbertext.innerHTML = currentIndex + 1 + "/" + images.length
+        }
+
+    </script>
+  
+</body>
+
+</html>

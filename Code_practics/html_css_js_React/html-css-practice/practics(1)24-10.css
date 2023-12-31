@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+}
+ul {
+    position: fixed;
+    height: 100%;
+    width: 25%;
+    background-color: antiquewhite;
+    margin: 0;
+    padding: 0;
+    list-style-type: none ;
+
+}
+
+div {
+    margin-left: 25%;
+    height: 1500px;
+    padding: 2px 10px;
+}
+
+li a{ text-decoration: none;
+    display: block ;
+    padding: 8px 16px;
+ }
+li a:hover{background-color: green;
+    color:white;}
+ #first {
+    background-color: red;
+    color: white;}

@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+nav{
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+  background-color: dodgerblue;
+
+}
+
+nav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+section{
+    margin-left: 220px;
+}

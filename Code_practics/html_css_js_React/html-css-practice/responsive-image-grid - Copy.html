@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #header {
+        text-align: center;
+    }
+
+    #header #btn button {
+        padding: 10px;
+    }
+
+    #btn {
+        margin-bottom: 12px;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+
+
+
+    }
+
+    .column {
+        flex: 25%; 
+    }
+
+    .column img {
+        width: 100%;
+        border: 2px solid red;
+        padding: 8px 8px;
+    }
+
+     /* @media screen and (max-width: 1000px) {
+        .column {
+            flex: 33%; 
+        } */
+    }
+
+    @media screen and (max-width: 800px) {
+        .column {
+            flex: 50%; 
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .column { 
+            flex: 100%;
+
+        }
+    }  
+</style>
+
+<body>
+    <div id="header">
+        <h1>Responsive Image Grid</h1>
+        <p>Resize the browser window to see the responsive effect.</p>
+        <div id="btn">
+            <button onclick="btn(3)">1</button>
+            <button onclick="btn(2)">2</button>
+            <button onclick="btn(1)">4</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column" id="column1S">
+            <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/ocean.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/ocean.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+            <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+        </div>
+    </div>
+
+    <script>
+        var columns = document.getElementsByClassName('column')
+
+        function btn(flexPercentage) {
+
+            let percentageToUse = "25%"
+            if (flexPercentage == 1) {
+                percentageToUse = "25%"
+            } else if (flexPercentage == 2) {
+                percentageToUse = "50%"
+            } else {
+                percentageToUse = "100%"
+            }
+           
+            for (let index = 0; index < columns.length; index++) {
+                columns[index].style.flex = percentageToUse
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Down a Bar</title>
+</head>
+<style>
+    body { 
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #topnav {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        background-color: black;
+        height: 300px;
+
+
+
+    }
+
+    nav {
+        width: 100%;
+        
+        
+
+        outline: 2px solid red;
+        margin-left: 10px;
+        margin-right: 30px;
+        /* position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%); */
+
+    }
+
+    nav div a {
+        display: inline-block;
+        padding: 14px 16px;
+        border-radius: 20px;
+        background-color: white;
+        text-decoration: none;
+
+    }
+      a:hover { background-color: rgb(71, 22, 207);
+    color: rgb(221, 29, 29);}
+    #topnav nav #second {float: right;}
+    #topnav nav #first {float: left;}
+    
+    
+    #container {
+        padding-left: 15px;
+        padding-top: 30px;
+        height: 3030px;
+    }
+</style>
+
+<body>
+    <div id="topnav">
+        <nav>
+            <div id="first"> <a href="#">Company Logo</a></div>
+            <div id="second"><a href="#">Home</a>
+                <a href="#">News</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+    </div>
+    <div id="container">
+        <h1>This example demonstrates how to slide down a navbar when the user starts to scroll the page.</h1>
+        <p>Scroll down this frame to see the effect!
+
+            Scroll to the top to hide the navbar.
+
+            Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum.</p>
+    </div>
+</body>
+
+</html>

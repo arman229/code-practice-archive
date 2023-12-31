@@ -1,0 +1,123 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    form {
+        background-color: black;
+        color: white;
+    }
+
+    .row,
+    #pbtn {
+        display: flex;
+        padding: 16px;
+    }
+
+    .col-25 {
+        width: 200px;
+    
+        display: flex;
+        align-items: center;
+
+    }
+
+    .col-75 {
+
+   
+        flex-grow: 1;
+    }
+
+    #contant {
+        width: 100%;
+        height: 200px;
+        resize: vertical;
+
+    }
+
+    #btn {
+        padding: 12px;
+        background-color: green;
+    }
+
+    #pbtn {
+        display: flex;
+        justify-content: end;
+    }
+
+    select,
+    textarea,
+    input {
+        width: 100%;
+        padding: 12px;
+        margin-top: 12px;
+    }
+
+    @media screen and (max-width:800px) {
+        .row {
+            flex-direction: column;
+        }
+
+        .col-25 {
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+    <form action="#">
+        <div class="row">
+            <div class="col-25">
+                <label>First Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="fname" placeholder="Your name..">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label>Last Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="lname" placeholder="Your last name..">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label>Country</label>
+            </div>
+            <div class="col-75">
+                <select name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div style="display: flex; align-items:flex-start; padding-top: 12px;" class="col-25">
+                <label>Subject</label>
+            </div>
+            <div class="col-75">
+                <textarea name="text" placeholder="write something.." id="contant"></textarea>
+            </div>
+        </div>
+        <div id="pbtn"> <button id="btn">Submit</button></div>
+    </form>
+</body>
+
+</html>

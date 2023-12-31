@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hoverable-dropdown</title>
+    <link rel="stylesheet" href="hoverable-dropdown.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+<h1> Hoverable Dropdown</h1>
+<p> Move the mouse over the button to open the dropdown menu</p>
+
+<div class="container">
+    <button id="my-button" class="button1">Dropdown</button>
+    <div class="nav1">
+        <a href="#">Link1</a>
+        <a href="#">Link2</a>
+        <a href="#">Link3</a>
+    </div>
+</div>
+<h1>Search demo</h1>
+<div id="search-container">
+    <i class="fa fa-search"></i>
+    <input type="text" placeholder="Search" id="search-input">
+    <div id="result-container">
+        <p>About</p>
+        <p>Base</p>
+        <p>Blog</p>
+        <p>Contact</p>
+        <p>Customer</p>
+        <p>Supprts</p>
+        <p>Tools</p>
+        <p>Ton</p>
+    </div>
+
+</div>
+<script>
+    let button1 = document.getElementById('my-button');
+
+    let nav1 = document.getElementsByClassName('nav1')[0];
+    button1.addEventListener("click", toggle);
+
+    function toggle() {
+        if (nav1.style.display == "none") {
+            nav1.sty-sult-container');
+    searchInput.addEventListener("input", filter);
+    let allPs = resultContainer.getElementsByTagName("p");
+
+    function filter() {
+        console.log("on fliter ")
+        let query = searchInput.value
+        for (i = 0; i < allPs.length; i++) {
+            let element = allPs.item(i);
+            let pValue = element.innerText;
+            if (pValue.indexOf(query) > -2) {
+                element.style.display = "block"
+            } else {
+                element.style.display = "none"
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

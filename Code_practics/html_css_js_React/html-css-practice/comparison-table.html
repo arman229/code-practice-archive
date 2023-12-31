@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title> Comparsion Table</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+    }
+
+    * {
+        box-sizing: border-box;
+        border-collapse: collapse;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        padding: 14px;
+        border: 2px solid red;
+    }
+
+    td,
+    th {
+        border: 2px solid rgb(162, 0, 255);
+        text-align: center;
+        padding: 12px;
+    }
+    th:first-child, td:first-child {
+  text-align: left;
+}
+    tr:nth-child(even) {
+        background-color: gray;
+    }
+
+    .fa-check {
+        color: green;
+    }
+
+    .fa-remove {
+        color: red;
+    }
+</style>
+
+<body>
+
+    <table>
+        <tr>
+            <th style="width:50%">Features</th>
+            <th>Basic</th>
+            <th>pro</th>
+        </tr>
+        <tr>
+            <td>Sample text</td>
+            <td><i class="fa fa-remove"></i></td>
+            <td><i class="fa fa-check"></i></td>
+        </tr>
+        <tr>
+            <td>Sample text</td>
+            <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-check"></i></td>
+        </tr>
+        <tr>
+            <td>Sample text</td>
+            <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-check"></i></td>
+        </tr>
+        <tr>
+            <td>Sample text</td>
+            <td><i class="fa fa-remove"></i></td>
+            <td><i class="fa fa-check"></i></td>
+        </tr>
+        <tr>
+            <td>Sample text</td>
+            <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-check"></i></td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive zig zag Layout Example </title>
+</head>
+<style>
+    body {
+        margin: 0;   font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #header {
+        padding: 12px;
+        background-color: gray;
+        text-align: center;
+    }
+
+    .row {
+        display: flex;
+        margin-top: 36px;
+        border: 2px solid red;
+    }
+
+
+
+    #container {
+        padding: 50px;
+        border: 2px solid red;
+        text-align: center;
+    }
+
+    .btn {
+        padding: 14px;
+        cursor: pointer;
+        color: white;
+        background-color: green;
+    }
+
+    @media screen and (max-width: 800px) {
+        .row {
+
+            flex-direction: column;
+        }
+    }
+</style>
+
+<body>
+
+    <div id="header">
+        <h1>Responsive Zig Zag Layout Example</h1>
+        <p>Resize the browser window to see the effect.</p>
+    </div>
+    <div id="container">
+        <div class="row">
+            <div class="column66" style="margin-right: 16px;">
+                <h1 style="font-size:4em;">The App</h1>
+                <h1 style="font-size:4em; color: aquamarine;">Why buy it?
+                </h1>
+                <p><span style="font-size: 4em;">Take photos like a pro.</span> You should buy this app because lorem  ipsum consectetur
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                <button class="btn">Downlaoad Application</button>
+            </div>
+            <div class="column33" style="margin-right: 16px;"> <img src="https://www.w3schools.com/w3images/img_app.jpg"
+                    alt=" "></div>
+        </div>
+        <div class="row" style="background-color: gray;">
+            <div class="column33" style="margin-right: 16px;"> <img style="margin-top: 14px;" src="https://www.w3schools.com/w3images/app5.jpg"
+                    alt=" "></div>
+            <div class="column66">
+                <h1 style="font-size:4em;"> Clarity</h1>
+                <h1 style="font-size:4em; color: red">Pixels, who?
+                </h1>
+                <p><span style="font-size: 4em;">A revolution in resolution.</span> Sharp and clear photos with the
+                    world's best photo engine,
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquipex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <button class="btn" style="background-color: red;"> Read More</button>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="column66" style="margin-right: 16px;">
+                <h1 style="font-size:4em;">The App</h1>
+                <h1 style="font-size:4em; color: aquamarine;">Why buy it?
+                </h1>
+                <p><span style="font-size: 4em;">Take photos like a pro.</span> You should buy this app because lorem
+                    ipsum consectetur
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                <button class="btn">Downlaoad Application</button>
+            </div>
+            <div class="column33" style="margin-right: 16px;"> <img src="https://www.w3schools.com/w3images/img_app.jpg"
+                    alt=" "></div>
+        </div>
+    </div>
+</body>
+
+</html>

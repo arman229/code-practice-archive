@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+}
+
+#container1 {
+    width: 400px;
+    height: 400px;
+    background-color: red;
+}
+
+
+#container2 {
+    width: 400px;
+    height: 400px;
+    background-color: green;
+    position: relative;
+}
+
+
+#container3 {
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+    position: absolute;
+    left: 40px;
+    top: 50px;
+}
+
