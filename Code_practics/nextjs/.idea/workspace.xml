@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98ad0014-14c3-4b78-8099-025fc7b08a10" name="Changes" comment="" />
+    <list default="true" id="98ad0014-14c3-4b78-8099-025fc7b08a10" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/contextapi/src/app/test/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/python_course/index.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../python/python_course/index.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/python_course/packages.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../python/python_course/packages.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +25,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/wmd/gitclone/Code_practics/nextjs/newnextproject",
+    "last_opened_file_path": "E:/wmd/My_coding_practics/Code_practics/nextjs",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -33,6 +41,8 @@
       <option name="presentableId" value="Default" />
       <updated>1703729658569</updated>
       <workItem from="1703729659713" duration="370000" />
+      <workItem from="1704977944423" duration="1617000" />
+      <workItem from="1705196722326" duration="1260000" />
     </task>
     <servers />
   </component>

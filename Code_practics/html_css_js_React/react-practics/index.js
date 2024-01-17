@@ -1,14 +1,12 @@
-import React, {useEffect, useMemo, useState} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-
-import Dayinformation from "./components/Dayinformation";
+import MyTodoApp from "./todo/MyTodoApp";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <Dayinformation/>
+        <MyTodoApp/>
     </React.StrictMode>
 );
 
