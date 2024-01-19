@@ -145,3 +145,36 @@ Imagine that your components are cooks in the kitchen, assembling tasty dishes f
 Triggering a render (delivering the diner’s order to the kitchen)
 Rendering the component (preparing the order in the kitchen)
 Committing to the DOM (placing the order on the table)
+
+* Note: State is private to the component. If you render it in two places, each copy gets its own state.
+
+# What is Propagation in JS ?
+In JavaScript, event propagation refers to the order in which events are handled when they occur on a DOM (Document Object Model) element. There are two phases of event propagation: capturing phase and bubbling phase.
+* Capturing Phase:
+During the capturing phase, the event travels down from the root of the DOM hierarchy to the target element.
+* Bubbling Phase:
+During the bubbling phase, the event travels back up from the target element to the root of the DOM hierarchy.
+Bubbling is the default behavior for most events in the DOM.
+
+e.preventDefault() is a method in JavaScript that is commonly used in event handlers to prevent the default behavior associated with a particular event.
+For example:
+
+Clicking on a link (<a> element) navigates to the URL specified in the href attribute.
+If you want to override or stop the default behavior associated with an event, you can use e.preventDefault(). This method tells the browser not to perform the default action for the event, allowing you to implement your own custom behavior instead.
+
+# Rendering
+Rendering” is React calling your components.
+On initial render, React will call the root component.
+For subsequent renders, React will call the function component whose state update triggered the render.
+During the initial render, React will create the DOM nodes .
+During a re-render, React will calculate which of their properties, if any, have changed since the previous render. It won’t do anything with that information until the next step, the commit phase.
+* Note: Re-renders when state updates
+# What is Pure Function ?
+Rendering must always be a pure calculation:
+
+Same inputs, same output. Given the same inputs, a component should always return the same JSX. (When someone orders a salad with tomatoes, they should not receive a salad with onions!)
+It minds its own business. It should not change any objects or variables that existed before rendering. (One order should not change anyone else’s order.)
+Otherwise, you can encounter confusing bugs and unpredictable behavior as your codebase grows in complexity. When developing in “Strict Mode”, React calls each component’s function twice, which can help surface mistakes caused by impure functions.
+* Note: After rendering is done and React updated the DOM, the browser will repaint the screen. Although this process is known as “browser rendering”, we’ll refer to it as “painting” to avoid confusion throughout the docs.
+* Note You can use Strict Mode to find mistakes in your components
+* Note React does not touch the DOM if the rendering result is the same as last time
