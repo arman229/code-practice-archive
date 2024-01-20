@@ -177,4 +177,37 @@ It minds its own business. It should not change any objects or variables that ex
 Otherwise, you can encounter confusing bugs and unpredictable behavior as your codebase grows in complexity. When developing in “Strict Mode”, React calls each component’s function twice, which can help surface mistakes caused by impure functions.
 * Note: After rendering is done and React updated the DOM, the browser will repaint the screen. Although this process is known as “browser rendering”, we’ll refer to it as “painting” to avoid confusion throughout the docs.
 * Note You can use Strict Mode to find mistakes in your components
-* Note React does not touch the DOM if the rendering result is the same as last time
+* Note React does not touch the DOM if the rendering result is the same as last time.
+# Choosing the state structure 
+The most important principle is that state shouldn’t contain redundant or duplicated information. If there’s unnecessary state, it’s easy to forget to update it, and introduce bugs!
+In React, redundancy typically refers to unnecessary repetition or duplication in your code that doesn't add value and can potentially make your code more complex, harder to maintain, and prone to bugs.
+        
+this is redundant
+
+          const [firstName, setFirstName] = useState('');
+          const [lastName, setLastName] = useState('');
+          const [fullName, setFullName] = useState('');
+         function handleFirstNameChange(e) {
+          setFirstName(e.target.value);
+         setFullName(e.target.value + ' ' + lastName);
+          }
+
+            function handleLastNameChange(e) {
+            setLastName(e.target.value);
+            setFullName(firstName + ' ' + e.target.value);
+            }
+* instead of 
+           
+           const [firstName, setFirstName] = useState('');
+             const [lastName, setLastName] = useState('');
+
+                          function handleFirstNameChange(e) {
+                   setFirstName(e.target.value);
+                }
+
+                      function handleLastNameChange(e) {
+                setLastName(e.target.value);
+                }
+      
+           const fullName = `${firstName} ${lastName}`;
+* “Rendering” means that React is calling your component, which is a function.
