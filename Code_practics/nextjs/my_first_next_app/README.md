@@ -5,6 +5,7 @@ A full-stack application is a software application that encompasses both the fro
 
 ### Library:
 A library is like a collection of tools(software programs) you can borrow when you need them. You decide when and how to use these tools, and they don't control the overall structure of your project. It's like having a toolbox that you pick tools from when you need them.
+A library in the context of software development is a collection of pre-written code and routines that can be used by other programs or projects. 
 Framework:
 
 A framework is like a pre-built house with some rooms already set up. You need to follow the house's design and fit your furniture into the rooms. The framework decides how your project is organized, and you work within its structure.
