@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98ad0014-14c3-4b78-8099-025fc7b08a10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/contextapi/src/app/test/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/python_course/index.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../python/python_course/index.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/python_course/packages.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../python/python_course/packages.txt" afterDir="false" />
+    <list default="true" id="df80c619-0f34-424b-b602-29289c206c5d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectId" id="2a9TBMkx1odRKErRQNeiHbbNj7o" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2bfAvn2EGgnG4D4ehLwrUhDzHi4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="false" />
@@ -25,7 +24,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/wmd/My_coding_practics/Code_practics/nextjs",
+    "last_opened_file_path": "E:/wmd/My_coding_practics/Code_practics/nextjs/daywisecoding",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -35,14 +34,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="98ad0014-14c3-4b78-8099-025fc7b08a10" name="Changes" comment="" />
-      <created>1703729658569</created>
+      <changelist id="df80c619-0f34-424b-b602-29289c206c5d" name="Changes" comment="" />
+      <created>1706595992144</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1703729658569</updated>
-      <workItem from="1703729659713" duration="370000" />
-      <workItem from="1704977944423" duration="1617000" />
-      <workItem from="1705196722326" duration="1260000" />
+      <updated>1706595992144</updated>
+      <workItem from="1706595994555" duration="1271000" />
+      <workItem from="1706626855040" duration="52000" />
     </task>
     <servers />
   </component>

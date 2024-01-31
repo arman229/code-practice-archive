@@ -4,7 +4,7 @@ import Button from "@/(daywisecoding)/addinginteractivityy/button";
 import Contant from "@/(daywisecoding)/addinginteractivityy/contant";
 import {sculptureList} from "@/(daywisecoding)/addinginteractivityy/data";
 
- export const Mycontext=createContext({Data:sculptureList} )
+const Mycontext=createContext( )
 const AddingInteractivity = () => {
 
     const [data, setDate ]=useState(sculptureList)
