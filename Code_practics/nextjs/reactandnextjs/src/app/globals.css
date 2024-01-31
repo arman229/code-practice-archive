@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* .heading {
+    background-color:   red;
+    border: 3px solid black;
+}  
+
+  @layer base {
+    body {
+      @apply bg-gray-400;
+    }
+  }  
+    @layer components {
+    h1 {
+      @apply text-2xl;
+    }
+  } */
