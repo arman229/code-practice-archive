@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df80c619-0f34-424b-b602-29289c206c5d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="df80c619-0f34-424b-b602-29289c206c5d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,10 +22,11 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/wmd/My_coding_practics/Code_practics/nextjs/daywisecoding",
+    "last_opened_file_path": "E:/wmd/Branches/My_coding_practics/Code_practics/nextjs/reactandnextjs",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "E:\\wmd\\Branches\\My_coding_practics\\Code_practics\\nextjs\\reactandnextjs\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -41,6 +40,7 @@
       <updated>1706595992144</updated>
       <workItem from="1706595994555" duration="1271000" />
       <workItem from="1706626855040" duration="52000" />
+      <workItem from="1706763231668" duration="624000" />
     </task>
     <servers />
   </component>
