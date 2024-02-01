@@ -6,7 +6,7 @@ export interface TodoContextType {
   setQuery: (q: string) => void;
   todos: Todo[];
   edit: (todo: Todo) => void;
-  delete: (todo: Todo) => void;
+  deleteTodo: (todo: Todo) => void;
   changeStatus: (todo: Todo) => void;
   title: string;
   setTitle: (title: string) => void;
@@ -18,7 +18,7 @@ const defaultTodoContext: TodoContextType = {
   setQuery: (str: string) => {},
   todos: [],
   edit: (todo: Todo) => {},
-  delete: (todo: Todo) => {},
+  deleteTodo: (todo: Todo) => {},
   changeStatus: (todo: Todo) => {},
   title: "",
   setTitle: (title: string) => {},

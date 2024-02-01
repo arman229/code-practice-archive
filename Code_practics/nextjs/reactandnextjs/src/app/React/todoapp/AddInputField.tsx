@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
 import { TodoContextType, todoContext } from "./TodoContext";
 function AddInputField() {
-  const ctx = useContext<TodoContextType>(todoContext);
+  const {title,setTitle,add}= useContext<TodoContextType>(todoContext);
   const onAdd = () => {
-    ctx.add();
+    add();
   };
   return (
     <div className="flex justify-center my-4">
@@ -12,8 +12,8 @@ function AddInputField() {
         type="text"
         className="border"
         placeholder="Please add the title of the task"
-        value={ctx.title}
-        onChange={(e) => ctx.setTitle(e.target.value)}
+        value={title}
+        onChange={(e) =>  setTitle(e.target.value)}
       />
       <button onClick={onAdd}>Add Task</button>
     </div>

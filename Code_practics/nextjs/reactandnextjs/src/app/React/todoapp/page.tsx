@@ -8,15 +8,37 @@ import { Todo } from "./store";
 var globalId = 4;
 function TodoApp() {
   const [todos, setTodos] = useState<Todo[]>([]);
+
   const [query, setQuery] = useState<string>("");
   const [title, setTitle] = useState<string>("");
   const [lastEdited, setLastedEdit] = useState<Todo | null>(null);
-  
+  const [todos1,dispatch]=useReducer(reducerFun,[])
   const finalTodos = todos.filter((todo) =>
     todo.title.toLowerCase().includes(query.toLowerCase())
   );
+ function reducerFun(todos1,action){
+   switch (action.type){
+       case 'ONADD':
+       alert('Yor are pressing the enter button')
+           break;
+       case 'ONEDIT':
+           alert('you are editing the todo')
+           break;
+       case 'ONDELETE':
+           alert('Yor are deleting the todo')
+           break;
+       case 'MARKASDONE':
+           alert('you are MARK  as done or not ')
+           break;
+       case 'ONSEARCH':
+           alert('Now you are searching the item')
+       default:
+           return todos1
+   }
 
+ }
   const onAdd = () => {
+   dispatch({type:'ONADD'})
     if (lastEdited === null) {
       var newId = ++globalId;
       const newTodo: Todo = { id: newId, title: title, status: "PENDING" };
@@ -36,16 +58,18 @@ function TodoApp() {
     setTitle("");
   };
   const onEdit = (todo: Todo) => {
-    console.log("on edit id:" + todo.id);
+      dispatch({type:'ONEDIT'})
     setLastedEdit(todo);
     setTitle(todo.title);
   };
 
   const onDelete = (todo: Todo) => {
+      dispatch({type:'ONDELETE'})
     const newTodos = todos.filter((t) => t.id != todo.id);
     setTodos(newTodos);
   };
   const onChangeStatus = (todo: Todo) => {
+      dispatch({type:'MARKASDONE'})
     const finalTodos: Todo[] = todos.map((t) => {
       if (t.id == todo.id) {
         return todo;
@@ -61,7 +85,7 @@ function TodoApp() {
     setQuery: (q: string) => setQuery(q),
     todos: finalTodos,
     edit: onEdit,
-    delete: onDelete,
+    deleteTodo: onDelete,
     changeStatus: onChangeStatus,
     title: title,
     setTitle: (t: string) => {

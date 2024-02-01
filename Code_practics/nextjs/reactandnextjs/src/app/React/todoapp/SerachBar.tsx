@@ -3,15 +3,15 @@ import { todoContext } from "./TodoContext";
 import { TodoContextType } from "./TodoContext";
 
 function SerachBar() {
-  const ctx = useContext<TodoContextType>(todoContext);
+  const {query,setQuery} = useContext<TodoContextType>(todoContext);
 
   return (
     <div>
       <input
         type="text"
         className="border"
-        value={ctx.query}
-        onChange={(e) => ctx.setQuery(e.target.value)}
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
       />
     </div>
   );
