@@ -4,93 +4,83 @@ import SerachBar from "./SerachBar";
 import AddInputField from "./AddInputField";
 import { TodoContextType, todoContext } from "./TodoContext";
 import TodoList from "./TodoList";
-import { Todo } from "./store";
+import { Todo, Action } from "./store";
 var globalId = 4;
 function TodoApp() {
-  const [todos, setTodos] = useState<Todo[]>([]);
-
   const [query, setQuery] = useState<string>("");
   const [title, setTitle] = useState<string>("");
   const [lastEdited, setLastedEdit] = useState<Todo | null>(null);
-  const [todos1,dispatch]=useReducer(reducerFun,[])
-  const finalTodos = todos.filter((todo) =>
+
+  const [todos1, dispatch]: [todos: Todo[], dispatch: (action: Action) => void] =
+    useReducer(reducerFun, []);
+
+  const finalTodos = todos1.filter((todo) =>
     todo.title.toLowerCase().includes(query.toLowerCase())
   );
- function reducerFun(todos1,action){
-   switch (action.type){
-       case 'ONADD':
-       alert('Yor are pressing the enter button')
-           break;
-       case 'ONEDIT':
-           alert('you are editing the todo')
-           break;
-       case 'ONDELETE':
-           alert('Yor are deleting the todo')
-           break;
-       case 'MARKASDONE':
-           alert('you are MARK  as done or not ')
-           break;
-       case 'ONSEARCH':
-           alert('Now you are searching the item')
-       default:
-           return todos1
-   }
 
- }
-  const onAdd = () => {
-   dispatch({type:'ONADD'})
-    if (lastEdited === null) {
-      var newId = ++globalId;
-      const newTodo: Todo = { id: newId, title: title, status: "PENDING" };
-      setTodos([...todos, newTodo]);
-    } else {
-      const updatedTodo: Todo = { ...lastEdited, title: title };
-      const finalTodos: Todo[] = todos.map((t) => {
-        if (t.id == lastEdited.id) {
-          return updatedTodo;
+  function reducerFun(todos: Todo[], action: Action) {
+    switch (action.type) {
+      case "ONADD":
+        var res: Todo[] = [];
+        if (lastEdited === null) {
+          var newId = ++globalId;
+          const newTodo: Todo = { id: newId, title: title, status: "PENDING" };
+          res = [...todos, newTodo];
         } else {
-          return t;
+          const updatedTodo: Todo = { ...lastEdited, title: title };
+          const finalTodos: Todo[] = todos.map((t) => {
+            if (t.id == lastEdited.id) {
+              return updatedTodo;
+            } else {
+              return t;
+            }
+          });
+          res = finalTodos;
         }
-      });
-      setTodos(finalTodos);
+        setLastedEdit(null);
+        setTitle("");
+        return res;
+      case "ONEDIT":
+        setLastedEdit(action.payload);
+        setTitle(action.payload!!.title);
+        return todos;
+      case "ONDELETE":
+        return todos.filter((t) => t.id != action.payload!!.id);
+      case "MARKASDONE":
+        return todos.map((t) => {
+          if (t.id == action.payload!!.id) {
+            return action.payload!!;
+          } else {
+            return t;
+          }
+        });
+      default:
+        return todos;
     }
-    setLastedEdit(null);
-    setTitle("");
+  }
+  const onAdd = () => {
+    dispatch({ type: "ONADD", payload: null });
   };
   const onEdit = (todo: Todo) => {
-      dispatch({type:'ONEDIT'})
-    setLastedEdit(todo);
-    setTitle(todo.title);
+    dispatch({ type: "ONEDIT", payload: todo });
   };
 
   const onDelete = (todo: Todo) => {
-      dispatch({type:'ONDELETE'})
-    const newTodos = todos.filter((t) => t.id != todo.id);
-    setTodos(newTodos);
+    dispatch({ type: "ONDELETE", payload: todo });
   };
   const onChangeStatus = (todo: Todo) => {
-      dispatch({type:'MARKASDONE'})
-    const finalTodos: Todo[] = todos.map((t) => {
-      if (t.id == todo.id) {
-        return todo;
-      } else {
-        return t;
-      }
-    });
-    setTodos(finalTodos);
+    dispatch({ type: "MARKASDONE", payload: todo });
   };
 
   const ctxObj: TodoContextType = {
     query: query,
-    setQuery: (q: string) => setQuery(q),
+    setQuery: setQuery,
     todos: finalTodos,
     edit: onEdit,
     deleteTodo: onDelete,
     changeStatus: onChangeStatus,
     title: title,
-    setTitle: (t: string) => {
-      setTitle(t);
-    },
+    setTitle: setTitle,
     add: onAdd,
   };
   return (

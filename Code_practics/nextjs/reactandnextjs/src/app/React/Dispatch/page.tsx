@@ -1,36 +1,29 @@
 "use client";
 import React, { useReducer, useState } from "react";
 import { Action, State, initialValue } from "@/app/React/Dispatch/types";
+import { reducerFun } from "./temp";
 
 function DispatchState() {
-  const [value, dispatch] = useReducer(reducerFun, initialValue);
-const [power,setPower]=useState<string>('')
-  function reducerFun(value: State, action: Action) {
-    console.log(action.type);
-    switch (action.type) {
-      case "FINDSQUARE":
-        const newValue=value.val+1;
-    
-        return {
-          ...value,
-          val: newValue,
-          squareVal: newValue *newValue,
-        };
-    
+  const [obj, dispatch]: [State, (action: Action) => void] = useReducer(
+    reducerFun,
+    initialValue
+  );
 
-      default:
-        return value;
-    }
-  }
   return (
     <>
       <h1> Dispatch State</h1>
       <h1>
-        Value={value.val}&& its {power} is {value.squareVal}
+        Value={obj.value} action: {obj.action} and its reuslt {obj.result}
       </h1>
-      <button onClick={() => dispatch({ type: "FINDSQUARE" })}>Find Square</button>
-      <button onClick={() => dispatch({ type: "addOne" })}>Find Cube</button>
-      <button onClick={() => dispatch({ type: "addOne" })}>Find Forth</button>
+      <button onClick={() => dispatch({ type: "FINDSQUARE", payload: 2 })}>
+        Find Square
+      </button>
+      <button onClick={() => dispatch({ type: "FINDCUBE", payload: 3 })}>
+        Find Cube
+      </button>
+      <button onClick={() => dispatch({ type: "FINDFORTH", payload: 4 })}>
+        Find Forth
+      </button>
     </>
   );
 }

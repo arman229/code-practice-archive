@@ -9,3 +9,7 @@ export interface Todo {
   title: string;
   status: "COMPLETED" | "PENDING";
 }
+export interface Action {
+  type: string;
+  payload: Todo |null;
+}

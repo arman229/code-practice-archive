@@ -3,10 +3,12 @@ export default interface initalValueProps {
   squareVal: number;
 }
 export interface Action {
-    type:string
+  type: string;
+  payload: number;
 }
 export interface State {
-  val: number;
-  squareVal: number;
+  value: number;
+  action: string;
+  result: number;
 }
-export const initialValue: State = { val: 1, squareVal: 1 };
+export const initialValue: State = { value: 2, action: "", result: 2 };
