@@ -294,3 +294,14 @@ JSX makes it easier to write and add HTML in React.
 
          const myElement = React.createElement('h1', {}, 'I do not use JSX!');
 * Note:When you nest content inside a JSX tag, the parent component will receive that content in a prop called children.          
+
+# Code Splitting
+Code splitting allows you to split your application code into smaller bundles to be downloaded and executed by the browser. This reduces the amount of data transferred and execution time for each request, leading to improved performance.
+
+Server Components allow your application code to be automatically code-split by route segments. This means only the code needed for the current route is loaded on navigation.
+# Prefetching
+Prefetching is a way to preload a route in the background before the user visits it.
+# Partial Rendering
+Partial rendering means only the route segments that change on navigation re-render on the client, and any shared segments are preserved.
+# Soft Navigation
+only the route segments that have changed are re-rendered 

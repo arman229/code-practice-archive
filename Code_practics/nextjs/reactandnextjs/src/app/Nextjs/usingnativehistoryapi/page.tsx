@@ -1,20 +1,24 @@
 'use client'
  
-import { useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
  
-export default function SortProducts() {
-  const searchParams = useSearchParams()
- console.log('fll',searchParams)
-  function updateSorting(sortOrder: string) {
-    const params = new URLSearchParams(searchParams.toString())
-    params.set('sort', sortOrder)
-    window.history.pushState(null, '', `?${params.toString()}`)
+export default function LocaleSwitcher() {
+  const pathname = usePathname()
+ console.log('pathname',pathname)
+  function switchLocale(locale: string) {
+    // e.g. '/en/about' or '/fr/contact'
+    const newPath = `/${locale}${pathname}`
+    const stateObject = { data: 'exampleStateData' }; // Example state object
+    const newTitle = 'New Page Title'; // Example new title
+    
+    window.history.replaceState(stateObject, newTitle, newPath);
+    
   }
  
   return (
     <>
-      <button  >Sort Ascending</button>
-      <button onClick={() => updateSorting('desc')}>Sort Descending</button>
+      <button onClick={() => switchLocale('en')}>English</button>
+      <button onClick={() => switchLocale('fr')}>French</button>
     </>
   )
 }
