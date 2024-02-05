@@ -5,7 +5,7 @@ function TemplatePage() {
     <div>
         <p>This is the page of TemplatePage   </p>
         
-        <Link href={'/Nextjs/templateroute/nestedTemplateroute'}>Go to nested Page</Link></div>
+        <Link href={'/Nextjs/templateroute/nestedTemplateroute'} scroll={false}>Go to nested Page</Link></div>
   )
 }
 

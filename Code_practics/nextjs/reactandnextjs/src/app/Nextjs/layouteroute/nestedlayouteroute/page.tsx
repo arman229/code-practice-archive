@@ -238,10 +238,12 @@ function NestedLayoutroute() {
         velit sit amet metus tempus efficitur. Pellentesque sit amet libero
         bibendum, efficitur sapien nec, aliquam nulla. Duis pretium vestibulum
         turpis id tempor. Suspendisse potenti.
-      </p>
-      <div className="border bg-red-900 p-4  w-[180px]">
-        <Link href={"/Nextjs/layouteroute"} scroll={false}> Go to Main Page</Link>{" "}
+     
+        <div className="border bg-red-900 p-4  w-[180px]">
+        <Link href={"/Nextjs/layouteroute"}  > Go to Main Page</Link>{" "}
       </div>
+      </p>
+      
     </div>
   );
 }

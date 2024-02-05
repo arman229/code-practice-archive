@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .maincontainer {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .centerClass {
+            text-align: center;
+        }
+
+        .donation {
+            border-top: 2px solid #f1f1f0;
+
+            text-align: right;
+            padding: 30px 10px;
+        }
+
+        .donation span {
+            font-weight: bold;
+        }
+
+        .copyofreceipt {
+            border-top: 2px solid #f1f1f0;
+            text-align: center;
+            padding: 30px 10px;
+        }
+
+        .borderTopbottom {
+            border-top: 2px solid #f1f1f0;
+            border-bottom: 2px solid #f1f1f0;
+            text-align: center;
+            padding: 30px 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 14px;
+            margin-bottom: 14px;
+        }
+
+        td,
+        th {
+            text-align: left;
+        }
+
+        .trbackgrounds {
+            background-color: #f1f1f0;
+            height: 60px;
+            padding: 10px;
+        }
+
+        .imgstyle img {
+            height: 190px;
+            width: 190px;
+        }
+
+        .vertical-end {
+            vertical-align: bottom;
+        }
+
+        .vertical-center {
+            vertical-align: middle;
+        }
+
+        .vertical-top {
+            vertical-align: top;
+        }
+
+        .vertical-top,
+        .vertical-center,
+        .vertical-end {
+            height: 30px;
+            padding: 6px 0px;
+        }
+
+        .fontbolder {
+            font-weight: bolder;
+        }
+
+        .maincontainer p {
+            margin: 0px;
+        }
+
+        .colorblue {
+            color: #006fbf;
+        }
+
+        .colorgray {
+            color: gray;
+        }
+
+        .fontbold {
+            font-weight: bold;
+        }
+
+        .marginzero {
+            margin: 0;
+        }
+
+        .paddingclass {
+            height: 40px;
+        }
+    </style>
+
+</head>
+
+<body class="maincontainer">
+    <div class="centerClass">
+        <div>
+            <img src="data:image/png;base64,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"
+                alt="Brantwook logo">
+        </div>
+        <div class="colorblue fontbold marginzero">
+            <p>Name of Organization</p>
+            <p>Address</p>
+            <p>Charity BN/Registration Number</p>
+        </div>
+        <h1 class="marginzero">Thank You.</h1>
+        <h3 class="marginzero">Hi Donor!</h3>
+        <div>
+            <span>Thanks for your contribution from</span><span class="colorblue fontbold"> Brantwood Community
+                Services</span>
+        </div>
+        <h2>DONATION ID: F3048213392</h2>
+    </div>
+    <h4 class="colorgray marginzero">YOUR DONATION INFORMATION:</h4>
+    <hr />
+
+    <table>
+        <tr>
+            <th class="vertical-end"> Donated By:</th>
+            <th class="vertical-center">Bill To: </th>
+            <th class="vertical-top">Donated via: </th>
+        </tr>
+        <tr class="vertical-top">
+            <td> Full Donor Name</td>
+            <td><a href="mailto:donations@givetree.ca">donations@givetree.ca</a></td>
+            <td>
+                Mastercard #1234 <br />
+                <span class="fontbolder"> Donor Address: </span>
+            </td>
+        </tr>
+        <tr class="vertical-end">
+            <td>
+                <span class="fontbolder"> Donation Date:</span> <br />
+                Tue Nov 3, 2023 13:15 EST
+            </td>
+            <td>
+                <span class="fontbolder">Source: </span><br />
+                Brantwood
+            </td>
+            <td>
+
+                <span>123 Bell Ave, Brantford, ON, N3S K9N </span>
+            </td>
+        </tr>
+
+
+    </table>
+
+    <h4 class="colorgray marginzero">HERE'S WHERE YOU HELPED:</h4>
+    <hr />
+    <table>
+        <tr class="trbackgrounds">
+            <th>Description:</th>
+            <th>Organization:</th>
+            <th>Amount</th>
+        </tr>
+        <tr class="paddingclass">
+            <td>Transportation for Niagara Falls</td>
+            <td>Brantwood</td>
+            <td>$200.00 CAD</td>
+        </tr>
+        <tr class="paddingclass">
+            <td>Processing Fee Relief</td>
+            <td>Brantwood</td>
+            <td>$1.75 CAD</td>
+        </tr>
+
+    </table>
+
+
+    <p class="donation "><span class="colorgray">DONATION AMOUNT:</span> <span class="fontbolder">$200.00 CAD</span></p>
+    <p class="copyofreceipt">Please keep a copy of this receipt for your records.</p>
+    <div class="borderTopbottom"></div>
+    <div class="centerClass">
+        <h2 class="marginzero"> Brantwood Community Services</h2>
+        <p>25 Vell Lane, Brantford, ON N3T 1E1</p>
+        <p>519-753-2658 | <a href="mailto:donations@givetree.ca">donations@givetree.ca</a></p>
+        <p>Tax Registration Number: 78549 6613 RT9999</p>
+        <p>View your donation history | Edit your subscription</p>
+        <div><span>Need Help? help.givetree.com</span></div>
+        <div><span>Terms of Service </span> |<span> Privacy Policy</span></div>
+        <p>Powered By</p>
+        <div class="imgstyle"><img src="https://armourpayments.com/wp-content/uploads/2023/08/1-givetreelogo.png"
+                alt="not shows image">
+        </div>
+    </div>
+
+</body>
+
+</html>

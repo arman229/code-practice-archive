@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+.maincontainer {
+  max-width: 1000px;
+  margin: auto;
+}
+.centerClass {
+  text-align: center;
+}
+.donation {
+  border-top: 2px solid #f1f1f0;
+
+  text-align: right;
+  padding: 30px 10px;
+}
+.donation span {
+  font-weight: bold;
+}
+.copyofreceipt {
+  border-top: 2px solid #f1f1f0;
+  text-align: center;
+  padding: 30px 10px;
+}
+.borderTopbottom {
+  border-top: 2px solid #f1f1f0;
+  border-bottom: 2px solid #f1f1f0;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+td,
+th {
+  text-align: left;
+}
+.trbackgrounds {
+  background-color: #f1f1f0;
+  height: 60px;
+  padding: 10px;
+}
+.imgstyle img {
+  height: 190px;
+  width: 190px;
+}
+.vertical-end {
+  vertical-align: bottom;
+}
+
+.vertical-center {
+  vertical-align: middle;
+}
+
+.vertical-top {
+  vertical-align: top;
+}
+
+.vertical-top,
+.vertical-center,
+.vertical-end {
+  height: 30px;
+  padding: 6px 0px;
+}
+
+.fontbolder {
+  font-weight: bolder;
+}
+.maincontainer p {
+  margin: 0px;
+}
+.colorblue {
+  color: #006fbf;
+}
+.colorgray {
+  color: gray;
+}
+.fontbold {
+  font-weight: bold;
+}
+.marginzero {
+  margin: 0;
+}
+.paddingclass {
+  height: 40px;
+}

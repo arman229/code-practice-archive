@@ -242,7 +242,7 @@ function LayouteChild() {
       <p id={"bottom"}  >This is the page of Layoute Child </p>
       <Link href={"#top"} className="bg-red-400 p-4 inline-block">Go to top</Link>
 
-      <Link href={"/Nextjs/layouteroute/nestedlayouteroute"}    scroll={false}  className="bg-orange-400 p-4 inline-block">
+      <Link href={"/Nextjs/layouteroute/nestedlayouteroute"}      className="bg-orange-400 p-4 inline-block">
         Go to nested Page
       </Link>
     </div>

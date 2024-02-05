@@ -305,3 +305,31 @@ Prefetching is a way to preload a route in the background before the user visits
 Partial rendering means only the route segments that change on navigation re-render on the client, and any shared segments are preserved.
 # Soft Navigation
 only the route segments that have changed are re-rendered 
+Client-side rendering (CSR) and server-side rendering (SSR) are two different approaches to how web content is generated and displayed to users.
+
+# Client-Side Rendering (CSR):
+
+In CSR, the web browser loads a basic HTML file along with JavaScript files.
+The JavaScript code is responsible for rendering the content dynamically on the client-side.
+This means that the browser needs to wait for the JavaScript to be downloaded and executed before it can render the page.
+Popular JavaScript frameworks like ReactJS, AngularJS, and Vue.js heavily utilize CSR.
+Example: Suppose a user searches for a product on an e-commerce website that uses CSR. When the user makes a search, the website sends a request to the server, retrieves raw data, and then uses JavaScript to render the search results dynamically on the user's browser without reloading the entire page.
+# Server-Side Rendering (SSR):
+
+In SSR, the server processes the request, generates the HTML for the entire page, and sends the fully rendered HTML page to the client.
+This means that the user receives a fully formed HTML document from the server, which can be displayed immediately.
+Frameworks like Next.js (for React), Nuxt.js (for Vue), and Sapper (for Svelte) facilitate SSR.
+Example: Let's consider the same e-commerce website but with SSR. When the user searches for a product, the server processes the search query, fetches the data, generates the HTML for the search results, and sends back a complete HTML page with the search results already rendered. This allows the user to see the search results faster because they don't have to wait for JavaScript to execute and render the page.
+In summary, CSR involves rendering content on the client-side using JavaScript after receiving a basic HTML file, while SSR involves rendering content on the server and sending a fully formed HTML page to the client. Each approach has its advantages and disadvantages in terms of performance, SEO, and initial load time.
+
+
+# What is prerendring ?
+prerendering is a technique used to improve website performance, user experience, and SEO by generating HTML content in advance, either on the server or during the build process, rather than dynamically at runtime.
+
+# What is hydration?
+ hydration is the process of adding interactivity to pre-rendered HTML content on the client-side, typically in the context of server-side rendered applications.
+
+
+
+
+
