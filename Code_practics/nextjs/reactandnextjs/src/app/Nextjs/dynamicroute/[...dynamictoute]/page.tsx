@@ -14,3 +14,17 @@ function page({params,searchParams }:{params:{dynamictoute:string},searchParams 
 }
 
 export default page
+
+
+// function DynamicRoute({params,searchParams}:{params:{dynamictoute:string},searchParams:{id:string}}) {
+//   return (
+//     <div>
+
+//       <h1>DynamicRoute</h1>
+//       <p>My name is {params.dynamictoute}and search params is {searchParams.id}</p>
+
+//     </div>
+//   )
+// }
+
+// export default DynamicRoute
