@@ -7,9 +7,21 @@ export async function generateStaticParams() {
   });
 }
 function page({params,searchParams }:{params:{dynamictoute:string},searchParams :{id:string},}) {
-  return (<div className='flex flex-col'>
+ 
+  const links = [
+    { id: 1, url: 'https://example.com', text: 'Example Website' },
+    { id: 2, url: 'https://another-example.com', text: 'Another Example' },
+    { id: 3, url: 'https://yet-another-example.com', text: 'Yet Another Example' },
+  ];
+ return (<div className='flex flex-col'>
     <div> my name is {params.dynamictoute} </div>
     <div> this is the serach params like ? id=pk{searchParams.id}</div>
+
+    {links.map(link => {}
+          <li key={link.id}>
+            <a href={link.url}>{link.text}</a>
+          </li>
+        ))}
 </div>  )
 }
 
