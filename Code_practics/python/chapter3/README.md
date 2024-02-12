@@ -1,2 +1,1 @@
-# exit command 
-Exit comman is used to close the terminal 
+# Chapter 3 List
