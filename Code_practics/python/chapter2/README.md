@@ -22,3 +22,7 @@ a string in Python, and you can use single or double quotes around your
 strings 
 # Method
 A method is an action that Python can perform on a piece of data.
+# Jinja Style
+# Different formats of string
+# Difference between display and print in Python.
+
