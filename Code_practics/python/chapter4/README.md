@@ -4,6 +4,6 @@
 # enumerate method
 # we can use else without if 
 # List Comprehensive
-# Slicing return a parratially deep copy 
+# Slicing return a parratially deep copy [:]
 # tuple
 # Note: The input function always returns a string.
