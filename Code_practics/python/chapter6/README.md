@@ -7,3 +7,4 @@
 # Swaping key and values
 # Removing Key-Value Pairs
 # By default in dictionary when we apply loop it iterate over keys
+# pop popitem and setdefault method in python
